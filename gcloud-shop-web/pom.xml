@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gcloud-shop-web</artifactId>
     <packaging>war</packaging>
-    <name>gcloud-web Maven Webapp</name>
+    <name>gcloud-shop-web</name>
     <url>http://maven.apache.org</url>
 
     <organization>
