@@ -1,0 +1,170 @@
+<div class="shop-order-templ pd_15" xmlns="http://www.w3.org/1999/html">
+    <div id="deliver-header" style="position: relative">
+        <img src="resources/css/build/images/1wm.png" data-field-name="trade_barcode" style="display:none;width: 196px; height: 84px; position: absolute; top: -5px; left: 110px;" alt="" />
+        <div class="footer-qrcode" data-field-name="qrcode" style="display:none; width: 120px; height: 120px; position: absolute; top: -10px; right: -5px;" >
+            <img src="http://static.superboss.cc/eweima.jpg" alt="" style="width:120px; height:120px;" />
+        </div>
+        <h2 class="shop-order-header" style="position: relative; height: 42px;text-align:left;">
+            <input type="text" class="fc_center" value="发货单" data-field-name="title" style="display: none;width: 100px;" />		
+        </h2>
+		<div act-if="displayTradePrintNum != -1" style="display: inline-block;position: absolute; top: 0;right: 0;font-weight: bold;width: 32px;border-bottom: 2px solid #000;" data-field-name="trade_print_num">
+			<div style="font-size: 20px;padding: 2px;width: 32px;text-align: center;">#</div>
+			<!-- <div style="margin: 5px 0 5px 10px;">
+				<span format="#" tdata="pageNO">第#页</span>
+				<span format="#" tdata="pageCount">共#页</span>
+			</div> -->
+		</div>
+        <div class="info-list">
+            <ul>
+                <li data-field-name="buyer_nick" style="display: none; width: 50%;">买家旺旺：guanghua2cc</li>
+                <li data-field-name="receiver_name" style="display: none; width: 50%;">买家姓名：刘德华</li>
+                <li data-field-name="receiver_mobile" style="display: none; width: 50%;">买家手机：13186978826</li>
+                <li data-field-name="receiver_phone" style="display: none; width: 50%;">买家电话：0571-88995530</li>
+                <li data-field-name="trade_create_time" style="display: none; width: 50%;">下单时间：2013-12-20 17:04</li>
+				<li data-field-name="trade_pay_time" style="display: none; width: 50%;">付款时间：2013-12-20 17:04</li>
+                <li data-field-name="trade_print_time" style="display: none; width: 50%;">打印时间：2013-12-20 17:04</li>
+				<li data-field-name="trade_deliver_time" style="display: none; width: 50%;">发货时间：2013-12-20 17:04</li>
+                <li data-field-name="receiver_zip" style="display: none; width: 50%;">买家邮编：123567</li>
+				<li data-field-name="receiver_address" style=" width: 100%; display:none">收货地址：湖南省长沙市岳麓区***** </li>
+                <li data-field-name="trade_id" style="width: 100%; display: none">订单编号：12345678</li>
+            </ul>
+        </div>
+    </div>
+    <div class="order-pro-list">
+        <table id="deliver-table">
+            <thead>
+            <tr>
+                <td width="26" data-field-name="table_item_id">序号</td>
+                <td width="65" class="ft-left" data-field-name="table_item_pic" style="display: none">宝贝图片</td>
+                <td width="160" class="ft-left" data-field-name="table_item_title" style="display: none">宝贝名称</td>
+                <td width="54" data-field-name="table_item_short_title" style="display: none">宝贝简称</td>
+                <td class="ft-left" width="86" data-field-name="table_item_properties" style="display: none">宝贝属性</td>
+                <td width="55" data-field-name="table_item_outer_id" style="display: none">商家编码</td>
+                <td width="26" data-field-name="table_item_num" style="display: none">数量</td>
+                <td width="55" data-field-name="table_item_price" style="display: none">宝贝单价</td>
+                <td width="55" data-field-name="table_item_payment" style="display: none">实付金额</td>
+                <td width="55" data-field-name="table_item_discount" style="display: none">优惠金额</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-field-name="table_item_id" style="display: none">1</td>
+                <td data-field-name="table_item_pic" style="display: none"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB17L7VGXXXXXXmXVXXXXXXXXXX_!!0-item_pic.jpg_sum.jpg" alt="" style="width: 50px; height: 50px" /></td>
+                <td class="ft-left" data-field-name="table_item_title" style="display: none">女士包包2014新款潮真皮女包时尚手提包女包新款包邮单肩包女大包</td>
+                <td data-field-name="table_item_short_title" style="display: none">简称</td>
+                <td class="ft-left" data-field-name="table_item_properties" style="display: none">
+                    颜色：红色<br>
+                    尺码：M码
+                </td>
+                <td data-field-name="table_item_outer_id" style="display: none">0001</td>
+                <td data-field-name="table_item_num" style="display: none">1</td>
+                <td data-field-name="table_item_price" style="display: none">￥269.00</td>
+                <td data-field-name="table_item_payment" style="display: none">￥219.00</td>
+                <td data-field-name="table_item_discount" style="display: none">￥50.00</td>
+            </tr>
+            <tr>
+                <td data-field-name="table_item_id" style="display: none">2</td>
+                <td data-field-name="table_item_pic" style="display: none"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB17L7VGXXXXXXmXVXXXXXXXXXX_!!0-item_pic.jpg_sum.jpg" alt="" style="width: 50px; height: 50px" /></td>
+                <td class="ft-left" data-field-name="table_item_title" style="display: none">女士包包2014新款潮真皮女包时尚手提包女包新款包邮单肩包女大包</td>
+                <td data-field-name="table_item_short_title" style="display: none">简称</td>
+                <td class="ft-left" data-field-name="table_item_properties" style="display: none">
+                    颜色：红色<br>
+                    尺码：M码
+                </td>
+                <td data-field-name="table_item_outer_id" style="display: none">0001</td>
+                <td data-field-name="table_item_num" style="display: none">1</td>
+                <td data-field-name="table_item_price" style="display: none">￥269.00</td>
+                <td data-field-name="table_item_payment" style="display: none">￥219.00</td>
+                <td data-field-name="table_item_discount" style="display: none">￥50.00</td>
+            </tr>
+            <tr>
+                <td data-field-name="table_item_id" style="display: none">3</td>
+                <td data-field-name="table_item_pic" style="display: none"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB17L7VGXXXXXXmXVXXXXXXXXXX_!!0-item_pic.jpg_sum.jpg" alt="" style="width: 50px; height: 50px" /></td>
+                <td class="ft-left" data-field-name="table_item_title" style="display: none">女士包包2014新款潮真皮女包时尚手提包女包新款包邮单肩包女大包</td>
+                <td data-field-name="table_item_short_title" style="display: none">简称</td>
+                <td class="ft-left" data-field-name="table_item_properties" style="display: none">
+                    颜色：红色<br>
+                    尺码：M码
+                </td>
+                <td data-field-name="table_item_outer_id" style="display: none">0001</td>
+                <td data-field-name="table_item_num" style="display: none">1</td>
+                <td data-field-name="table_item_price" style="display: none">￥269.00</td>
+                <td data-field-name="table_item_payment" style="display: none">￥219.00</td>
+                <td data-field-name="table_item_discount" style="display: none">￥50.00</td>
+            </tr>
+            <tr>
+                <td data-field-name="table_item_id" style="display: none">4</td>
+                <td data-field-name="table_item_pic" style="display: none"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB17L7VGXXXXXXmXVXXXXXXXXXX_!!0-item_pic.jpg_sum.jpg" alt="" style="width: 50px; height: 50px" /></td>
+                <td class="ft-left" data-field-name="table_item_title" style="display: none">女士包包2014新款潮真皮女包时尚手提包女包新款包邮单肩包女大包</td>
+                <td data-field-name="table_item_short_title" style="display: none">简称</td>
+                <td class="ft-left" data-field-name="table_item_properties" style="display: none">
+                    颜色：红色<br>
+                    尺码：M码
+                </td>
+                <td data-field-name="table_item_outer_id" style="display: none">0001</td>
+                <td data-field-name="table_item_num" style="display: none">1</td>
+                <td data-field-name="table_item_price" style="display: none">￥269.00</td>
+                <td data-field-name="table_item_payment" style="display: none">￥219.00</td>
+                <td data-field-name="table_item_discount" style="display: none">￥50.00</td>
+            </tr>
+            <tr>
+                <td data-field-name="table_item_id" style="display: none">5</td>
+                <td data-field-name="table_item_pic" style="display: none"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB17L7VGXXXXXXmXVXXXXXXXXXX_!!0-item_pic.jpg_sum.jpg" alt="" style="width: 50px; height: 50px" /></td>
+                <td class="ft-left" data-field-name="table_item_title" style="display: none">女士包包2014新款潮真皮女包时尚手提包女包新款包邮单肩包女大包</td>
+                <td data-field-name="table_item_short_title" style="display: none">简称</td>
+                <td class="ft-left" data-field-name="table_item_properties" style="display: none">
+                    颜色：红色<br>
+                    尺码：M码
+                </td>
+                <td data-field-name="table_item_outer_id" style="display: none">0001</td>
+                <td data-field-name="table_item_num" style="display: none">1</td>
+                <td data-field-name="table_item_price" style="display: none">￥269.00</td>
+                <td data-field-name="table_item_payment" style="display: none">￥219.00</td>
+                <td data-field-name="table_item_discount" style="display: none">￥50.00</td>
+            </tr>
+            <tr>
+                <td data-field-name="table_item_id" style="display: none">6</td>
+                <td data-field-name="table_item_pic" style="display: none"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB17L7VGXXXXXXmXVXXXXXXXXXX_!!0-item_pic.jpg_sum.jpg" alt="" style="width: 50px; height: 50px" /></td>
+                <td class="ft-left" data-field-name="table_item_title" style="display: none">女士包包2014新款潮真皮女包时尚手提包女包新款包邮单肩包女大包</td>
+                <td data-field-name="table_item_short_title" style="display: none">简称</td>
+                <td class="ft-left" data-field-name="table_item_properties" style="display: none">
+                    颜色：红色<br>
+                    尺码：M码
+                </td>
+                <td data-field-name="table_item_outer_id" style="display: none">0001</td>
+                <td data-field-name="table_item_num" style="display: none">1</td>
+                <td data-field-name="table_item_price" style="display: none">￥269.00</td>
+                <td data-field-name="table_item_payment" style="display: none">￥219.00</td>
+                <td data-field-name="table_item_discount" style="display: none">￥50.00</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="pd_10 ft-center" style="border: 1px solid #bdbdbd; border-top: none">
+            <span class="mr_30" data-field-name="item_num_total" style="display: none">宝贝总数：6</span>
+            <span class="mr_30" data-field-name="item_payment_total" style="display: none">实付总额：￥425.00</span>
+            <span class="mr_30" data-field-name="item_discount_total" style="display: none">优惠总额：￥55.00</span>
+            <span class="mr_30" data-field-name="package_weight" style="display: none">宝贝重量：10kg</span>
+            <!--<span data-field-name="post_fee" style="display: none">邮费：￥15.00</span>--></div>
+    </div>
+    <div id="deliver-footer">
+        <div class="info-list">
+            <ul>
+                <li style="width: 100%; display: none" data-field-name="trade_shop_promotion">赠品：3双袜子</li>
+                <li style="width: 100%; display: none" data-field-name="trade_buyer_message">买家留言：请发圆通快递，多谢！！！！</li>
+                <li style="width: 100%; display: none; padding-bottom: 10px" data-field-name="trade_seller_memo">卖家备注：改发圆通</li>
+                <li data-field-name="seller_nick" style="display: none; width: 50%;">卖家旺旺：guanghua2ccc</li>
+                <li data-field-name="send_name" style="display: none; width: 50%;">卖家姓名：刘德华</li>
+                <li data-field-name="send_mobile" style="display: none; width: 50%;">卖家手机：13186978826</li>
+                <li data-field-name="send_phone" style="display: none; width: 50%;">卖家电话：0571-88995530</li>
+                <li data-field-name="shop_title" style="display: none; width: 50%;">店铺名称：巴拉巴拉一段店铺名称</li>
+                <li data-field-name="send_zip" style="display: none; width: 50%;">卖家邮编：123456</li>
+                <li style="width: 100%;display: none" data-field-name="send_address">发货地址：湖南省长沙市岳麓区*****</li>
+                <li style="width: 100%;display: none" data-field-name="trade_invoice_title">发票抬头：***科技有限公司</li>
+                <li style="width: 100%;display: none" data-field-name="trade_express_info">物流信息: 圆通快递</li>
+            </ul>
+        </div>
+        <div class="shop-order-footer">
+            <textarea data-field-name="custom_content" style="display: none" placeholder="自定义内容"></textarea>
+        </div>
+    </div>
+</div>

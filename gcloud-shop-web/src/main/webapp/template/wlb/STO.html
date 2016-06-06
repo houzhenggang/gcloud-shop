@@ -1,0 +1,1 @@
+<dl act-loop="item in list"><dt>{{item.title}}<span>ˇ</span></dt><dd><div act-loop="setting in item.fieldSettingsList" class="item"><label><input type="checkbox" data-field-name="{{setting.field}}" /><span class="editable-description">{{setting.description}}</span></label><span act-if="setting.edit == true" class="edit-icon"></span></div></dd></dl>
