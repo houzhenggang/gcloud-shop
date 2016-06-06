@@ -99,4 +99,12 @@
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/views/" p:suffix=".jsp"/>
 
     <mvc:resources mapping="/demo/**" location="/demo/" />
+    <mvc:resources mapping="/images/**" location="/images/" />
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+    <mvc:resources mapping="/samples/**" location="/samples/" />
+    <mvc:resources mapping="/shop/**" location="/shop/" />
+    <mvc:resources mapping="/static/**" location="/static/" />
+    <mvc:resources mapping="/template/**" location="/template/" />
+    <mvc:resources mapping="/install_lodop32.exe" location="/install_lodop32.exe" />
+    <mvc:resources mapping="/install_lodop64.exe" location="/install_lodop64.exe" />
 </beans>
