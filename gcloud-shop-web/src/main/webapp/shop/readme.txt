@@ -1,1 +1,1 @@
-1. git submodule https://github.com/janenone/gcloud-shop-js.git
+1. submodule https://github.com/janenone/gcloud-shop-js.git

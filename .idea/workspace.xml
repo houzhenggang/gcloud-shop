@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/shop/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <caret line="0" column="22" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -76,6 +76,7 @@
         <option value="$PROJECT_DIR$/gcloud-shop-dao/src/main/resources/spring/spring-jdbc.xml" />
         <option value="$PROJECT_DIR$/gcloud-shop-web/pom.xml" />
         <option value="$PROJECT_DIR$/gcloud-shop-web/src/main/resources/spring/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/shop/readme.txt" />
       </list>
     </option>
   </component>
@@ -749,16 +750,16 @@
       <workItem from="1464939026797" duration="360000" />
       <workItem from="1464939540961" duration="2875000" />
       <workItem from="1465197534625" duration="4664000" />
-      <workItem from="1465263377016" duration="3897000" />
+      <workItem from="1465263377016" duration="3948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16098000" />
+    <option name="totallyTimeSpent" value="16149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1927" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1149,7 +1150,7 @@
     <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/shop/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="59" />
           <folding />
         </state>
       </provider>
