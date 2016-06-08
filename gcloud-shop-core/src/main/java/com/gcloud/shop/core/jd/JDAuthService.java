@@ -1,6 +1,7 @@
 package com.gcloud.shop.core.jd;
 
 import com.gcloud.shop.core.IOAuthService;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
  * @Description: ${TODO}(用一句话描述该文件做什么)
  * @date 2016/6/8 16:20
  */
+@Service("jdAuthService")
 public class JDAuthService implements IOAuthService {
 
     @Resource
