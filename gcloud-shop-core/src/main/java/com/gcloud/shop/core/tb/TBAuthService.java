@@ -49,9 +49,6 @@ public class TBAuthService implements IOAuthService {
     @Resource
     private TBClientHelper tbClientHelper;
 
-    @Resource
-    private TBIsvService tbIsvService;
-
     @Override
     public String authorize(String state) {
 
@@ -140,9 +137,9 @@ public class TBAuthService implements IOAuthService {
         paramsMap.put("visitor_nick", visitor_nick);
         paramsMap.put("visitor_id", visitor_id);
         paramsMap.put("source", (String) model.asMap().get("source"));
-        User user = tbIsvService.firstInit(visitor_nick, visitor_id);
+//        User user = tbIsvService.firstInit(visitor_nick, visitor_id);
         model.addAttribute("params", params);
         model.addAttribute("top_parameters", paramsMap);
-        model.addAttribute("user", user);
+//        model.addAttribute("user", user);
     }
 }

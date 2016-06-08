@@ -2,15 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edb5491-86cd-4545-8b30-c11d1a7bcd7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBIsvService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/utils/JsonUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/OAuthController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/auth2.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/auth2_cancel.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/auth2_forward.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/forward_index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_500.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_bindshop.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_bindshop_error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_failure.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_limitAccess.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_refresh.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_refresh_error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_shortsign.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_shortsign_error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_validate.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/sandbox_index_validate.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/sign_error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/uploadResult.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/user/user.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IsvService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDIsvService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBIsvService.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-core/gcloud-shop-core.iml" afterPath="$PROJECT_DIR$/gcloud-shop-core/gcloud-shop-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-core/pom.xml" afterPath="$PROJECT_DIR$/gcloud-shop-core/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-domain/src/main/java/com/gcloud/shop/domain/PlatformEnum.java" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/enums/PlatformEnum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java" />
     </list>
     <ignored path="gcloud-shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,23 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JDAuthService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TBAuthService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="24" />
+              <caret line="56" column="69" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,37 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TBIsvService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBIsvService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDIsvService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDIsvService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OAuthController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OAuthController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/OAuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5334773">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,31 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-core/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.357143">
-              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-web/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.035714">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/impl/AreaServiceImpl.java">
+      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/user/user.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="23" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -334,6 +291,134 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -630,11 +715,11 @@
       <recent name="com.gcloud.shop.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp\WEB-INF" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-core\src\main\java\com\gcloud\shop\core" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-api\src\main\java\com\gcloud\shop\api" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\resources\config" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp\shop" />
-      <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.gcloud-shop">
@@ -1116,12 +1201,12 @@
       <workItem from="1464939540961" duration="2875000" />
       <workItem from="1465197534625" duration="4664000" />
       <workItem from="1465263377016" duration="4955000" />
-      <workItem from="1465350687694" duration="22557000" />
+      <workItem from="1465350687694" duration="23863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39713000" />
+    <option name="totallyTimeSpent" value="41019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1135,7 +1220,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2328125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5676533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47991544" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5422833" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1144,7 +1229,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48520085" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48520085" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1165,8 +1250,14 @@
           <line>39</line>
           <properties />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/OAuthController.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1383,16 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IsvService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1519,16 +1600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBClientHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="183" column="37" selection-start-line="183" selection-start-column="37" selection-end-line="183" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/resources/spring/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2997544">
@@ -1581,48 +1652,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/pom.xml">
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.357143">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.9139535">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-web/pom.xml">
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.035714">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state vertical-scroll-proportion="1.0874404">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/impl/AreaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.34061137">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java">
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBClientHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="37" />
+        <state vertical-scroll-proportion="1.7117904">
+          <caret line="278" column="0" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBIsvService.java">
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.22196262">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1630,17 +1699,7 @@
     <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDIsvService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="56" column="69" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1649,11 +1708,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/OAuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5334773">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/user/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -4,8 +4,6 @@ import com.gcloud.shop.core.IOAuthService;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-import javax.annotation.Resource;
-
 /**
  * @author ChenJin
  * @version V1.0
@@ -16,9 +14,6 @@ import javax.annotation.Resource;
  */
 @Service("jdAuthService")
 public class JDAuthService implements IOAuthService {
-
-    @Resource
-    private JDIsvService jdIsvService;
 
     @Override
     public String authorize(String state) {
