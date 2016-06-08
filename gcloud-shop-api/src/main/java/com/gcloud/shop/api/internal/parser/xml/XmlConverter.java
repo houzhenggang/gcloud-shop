@@ -1,11 +1,11 @@
 package com.gcloud.shop.api.internal.parser.xml;
 
-import com.gcloud.shop.api.exception.GcloudException;
+import com.gcloud.shop.api.ApiException;
+import com.gcloud.shop.api.TaobaoResponse;
 import com.gcloud.shop.api.internal.mapping.Converter;
 import com.gcloud.shop.api.internal.mapping.Converters;
 import com.gcloud.shop.api.internal.mapping.Reader;
-import com.gcloud.shop.api.response.GcloudResponse;
-import com.gcloud.shop.api.utils.XmlUtils;
+import com.gcloud.shop.api.internal.util.XmlUtils;
 import org.w3c.dom.Element;
 
 import java.text.ParseException;
@@ -21,19 +21,19 @@ import java.util.List;
  * @Title: XmlConverter
  * @Package com.gcloud.shop.api.internal.parser.xml
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 14:11
+ * @date 2016/6/8 15:37
  */
 public class XmlConverter implements Converter {
-    
     public XmlConverter() {
     }
 
-    public <T extends GcloudResponse> T toResponse(String rsp, Class<T> clazz) throws GcloudException {
+    public <T extends TaobaoResponse> T toResponse(String rsp, Class<T> clazz) throws ApiException {
         Element root = XmlUtils.getRootElementFromString(rsp);
+        //mod by chenjin  return (TaobaoResponse)this.getModelFromXML(root, clazz)
         return (T)this.getModelFromXML(root, clazz);
     }
 
-    private <T> T getModelFromXML(final Element element, Class<T> clazz) throws GcloudException {
+    private <T> T getModelFromXML(final Element element, Class<T> clazz) throws ApiException {
         return element == null?null: Converters.convert(clazz, new Reader() {
             public boolean hasReturnField(Object name) {
                 Element childE = XmlUtils.getChildElement(element, (String)name);
@@ -44,12 +44,12 @@ public class XmlConverter implements Converter {
                 return XmlUtils.getChildElementValue(element, (String)name);
             }
 
-            public Object getObject(Object name, Class<?> type) throws GcloudException {
+            public Object getObject(Object name, Class<?> type) throws ApiException {
                 Element childE = XmlUtils.getChildElement(element, (String)name);
                 return childE != null?XmlConverter.this.getModelFromXML(childE, type):null;
             }
 
-            public List<?> getListObjects(Object listName, Object itemName, Class<?> subType) throws GcloudException {
+            public List<?> getListObjects(Object listName, Object itemName, Class<?> subType) throws ApiException {
                 ArrayList list = null;
                 Element listE = XmlUtils.getChildElement(element, (String)listName);
                 if(listE != null) {
@@ -75,7 +75,7 @@ public class XmlConverter implements Converter {
                             try {
                                 obj = format.parse(value);
                             } catch (ParseException var13) {
-                                throw new GcloudException(var13);
+                                throw new ApiException(var13);
                             }
                         } else {
                             obj = XmlConverter.this.getModelFromXML(itemE, subType);

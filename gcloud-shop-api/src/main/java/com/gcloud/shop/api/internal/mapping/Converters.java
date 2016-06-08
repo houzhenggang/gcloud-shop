@@ -1,8 +1,8 @@
 package com.gcloud.shop.api.internal.mapping;
 
-import com.gcloud.shop.api.exception.GcloudException;
-import com.gcloud.shop.api.response.GcloudResponse;
-import com.gcloud.shop.api.utils.StringUtils;
+import com.gcloud.shop.api.ApiException;
+import com.gcloud.shop.api.TaobaoResponse;
+import com.gcloud.shop.api.internal.util.StringUtils;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Title: Converters
  * @Package com.gcloud.shop.api.internal.mapping
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:50
+ * @date 2016/6/8 15:34
  */
 public class Converters {
 
@@ -32,7 +32,7 @@ public class Converters {
     private Converters() {
     }
 
-    public static <T> T convert(Class<T> clazz, Reader reader) throws GcloudException {
+    public static <T> T convert(Class<T> clazz, Reader reader) throws ApiException {
         Object rsp = null;
 
         try {
@@ -49,8 +49,8 @@ public class Converters {
                     String itemName = pd.getName();
                     String listName = null;
                     Field field;
-                    if(baseFields.contains(itemName) && GcloudResponse.class.isAssignableFrom(clazz)) {
-                        field = getField(GcloudResponse.class, pd);
+                    if(baseFields.contains(itemName) && TaobaoResponse.class.isAssignableFrom(clazz)) {
+                        field = getField(TaobaoResponse.class, pd);
                     } else {
                         field = getField(clazz, pd);
                     }
@@ -74,7 +74,7 @@ public class Converters {
                                 method.invoke(rsp, new Object[]{obj.toString()});
                             } else {
                                 if(isCheckJsonType && obj != null) {
-                                    throw new GcloudException(itemName + " is not a String");
+                                    throw new ApiException(itemName + " is not a String");
                                 }
 
                                 if(obj != null) {
@@ -89,7 +89,7 @@ public class Converters {
                                 method.invoke(rsp, new Object[]{(Long)obj});
                             } else {
                                 if(isCheckJsonType && obj != null) {
-                                    throw new GcloudException(itemName + " is not a Number(Long)");
+                                    throw new ApiException(itemName + " is not a Number(Long)");
                                 }
 
                                 if(StringUtils.isNumeric(obj)) {
@@ -102,7 +102,7 @@ public class Converters {
                                 method.invoke(rsp, new Object[]{(Integer)obj});
                             } else {
                                 if(isCheckJsonType && obj != null) {
-                                    throw new GcloudException(itemName + " is not a Number(Integer)");
+                                    throw new ApiException(itemName + " is not a Number(Integer)");
                                 }
 
                                 if(StringUtils.isNumeric(obj)) {
@@ -115,7 +115,7 @@ public class Converters {
                                 method.invoke(rsp, new Object[]{(Boolean)obj});
                             } else {
                                 if(isCheckJsonType && obj != null) {
-                                    throw new GcloudException(itemName + " is not a Boolean");
+                                    throw new ApiException(itemName + " is not a Boolean");
                                 }
 
                                 if(obj != null) {
@@ -127,14 +127,14 @@ public class Converters {
                             if(obj instanceof Double) {
                                 method.invoke(rsp, new Object[]{(Double)obj});
                             } else if(isCheckJsonType && obj != null) {
-                                throw new GcloudException(itemName + " is not a Double");
+                                throw new ApiException(itemName + " is not a Double");
                             }
                         } else if(Number.class.isAssignableFrom(typeClass)) {
                             obj = reader.getPrimitiveObject(itemName);
                             if(obj instanceof Number) {
                                 method.invoke(rsp, new Object[]{(Number)obj});
                             } else if(isCheckJsonType && obj != null) {
-                                throw new GcloudException(itemName + " is not a Number");
+                                throw new ApiException(itemName + " is not a Number");
                             }
                         } else if(Date.class.isAssignableFrom(typeClass)) {
                             SimpleDateFormat var23 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -165,9 +165,10 @@ public class Converters {
                     }
                 }
             }
-            return (T)rsp;//mod by ChenJin
+
+            return (T)rsp; //mod by chenjin
         } catch (Exception var21) {
-            throw new GcloudException(var21);
+            throw new ApiException(var21);
         }
     }
 
@@ -193,3 +194,4 @@ public class Converters {
         baseFields.add("topForbiddenFields");
     }
 }
+

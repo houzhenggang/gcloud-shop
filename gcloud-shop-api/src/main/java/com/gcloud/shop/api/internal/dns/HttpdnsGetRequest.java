@@ -1,8 +1,8 @@
 package com.gcloud.shop.api.internal.dns;
 
-import com.gcloud.shop.api.exception.GcloudRuleException;
-import com.gcloud.shop.api.request.GcloudRequest;
-import com.gcloud.shop.api.utils.GcloudHashMap;
+import com.gcloud.shop.api.ApiRuleException;
+import com.gcloud.shop.api.TaobaoRequest;
+import com.gcloud.shop.api.internal.util.TaobaoHashMap;
 
 import java.util.Map;
 
@@ -12,20 +12,15 @@ import java.util.Map;
  * @Title: HttpdnsGetRequest
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:42
+ * @date 2016/6/8 15:31
  */
-public class HttpdnsGetRequest implements GcloudRequest<HttpdnsGetResponse> {
+public class HttpdnsGetRequest implements TaobaoRequest<HttpdnsGetResponse> {
 
-    private Map<String, String> headerMap = new GcloudHashMap();
-    private GcloudHashMap udfParams;
+    private Map<String, String> headerMap = new TaobaoHashMap();
+    private TaobaoHashMap udfParams;
     private Long timestamp;
 
     public HttpdnsGetRequest() {
-    }
-
-    @Override
-    public String getMethodName() {
-        return null;
     }
 
     public Long getTimestamp() {
@@ -41,7 +36,7 @@ public class HttpdnsGetRequest implements GcloudRequest<HttpdnsGetResponse> {
     }
 
     public Map<String, String> getTextParams() {
-        GcloudHashMap txtParams = new GcloudHashMap();
+        TaobaoHashMap txtParams = new TaobaoHashMap();
         if(this.udfParams != null) {
             txtParams.putAll(this.udfParams);
         }
@@ -51,7 +46,7 @@ public class HttpdnsGetRequest implements GcloudRequest<HttpdnsGetResponse> {
 
     public void putOtherTextParam(String key, String value) {
         if(this.udfParams == null) {
-            this.udfParams = new GcloudHashMap();
+            this.udfParams = new TaobaoHashMap();
         }
 
         this.udfParams.put(key, value);
@@ -61,7 +56,7 @@ public class HttpdnsGetRequest implements GcloudRequest<HttpdnsGetResponse> {
         return HttpdnsGetResponse.class;
     }
 
-    public void check() throws GcloudRuleException {
+    public void check() throws ApiRuleException {
     }
 
     public Map<String, String> getHeaderMap() {

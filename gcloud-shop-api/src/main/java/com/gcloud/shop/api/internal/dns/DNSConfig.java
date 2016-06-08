@@ -14,26 +14,20 @@ import java.util.*;
  * @Title: DNSConfig
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:41
+ * @date 2016/6/8 15:30
  */
-public class DNSConfig  implements Serializable {
+public class DNSConfig implements Serializable {
 
-    private static final long serialVersionUID = 6310378492830911768L;
 
     private static final Log log = LogFactory.getLog(DNSConfig.class);
+    private static final long serialVersionUID = 6310378492830911768L;
 
     private Boolean isDisable = null;
-
     private Double precision = Double.valueOf(10000.0D);
-
     private Random random = new Random();
-
     private Map<String, List<EnvConfig>> env;
-
     private Map<String, ApiConfig> api;
-
     private Map<String, Map<String, List<String>>> user;
-
     private Map<String, String> config;
 
     public DNSConfig() {

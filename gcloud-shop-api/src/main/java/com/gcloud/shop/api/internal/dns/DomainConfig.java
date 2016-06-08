@@ -10,7 +10,7 @@ import java.util.List;
  * @Title: DomainConfig
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:42
+ * @date 2016/6/8 15:31
  */
 public class DomainConfig {
 

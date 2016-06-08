@@ -6,7 +6,7 @@ package com.gcloud.shop.api.internal.dns;
  * @Title: ApiRule
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:39
+ * @date 2016/6/8 15:26
  */
 public class ApiRule {
 

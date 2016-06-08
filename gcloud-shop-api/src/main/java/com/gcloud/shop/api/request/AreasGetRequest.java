@@ -1,8 +1,10 @@
 package com.gcloud.shop.api.request;
 
-import com.gcloud.shop.api.exception.GcloudRuleException;
+import com.gcloud.shop.api.ApiRuleException;
+import com.gcloud.shop.api.TaobaoRequest;
+import com.gcloud.shop.api.internal.util.RequestCheckUtils;
+import com.gcloud.shop.api.internal.util.TaobaoHashMap;
 import com.gcloud.shop.api.response.AreasGetResponse;
-import com.gcloud.shop.api.utils.GcloudHashMap;
 
 import java.util.Map;
 
@@ -12,68 +14,66 @@ import java.util.Map;
  * @Title: AreasGetRequest
  * @Package com.gcloud.shop.api.request
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 11:07
+ * @date 2016/6/8 15:46
  */
-public class AreasGetRequest implements GcloudRequest<AreasGetResponse> {
+public class AreasGetRequest implements TaobaoRequest<AreasGetResponse> {
 
-    /**
-     *
-     */
-    private Map<String, String> headerMap = new GcloudHashMap();
+    public AreasGetRequest() {
 
-    /**
-     *
-     */
-    private GcloudHashMap udfParams;
-
-    /**
-     *
-     */
-    private Long timestamp;
-
-    /**
-     *
-     */
-    private String fields;
-
-    @Override
-    public String getMethodName() {
-        return "gcloud.areas.get";
     }
 
-    @Override
+    private Map<String, String> headerMap = new TaobaoHashMap();
+    private TaobaoHashMap udfParams;
+    private Long timestamp;
+    private String fields;
+
+    public void setFields(String fields) {
+        this.fields = fields;
+    }
+
+    public String getFields() {
+        return this.fields;
+    }
+
     public Long getTimestamp() {
         return this.timestamp;
     }
 
-    @Override
     public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 
-    @Override
-    public void check() throws GcloudRuleException {
-
+    public String getApiMethodName() {
+        return "taobao.areas.get";
     }
 
-    @Override
     public Map<String, String> getTextParams() {
-        return null;
+        TaobaoHashMap txtParams = new TaobaoHashMap();
+        txtParams.put("fields", this.fields);
+        if(this.udfParams != null) {
+            txtParams.putAll(this.udfParams);
+        }
+
+        return txtParams;
     }
 
-    @Override
-    public void putOtherTextParam(String var1, String var2) {
+    public void putOtherTextParam(String key, String value) {
+        if(this.udfParams == null) {
+            this.udfParams = new TaobaoHashMap();
+        }
 
+        this.udfParams.put(key, value);
     }
 
-    @Override
-    public Map<String, String> getHeaderMap() {
-        return null;
-    }
-
-    @Override
     public Class<AreasGetResponse> getResponseClass() {
         return AreasGetResponse.class;
     }
 
+    public void check() throws ApiRuleException {
+        RequestCheckUtils.checkNotEmpty(this.fields, "fields");
+    }
+
+    public Map<String, String> getHeaderMap() {
+        return this.headerMap;
+    }
 }

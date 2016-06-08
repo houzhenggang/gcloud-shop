@@ -1,6 +1,7 @@
 package com.gcloud.shop.api.internal.dns;
 
-import com.gcloud.shop.api.response.GcloudResponse;
+import com.gcloud.shop.api.TaobaoResponse;
+import com.gcloud.shop.api.internal.mapping.ApiField;
 
 /**
  * @author ChenJin
@@ -8,13 +9,13 @@ import com.gcloud.shop.api.response.GcloudResponse;
  * @Title: HttpdnsGetResponse
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:43
+ * @date 2016/6/8 15:32
  */
-public class HttpdnsGetResponse extends GcloudResponse {
+public class HttpdnsGetResponse extends TaobaoResponse {
 
     private static final long serialVersionUID = 52907500325908892L;
 
-    //    @ApiField("result")
+    @ApiField("result")
     private String result;
 
     public HttpdnsGetResponse() {

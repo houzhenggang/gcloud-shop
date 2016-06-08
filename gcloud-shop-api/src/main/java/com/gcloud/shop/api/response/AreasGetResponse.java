@@ -1,8 +1,10 @@
 package com.gcloud.shop.api.response;
 
-import com.gcloud.shop.domain.Area;
-
-import java.util.List;
+import com.gcloud.shop.api.TaobaoResponse;
+import com.gcloud.shop.api.domain.Area;
+import com.gcloud.shop.api.internal.mapping.ApiField;
+import com.gcloud.shop.api.internal.mapping.ApiListField;
+import com.sun.tools.javac.util.List;
 
 /**
  * @author ChenJin
@@ -10,24 +12,24 @@ import java.util.List;
  * @Title: AreasGetResponse
  * @Package com.gcloud.shop.api.response
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 11:07
+ * @date 2016/6/8 15:46
  */
-public class AreasGetResponse extends GcloudResponse {
+public class AreasGetResponse extends TaobaoResponse {
 
-    private static final long serialVersionUID = 5851371248926479165L;
+    private static final long serialVersionUID = -4297589920174859505L;
 
-    public AreasGetResponse(){
+    @ApiListField("areas")
+    @ApiField("area")
+    private List<Area> areas;
 
+    public AreasGetResponse() {
     }
 
-    public List<Area> getAreaList() {
-        return areaList;
+    public void setAreas(List<Area> areas) {
+        this.areas = areas;
     }
 
-    private List<Area> areaList;
-
-    public void setAreaList(List<Area> areaList) {
-        this.areaList = areaList;
+    public List<Area> getAreas() {
+        return this.areas;
     }
-
 }

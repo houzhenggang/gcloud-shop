@@ -6,7 +6,7 @@ package com.gcloud.shop.api.internal.dns;
  * @Title: VIPRule
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:45
+ * @date 2016/6/8 15:33
  */
 public class VIPRule {
 

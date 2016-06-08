@@ -1,8 +1,8 @@
 package com.gcloud.shop.api.internal.dns;
 
-import com.gcloud.shop.api.DefaultGcloudClient;
-import com.gcloud.shop.api.exception.GcloudException;
-import com.gcloud.shop.api.utils.GcloudUtils;
+import com.gcloud.shop.api.ApiException;
+import com.gcloud.shop.api.DefaultTaobaoClient;
+import com.gcloud.shop.api.internal.util.TaobaoUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -16,7 +16,7 @@ import java.util.Random;
  * @Title: AutoUpdateConfigThread
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:40
+ * @date 2016/6/8 15:33
  */
 public class AutoUpdateConfigThread extends Thread {
 
@@ -25,10 +25,10 @@ public class AutoUpdateConfigThread extends Thread {
     private Random random = new Random();
     private HttpdnsGetRequest request = new HttpdnsGetRequest();
     private static DNSConfig config = null;
-    private DefaultGcloudClient client = null;
+    private DefaultTaobaoClient client = null;
     private static AutoUpdateConfigThread thread = null;
 
-    public static AutoUpdateConfigThread getInstance(String name, DefaultGcloudClient client) throws GcloudException {
+    public static AutoUpdateConfigThread getInstance(String name, DefaultTaobaoClient client) throws ApiException {
         if(thread == null || !thread.isAlive()) {
             config = ClusterUtils.init();
             thread = new AutoUpdateConfigThread(name, client);
@@ -41,7 +41,7 @@ public class AutoUpdateConfigThread extends Thread {
         return thread;
     }
 
-    private AutoUpdateConfigThread(String name, DefaultGcloudClient client) {
+    private AutoUpdateConfigThread(String name, DefaultTaobaoClient client) {
         super(name);
         this.client = client;
     }
@@ -76,7 +76,7 @@ public class AutoUpdateConfigThread extends Thread {
                     }
 
                     if(e != null) {
-                        this.updateConfig(GcloudUtils.parseConfig(e.getResult()));
+                        this.updateConfig(TaobaoUtils.parseConfig(e.getResult()));
                         ClusterUtils.saveToFile(e.getResult());
                         if(config != null) {
                             this.interval = Integer.valueOf((String)config.getConfig().get("interval"));
@@ -121,3 +121,4 @@ public class AutoUpdateConfigThread extends Thread {
         return config;
     }
 }
+

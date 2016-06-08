@@ -11,10 +11,11 @@ import java.lang.annotation.Target;
  * @Title: ApiField
  * @Package com.gcloud.shop.api.internal.mapping
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:48
+ * @date 2016/6/8 15:33
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 public @interface ApiField {
+
     String value() default "";
 }

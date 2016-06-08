@@ -1,6 +1,6 @@
 package com.gcloud.shop.api;
 
-import com.gcloud.shop.api.utils.GcloudUtils;
+import com.gcloud.shop.api.internal.util.TaobaoUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -13,7 +13,7 @@ import java.io.IOException;
  * @Title: FileItem
  * @Package com.gcloud.shop.api
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 11:37
+ * @date 2016/6/8 15:15
  */
 public class FileItem {
 
@@ -50,7 +50,7 @@ public class FileItem {
 
     public String getMimeType() throws IOException {
         if(this.mimeType == null) {
-            this.mimeType = GcloudUtils.getMimeType(this.getContent());
+            this.mimeType = TaobaoUtils.getMimeType(this.getContent());
         }
 
         return this.mimeType;
@@ -82,6 +82,7 @@ public class FileItem {
 
             }
         }
+
         return this.content;
     }
 }

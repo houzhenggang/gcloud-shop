@@ -1,7 +1,7 @@
 package com.gcloud.shop.api.internal.dns;
 
-import com.gcloud.shop.api.exception.GcloudException;
-import com.gcloud.shop.api.utils.GcloudUtils;
+import com.gcloud.shop.api.ApiException;
+import com.gcloud.shop.api.internal.util.TaobaoUtils;
 
 import java.io.*;
 import java.util.HashMap;
@@ -16,10 +16,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Title: ClusterUtils
  * @Package com.gcloud.shop.api.internal.dns
  * @Description: ${TODO}(用一句话描述该文件做什么)
- * @date 2016/6/8 13:40
+ * @date 2016/6/8 15:30
  */
 public class ClusterUtils {
-
     public static Map<String, DNSConfig> configMap = new HashMap();
     public static Map<String, AtomicInteger> callErrorMap = new ConcurrentHashMap();
     private static String dnsConfigFilePath;
@@ -27,7 +26,7 @@ public class ClusterUtils {
     public ClusterUtils() {
     }
 
-    public static void saveToFile(String config) throws GcloudException, IOException {
+    public static void saveToFile(String config) throws ApiException, IOException {
         FileOutputStream fos = null;
         BufferedWriter bws = null;
 
@@ -56,7 +55,7 @@ public class ClusterUtils {
 
     }
 
-    public static DNSConfig init() throws GcloudException {
+    public static DNSConfig init() throws ApiException {
         if(configMap.size() != 0) {
             return (DNSConfig)configMap.get("httpdns");
         } else {
@@ -79,14 +78,14 @@ public class ClusterUtils {
                         }
 
                         if(e.length() > 0) {
-                            config = GcloudUtils.parseConfig(e.toString());
+                            config = TaobaoUtils.parseConfig(e.toString());
                         }
                         break label147;
                     }
 
                     e = null;
                 } catch (Exception var15) {
-                    throw new GcloudException(var15);
+                    throw new ApiException(var15);
                 } finally {
                     try {
                         if(bis != null) {
@@ -101,7 +100,6 @@ public class ClusterUtils {
                     }
 
                 }
-
 //                return e;//mod by chenjin
             }
 
@@ -113,7 +111,7 @@ public class ClusterUtils {
         }
     }
 
-    public static String transferServerUrlToIp(String serverUrl, String apiName, String session, DNSConfig config) throws GcloudException {
+    public static String transferServerUrlToIp(String serverUrl, String apiName, String session, DNSConfig config) throws ApiException {
         String userFlag = null;
         if(session != null && session.length() > 5) {
             if(!session.startsWith("6") && !session.startsWith("7")) {
@@ -175,3 +173,4 @@ public class ClusterUtils {
         dnsConfigFilePath = System.getProperty("user.dir") + File.separator + "TOPDNSConfig" + File.separator + "config.cnf";
     }
 }
+
