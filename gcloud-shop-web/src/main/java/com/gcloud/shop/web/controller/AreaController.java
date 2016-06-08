@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 
@@ -41,11 +42,21 @@ public class AreaController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public Object login(HttpServletRequest request, User user) {
+    public Object login(HttpServletRequest request, HttpServletResponse response, User user) {
 
         List<Area> areaList =areaService.queryAreaList(new HashMap<String, Object>());
         log.info(areaList.size());
         return areaList;
     }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @ResponseBody
+    public Object quest(HttpServletRequest request, HttpServletResponse response, User user) {
+
+        List<Area> areaList =areaService.queryAreaList(new HashMap<String, Object>());
+        log.info(areaList.size());
+        return areaList;
+    }
+
 
 }
