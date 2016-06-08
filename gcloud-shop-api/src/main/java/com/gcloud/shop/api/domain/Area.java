@@ -15,6 +15,10 @@ public class Area extends TaobaoObject {
 
     private static final long serialVersionUID = 7997392486199611460L;
 
+    public Area() {
+
+    }
+
     @ApiField("id")
     private Long id;
     @ApiField("name")
@@ -25,10 +29,6 @@ public class Area extends TaobaoObject {
     private Long type;
     @ApiField("zip")
     private String zip;
-
-    public Area() {
-
-    }
 
     public Long getId() {
         return this.id;
@@ -69,4 +69,5 @@ public class Area extends TaobaoObject {
     public void setZip(String zip) {
         this.zip = zip;
     }
+
 }

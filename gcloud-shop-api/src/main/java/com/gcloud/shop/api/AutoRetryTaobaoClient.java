@@ -1,7 +1,7 @@
 package com.gcloud.shop.api;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
 import java.util.Set;
@@ -15,7 +15,8 @@ import java.util.Set;
  * @date 2016/6/8 15:14
  */
 public class AutoRetryTaobaoClient extends DefaultTaobaoClient {
-    private static final Log log = LogFactory.getLog(AutoRetryTaobaoClient.class);
+
+    private static final Logger logger = LogManager.getLogger(AutoRetryTaobaoClient.class);
     private static final ApiException RETRY_FAIL = new ApiException("sdk.retry-call-fail", "API调用重试失败");
     private int maxRetryCount = 3;
     private long retryWaitTime = 100L;
@@ -53,7 +54,7 @@ public class AutoRetryTaobaoClient extends DefaultTaobaoClient {
                 }
 
                 this.sleepWithoutInterrupt(this.retryWaitTime);
-                log.warn(this.buildRetryLog(request.getApiMethodName(), request.getTextParams(), i));
+                logger.warn(this.buildRetryLog(request.getApiMethodName(), request.getTextParams(), i));
             }
 
             try {

@@ -2,75 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edb5491-86cd-4545-8b30-c11d1a7bcd7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/ApiException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/ApiRuleException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryClusterTaobaoClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/ClusterTaobaoClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/TaobaoClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/TaobaoParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/TaobaoRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/TaobaoUploadRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/domain/Area.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/json/JsonConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/AtsUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/NamedThreadFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoContext.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/GcloudClient.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/GcloudUploadRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/exception/GcloudException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/exception/GcloudRuleException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/GcloudParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/JsonConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/request/GcloudRequest.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IOAuthService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IsvService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDIsvService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAccessException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBClientHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBConstant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/W2InvalidateException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/gcloud_shop_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/gcloud_shop_web_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/gcloud-shop-api.iml" afterPath="$PROJECT_DIR$/gcloud-shop-api/gcloud-shop-api.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/pom.xml" afterPath="$PROJECT_DIR$/gcloud-shop-api/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/Constants.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/FileItem.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/FileItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiConfig.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiRule.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/AutoUpdateConfigThread.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/AutoUpdateConfigThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ClusterUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ClusterUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/domain/Area.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/domain/Area.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DNSConfig.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DNSConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DomainConfig.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DomainConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/EnvConfig.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/EnvConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetRequest.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetResponse.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/VIPRule.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/VIPRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiField.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiListField.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiListField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Converter.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Converter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Converters.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Converters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Reader.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Reader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/xml/ObjectXmlParser.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/xml/ObjectXmlParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/xml/XmlConverter.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/xml/XmlConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/request/AreasGetRequest.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/request/AreasGetRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/AreasGetResponse.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/AreasGetResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/DefaultGcloudClient.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/DefaultTaobaoClient.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/GcloudObject.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/TaobaoObject.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/ObjectJsonParser.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/json/ObjectJsonParser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/SimplifyJsonConverter.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/json/SimplifyJsonConverter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/GcloudResponse.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/TaobaoResponse.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/Base64.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/Base64.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/GcloudHashMap.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoHashMap.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/GcloudLogger.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/GcloudUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/RequestCheckUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/RequestCheckUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/RequestParametersHolder.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/RequestParametersHolder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/StringUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/StringUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/WebUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/WebUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/XmlUtils.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/BufferErrorListener.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/BufferErrorListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/ExceptionErrorListener.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/ExceptionErrorListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/JSONErrorListener.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONErrorListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/JSONReader.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/JSONValidatingReader.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidatingReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/JSONValidatingWriter.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidatingWriter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/JSONValidator.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/JSONWriter.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONWriter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/utils/json/StdoutStreamErrorListener.java" afterPath="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/StdoutStreamErrorListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-core/gcloud-shop-core.iml" afterPath="$PROJECT_DIR$/gcloud-shop-core/gcloud-shop-core.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-dao/gcloud-shop-dao.iml" afterPath="$PROJECT_DIR$/gcloud-shop-dao/gcloud-shop-dao.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-domain/gcloud-shop-domain.iml" afterPath="$PROJECT_DIR$/gcloud-shop-domain/gcloud-shop-domain.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-domain/pom.xml" afterPath="$PROJECT_DIR$/gcloud-shop-domain/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-web/gcloud-shop-web.iml" afterPath="$PROJECT_DIR$/gcloud-shop-web/gcloud-shop-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/AreaController.java" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/AreaController.java" />
     </list>
     <ignored path="gcloud-shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="XmlConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/xml/XmlConverter.java">
+      <file leaf-file-name="AutoRetryTaobaoClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="25" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="25" />
+              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,11 +69,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaobaoUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoUtils.java">
+      <file leaf-file-name="AreasGetResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/AreasGetResponse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="362" column="24" selection-start-line="362" selection-start-column="7" selection-end-line="362" selection-end-column="24" />
+              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AreaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/AreaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,11 +91,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/WebUtils.java">
+      <file leaf-file-name="TBClientHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBClientHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="89" selection-start-line="121" selection-start-column="89" selection-end-line="121" selection-end-column="89" />
+              <caret line="183" column="37" selection-start-line="183" selection-start-column="37" selection-end-line="183" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/resources/spring/spring-mvc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.2997544">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpiUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="78" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaobaoLogger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DNSConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DNSConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="79" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,77 +153,7 @@
         <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoRetryClusterTaobaoClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryClusterTaobaoClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="25" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoRetryTaobaoClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClusterTaobaoClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/ClusterTaobaoClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultTaobaoClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/DefaultTaobaoClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreasGetResponse.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/AreasGetResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56276447">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+              <caret line="36" column="78" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -238,20 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DNSConfig.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DomainConfig.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/EnvConfig.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/VIPRule.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiField.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiListField.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/ExceptionErrorListener.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONErrorListener.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONReader.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidatingReader.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidatingWriter.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidator.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/StdoutStreamErrorListener.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/BufferErrorListener.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/Base64.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/NamedThreadFactory.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/RequestParametersHolder.java" />
@@ -259,7 +189,6 @@
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoContext.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoHashMap.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/request/AreasGetRequest.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/domain/Area.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/AutoUpdateConfigThread.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetRequest.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetResponse.java" />
@@ -268,11 +197,8 @@
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Reader.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/json/ObjectJsonParser.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/xml/ObjectXmlParser.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/pom.xml" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/AtsUtils.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/RequestCheckUtils.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/FileItem.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/TaobaoResponse.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ClusterUtils.java" />
@@ -282,13 +208,31 @@
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/parser/xml/XmlConverter.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoUtils.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/WebUtils.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONWriter.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryClusterTaobaoClient.java" />
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/ClusterTaobaoClient.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/DefaultTaobaoClient.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/domain/Area.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IOAuthService.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthInfo.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IsvService.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDIsvService.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthInfo.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAccessException.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBConstant.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBClientHelper.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/W2InvalidateException.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/pom.xml" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/GcloudLogger.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DNSConfig.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/AreasGetResponse.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/AreaController.java" />
       </list>
     </option>
   </component>
@@ -433,6 +377,450 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exception" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gcloud-shop-api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -467,6 +855,230 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="request" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gcloud-shop-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -494,11 +1106,11 @@
       <recent name="com.gcloud.shop.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\gcloud-shop\gcloud-shop-core\src\main\java\com\gcloud\shop\core" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-api\src\main\java\com\gcloud\shop\api" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\resources\config" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp\shop" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp" />
-      <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.gcloud-shop">
@@ -980,12 +1592,12 @@
       <workItem from="1464939540961" duration="2875000" />
       <workItem from="1465197534625" duration="4664000" />
       <workItem from="1465263377016" duration="4955000" />
-      <workItem from="1465350687694" duration="17182000" />
+      <workItem from="1465350687694" duration="20243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34338000" />
+    <option name="totallyTimeSpent" value="37399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -999,9 +1611,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2328125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5676533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21987315" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47991544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1030,211 +1642,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/ApiListField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/ExceptionErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidatingReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidatingWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/StdoutStreamErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/BufferErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONErrorListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/Base64.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/NamedThreadFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/RequestParametersHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="1" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/request/AreasGetRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/domain/Area.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Converter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1261,16 +1668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/AutoUpdateConfigThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1286,7 +1683,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1309,24 +1706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.571428">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/AtsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1341,16 +1720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="176" column="81" selection-start-line="176" selection-start-column="81" selection-end-line="176" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1377,16 +1746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ClusterUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="43" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/mapping/Converters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1403,7 +1762,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1413,7 +1772,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="29" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1448,22 +1807,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/json/JSONWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1472,16 +1821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="54" column="25" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1506,13 +1845,280 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/AreasGetResponse.java">
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/domain/Area.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56276447">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ApiRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/AutoUpdateConfigThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/ClusterUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="43" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/request/AreasGetRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5811001">
+          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IOAuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IsvService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDIsvService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAccessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="192" column="24" selection-start-line="192" selection-start-column="24" selection-end-line="192" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/W2InvalidateException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="12.285714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.98275864">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.464286">
+          <caret line="56" column="24" selection-start-line="35" selection-start-column="7" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.107143">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.6/log4j-api-2.6.jar!/org/apache/logging/log4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="16.892857">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.6/log4j-api-2.6-sources.jar!/org/apache/logging/log4j/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/XmlUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="78" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/spi/SpiUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="78" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/util/TaobaoLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/DNSConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="79" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/AutoRetryTaobaoClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/response/AreasGetResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/java/com/gcloud/shop/web/controller/AreaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBClientHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="183" column="37" selection-start-line="183" selection-start-column="37" selection-end-line="183" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/resources/spring/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2997544">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -49,14 +49,4 @@ public class AreaController {
         return areaList;
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    @ResponseBody
-    public Object quest(HttpServletRequest request, HttpServletResponse response, User user) {
-
-        List<Area> areaList =areaService.queryAreaList(new HashMap<String, Object>());
-        log.info(areaList.size());
-        return areaList;
-    }
-
-
 }

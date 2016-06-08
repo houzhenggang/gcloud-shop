@@ -25,6 +25,7 @@
     <orderEntry type="module" module-name="gcloud-shop-core" />
     <orderEntry type="module" module-name="gcloud-shop-dao" />
     <orderEntry type="module" module-name="gcloud-shop-domain" />
+    <orderEntry type="module" module-name="gcloud-shop-api" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.3.0" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.39" level="project" />

@@ -1,8 +1,8 @@
 package com.gcloud.shop.api.internal.util;
 
 import com.gcloud.shop.api.ApiException;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -34,7 +34,7 @@ import java.util.Properties;
  */
 public class XmlUtils {
 
-    private static final Log log = LogFactory.getLog(XmlUtils.class);
+    private static final Logger logger = LogManager.getLogger(XmlUtils.class);
     private static final String XMLNS_XSI = "xmlns:xsi";
     private static final String XSI_SCHEMA_LOCATION = "xsi:schemaLocation";
     private static final String LOGIC_YES = "yes";
@@ -333,10 +333,9 @@ public class XmlUtils {
             Validator validator = schema.newValidator();
             validator.validate(new DOMSource(root));
         } catch (SAXException var10) {
-            if(log.isErrorEnabled()) {
-                log.error("验证XML文件出错：\n" + nodeToString(root));
+            if(logger.isErrorEnabled()) {
+                logger.error("验证XML文件出错：\n" + nodeToString(root));
             }
-
             throw new ApiException("XML_VALIDATE_ERROR", var10);
         } catch (Exception var11) {
             throw new ApiException("XML_READ_ERROR", var11);

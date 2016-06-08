@@ -3,8 +3,8 @@ package com.gcloud.shop.api.internal.spi;
 import com.gcloud.shop.api.internal.util.StringUtils;
 import com.gcloud.shop.api.internal.util.TaobaoUtils;
 import com.gcloud.shop.api.internal.util.WebUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -22,7 +22,7 @@ import java.util.*;
  */
 public class SpiUtils {
 
-    private static final Log log = LogFactory.getLog(SpiUtils.class);
+    private static final Logger logger = LogManager.getLogger(SpiUtils.class);
     private static final String TOP_SIGN_LIST = "top_sign_list";
     private static final String TOP_FIELD_SIGN = "sign";
     private static final String TOP_FIELD_TS = "timestamp";
@@ -65,7 +65,7 @@ public class SpiUtils {
             return true;
         } else {
             String paramStr = getParamStrFromMap(params);
-            log.error("checkTopSign error^_^remoteSign=" + remoteSign1 + "^_^localSign=" + localSign + "^_^paramStr=" + paramStr + "^_^body=" + body);
+            logger.error("checkTopSign error^_^remoteSign=" + remoteSign1 + "^_^localSign=" + localSign + "^_^paramStr=" + paramStr + "^_^body=" + body);
             return false;
         }
     }

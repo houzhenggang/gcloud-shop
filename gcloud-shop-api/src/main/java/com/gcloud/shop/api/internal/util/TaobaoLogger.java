@@ -1,8 +1,8 @@
 package com.gcloud.shop.api.internal.util;
 
 import com.gcloud.shop.api.TaobaoResponse;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -21,8 +21,10 @@ import java.util.*;
  */
 public class TaobaoLogger {
 
-    private static final Log clog = LogFactory.getLog("sdk.comm.err");
-    private static final Log blog = LogFactory.getLog("sdk.biz.err");
+    private static final Logger clogger = LogManager.getLogger(TaobaoLogger.class);
+    private static final Logger blogger = LogManager.getLogger(TaobaoLogger.class);
+//    private static final Log clog = LogFactory.getLog("sdk.comm.err");
+//    private static final Log blog = LogFactory.getLog("sdk.biz.err");
     private static String osName = System.getProperties().getProperty("os.name");
     private static String ip = null;
     private static boolean needEnableLogger = true;
@@ -136,7 +138,7 @@ public class TaobaoLogger {
         sb.append(rspCode);
         sb.append("^_^");
         sb.append((e.getMessage() + "").replaceAll("\r\n", " "));
-        clog.error(sb.toString());
+        clogger.error(sb.toString());
     }
 
     private static Map<String, String> parseParam(String contentString) {
@@ -170,7 +172,7 @@ public class TaobaoLogger {
             sb.append(df.format(new Date()));
             sb.append("^_^");
             sb.append(rsp);
-            blog.error(sb.toString());
+            blogger.error(sb.toString());
         }
     }
 
@@ -204,7 +206,7 @@ public class TaobaoLogger {
             sb.append("^_^");
             sb.append("Body:");
             sb.append(context.getResponseBody());
-            blog.error(sb.toString());
+            blogger.error(sb.toString());
         }
     }
 

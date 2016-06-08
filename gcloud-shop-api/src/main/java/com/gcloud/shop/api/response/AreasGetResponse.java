@@ -4,7 +4,7 @@ import com.gcloud.shop.api.TaobaoResponse;
 import com.gcloud.shop.api.domain.Area;
 import com.gcloud.shop.api.internal.mapping.ApiField;
 import com.gcloud.shop.api.internal.mapping.ApiListField;
-import com.sun.tools.javac.util.List;
+import java.util.List;
 
 /**
  * @author ChenJin

@@ -1,7 +1,7 @@
 package com.gcloud.shop.api.internal.dns;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.Serializable;
 import java.net.URI;
@@ -19,7 +19,7 @@ import java.util.*;
 public class DNSConfig implements Serializable {
 
 
-    private static final Log log = LogFactory.getLog(DNSConfig.class);
+    private static final Logger logger = LogManager.getLogger(DNSConfig.class);
     private static final long serialVersionUID = 6310378492830911768L;
 
     private Boolean isDisable = null;
@@ -179,7 +179,7 @@ public class DNSConfig implements Serializable {
         try {
             uri = new URI(serverUrl);
         } catch (URISyntaxException var7) {
-            log.error("Server Url parse ERROR,please check!");
+            logger.error("Server Url parse ERROR,please check!");
             return null;
         }
 

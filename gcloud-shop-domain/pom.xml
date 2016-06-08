@@ -27,6 +27,12 @@
     </developers>
 
     <dependencies>
+        <dependency>
+            <groupId>com.gcloud</groupId>
+            <artifactId>gcloud-shop-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- log start -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
