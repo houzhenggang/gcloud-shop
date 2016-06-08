@@ -2,30 +2,142 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edb5491-86cd-4545-8b30-c11d1a7bcd7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/auth2.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/auth2_cancel.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/auth2_forward.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/forward_index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_500.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_bindshop.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_bindshop_error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_failure.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_limitAccess.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_refresh.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_refresh_error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_shortsign.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_shortsign_error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/index_validate.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/sandbox_index_validate.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/sign_error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/uploadResult.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/user/user.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/IsvService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDIsvService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBIsvService.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/CRE2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/DBL.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/EYB2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/FAST201301.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/FEDEX.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/Fast230127.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/GDEMS.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/GTO1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/GTO2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/HTKY2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/HTKY230127.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/LB.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/LB1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/LBWL.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/LBWL1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/NEDA.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/POST.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/POSTB.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/QFKD2012.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/QFKD2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/QFKD201601.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/QRT1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/SF01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/SF2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/SF2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/SF2015.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/STO2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/STOTY.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/TTKDEX2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/TTKDEXHH.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/UAPEX.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/UC2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/XB243140.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/YTO2011VIP.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/YTO2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/YUNDA.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/YUNDA4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ZHQKD1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ZJS01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ZJS2010.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ZTO201201.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ZTO2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ZTO2014_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/anneng.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/cces.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/debang4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ems2013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ems_hk_201404.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ems_post_201410.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ems_postb_201410.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ems_postb_201510.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/fast_2014_01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/gto_2014_09.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/gto_cod_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ht_201407.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ht_cod_20140408.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/ht_value_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/nd_2013_10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/nd_2014_01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/qf_201404.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/qf_cod_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/qrt_201310.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/sf_sign_return_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/shentong3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/shentong_new.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/sto_cod_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/suer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/tiantian4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/tt_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/uc_2013_05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/uc_commerce_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/uc_ec_201404.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/yousu4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/yto_cod_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/yunda1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/yunda_cod_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/zhongtong5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/zjs_cod_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/express/zto_cod_2014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/32X32/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/32X32/hits.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/32X32/i.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/32X32/succ.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/alert.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/confirm.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/discuz_bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/error.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/face-sad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/face-smile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/gb_tip_layer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/gb_tip_layer_ie6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/lhgcore.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/ok.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/prompt.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/success.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/tips.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/icons/warn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/DBKD1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/DBKD2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/EMS1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/EMS2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/EYB1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/EYB2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/FAST1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/FAST2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/GTO1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/GTO2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/HTKY1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/HTKY2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/POSTB1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/POSTB2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/QFKD1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/QFKD2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/SF1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/SF2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/SF3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/SF4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/SF6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/STO1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/STO2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/TTKDEX1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/TTKDEX2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/UC1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/UC2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/YTO1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/YTO2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/YUNDA1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/YUNDA2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/ZJS1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/ZJS2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/ZTO1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/images/smt/ZTO2.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java" afterPath="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/index.jsp" />
     </list>
     <ignored path="gcloud-shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,11 +190,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/WEB-INF/views/user/user.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33268103">
+              <caret line="119" column="28" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -109,7 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/request/AreasGetRequest.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/AutoUpdateConfigThread.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetRequest.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-api/src/main/java/com/gcloud/shop/api/internal/dns/HttpdnsGetResponse.java" />
@@ -160,6 +281,7 @@
         <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/utils/JsonUtil.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/tb/TBAuthService.java" />
         <option value="$PROJECT_DIR$/gcloud-shop-core/src/main/java/com/gcloud/shop/core/jd/JDAuthService.java" />
+        <option value="$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -346,7 +468,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -369,322 +491,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcloud-shop-core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -715,11 +521,11 @@
       <recent name="com.gcloud.shop.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp\images" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp\WEB-INF" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-core\src\main\java\com\gcloud\shop\core" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-api\src\main\java\com\gcloud\shop\api" />
       <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\resources\config" />
-      <recent name="E:\workspace\gcloud-shop\gcloud-shop-web\src\main\webapp\shop" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.gcloud-shop">
@@ -1201,12 +1007,12 @@
       <workItem from="1464939540961" duration="2875000" />
       <workItem from="1465197534625" duration="4664000" />
       <workItem from="1465263377016" duration="4955000" />
-      <workItem from="1465350687694" duration="23863000" />
+      <workItem from="1465350687694" duration="24207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41019000" />
+    <option name="totallyTimeSpent" value="41363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1222,14 +1028,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5676533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5422833" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48520085" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3678647" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1720,6 +1526,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcloud-shop-web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33268103">
+          <caret line="119" column="28" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="28" />
           <folding />
         </state>
       </provider>
