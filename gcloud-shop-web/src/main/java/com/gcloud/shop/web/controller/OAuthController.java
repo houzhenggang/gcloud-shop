@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2016/6/8 17:29
  **/
 @Controller
+@RequestMapping("/index/auth")
 public class OAuthController {
 
     @Autowired
@@ -28,33 +29,33 @@ public class OAuthController {
     @Autowired
     IOAuthService jdAuthService;
 
-    @RequestMapping(value = "/tbAuthorizeUrl")
+    @RequestMapping(value = "/tbAuthorizeUrl", method = RequestMethod.GET)
     public String tbAuthorizeUrl(HttpServletRequest request) {
         String state = request.getParameter("state");
         return tbAuthService.authorizeUrl(state);
     }
 
-    @RequestMapping(value = "/jdAuthorizeUrl")
+    @RequestMapping(value = "/jdAuthorizeUrl", method = RequestMethod.GET)
     public String jdAuthorizeUrl(HttpServletRequest request) {
         String state = request.getParameter("state");
         return jdAuthService.authorizeUrl(state);
     }
 
-    @RequestMapping(value = "/tbAuthorize")
+    @RequestMapping(value = "/tbAuthorize", method = RequestMethod.GET)
     @ResponseBody
     public String tbAuthorize(HttpServletRequest request) {
         String state = request.getParameter("state");
         return tbAuthService.authorize(state);
     }
 
-    @RequestMapping(value = "/jdAuthorize")
+    @RequestMapping(value = "/jdAuthorize", method = RequestMethod.GET)
     @ResponseBody
     public String jdAuthorize(HttpServletRequest request) {
         String state = request.getParameter("state");
         return jdAuthService.authorize(state);
     }
 
-    @RequestMapping(value = "/auth2")
+    @RequestMapping(value = "/auth2", method = RequestMethod.GET)
     public String auth2(HttpServletRequest request, Model model) {
 
         String result;
