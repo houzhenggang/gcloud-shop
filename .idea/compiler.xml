@@ -64,14 +64,12 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="gcloud-shop-print" />
       </profile>
       <profile default="false" name="Annotation profile for gcloud-shop-goods" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="gcloud-shop-goods" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

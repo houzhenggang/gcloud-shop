@@ -30,8 +30,6 @@
         <module>gcloud-shop-core</module>
         <module>gcloud-shop-api</module>
         <module>gcloud-shop-trade</module>
-        <module>gcloud-shop-print</module>
-        <module>gcloud-shop-goods</module>
     </modules>
 
     <properties>

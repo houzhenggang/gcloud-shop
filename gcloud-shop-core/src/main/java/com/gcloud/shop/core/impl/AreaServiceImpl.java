@@ -1,6 +1,5 @@
 package com.gcloud.shop.core.impl;
 
-
 import com.gcloud.shop.core.IAreaService;
 import com.gcloud.shop.dao.IAreaDao;
 import com.gcloud.shop.domain.Area;
