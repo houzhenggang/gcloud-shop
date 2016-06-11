@@ -35,7 +35,7 @@
 
     <properties>
         <!-- base setting -->
-        <gcloud.web.port>9091</gcloud.web.port>
+        <gcloud.web.port>9090</gcloud.web.port>
         <gcloud.web.path>/</gcloud.web.path>
         <gcloud.taobao.sdk>20150906</gcloud.taobao.sdk>
         <gcloud.jetty.version>9.3.9.v20160517</gcloud.jetty.version>
