@@ -57,7 +57,6 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="gcloud-shop-trade" />
       </profile>
       <profile default="false" name="Annotation profile for gcloud-shop-print" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -71,6 +70,20 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for gcloud-shop-sync" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="gcloud-shop-sync" />
+      </profile>
+      <profile default="false" name="Annotation profile for gcloud-shop-dubbo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="gcloud-shop-dubbo" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gcloud-shop" target="1.5" />
@@ -78,8 +91,10 @@
       <module name="gcloud-shop-core" target="1.8" />
       <module name="gcloud-shop-dao" target="1.8" />
       <module name="gcloud-shop-domain" target="1.8" />
+      <module name="gcloud-shop-dubbo" target="1.8" />
       <module name="gcloud-shop-goods" target="1.8" />
       <module name="gcloud-shop-print" target="1.8" />
+      <module name="gcloud-shop-sync" target="1.8" />
       <module name="gcloud-shop-trade" target="1.8" />
       <module name="gcloud-shop-web" target="1.8" />
     </bytecodeTargetLevel>

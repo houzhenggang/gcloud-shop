@@ -10,8 +10,6 @@
           <element id="archive" name="gcloud-shop-core-1.0-SNAPSHOT.jar">
             <element id="module-output" name="gcloud-shop-core" />
           </element>
-          <element id="library" level="project" name="Maven: com.gcloud:gcloud-event-core:1.0-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: com.gcloud:gcloud-event-mongo:1.0-SNAPSHOT" />
           <element id="archive" name="gcloud-shop-dao-1.0-SNAPSHOT.jar">
             <element id="module-output" name="gcloud-shop-dao" />
           </element>

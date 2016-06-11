@@ -29,7 +29,8 @@
         <module>gcloud-shop-domain</module>
         <module>gcloud-shop-core</module>
         <module>gcloud-shop-api</module>
-        <module>gcloud-shop-trade</module>
+        <module>gcloud-shop-dubbo</module>
+        <module>gcloud-shop-sync</module>
     </modules>
 
     <properties>

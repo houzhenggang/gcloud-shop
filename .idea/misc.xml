@@ -16,6 +16,7 @@
       <set>
         <option value="$PROJECT_DIR$/gcloud-shop-goods/pom.xml" />
         <option value="$PROJECT_DIR$/gcloud-shop-print/pom.xml" />
+        <option value="$PROJECT_DIR$/gcloud-shop-trade/pom.xml" />
         <option value="$PROJECT_DIR$/gcloud-trade/pom.xml" />
       </set>
     </option>

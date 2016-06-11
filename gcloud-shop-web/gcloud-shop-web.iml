@@ -23,8 +23,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="gcloud-shop-core" />
-    <orderEntry type="library" name="Maven: com.gcloud:gcloud-event-core:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.gcloud:gcloud-event-mongo:1.0-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="gcloud-shop-dao" />
     <orderEntry type="module" module-name="gcloud-shop-domain" />
     <orderEntry type="module" module-name="gcloud-shop-api" />
