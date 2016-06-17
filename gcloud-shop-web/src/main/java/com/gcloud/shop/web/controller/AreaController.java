@@ -18,12 +18,6 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * 地区信息
- * @author chenjin
- * @since 2015年11月22日 上午11:35:28
- **/
-
-/**
  * @author ChenJin
  * @version V1.0
  * @Title: AreaController
@@ -42,7 +36,7 @@ public class AreaController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public Object login(HttpServletRequest request, HttpServletResponse response, User user) {
+    public Object list(HttpServletRequest request, HttpServletResponse response, User user) {
 
         List<Area> areaList =areaService.queryAreaList(new HashMap<String, Object>());
         log.info(areaList.size());
