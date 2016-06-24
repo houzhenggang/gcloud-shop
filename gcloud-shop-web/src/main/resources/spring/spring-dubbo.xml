@@ -16,5 +16,4 @@
 
 	<bean id="areaService" class="com.gcloud.shop.core.impl.AreaServiceImpl" />
 	<dubbo:service ref="areaService" interface="com.gcloud.shop.core.IAreaService" version="${gcloud.dubbo.app.version}" group="${gcloud.dubbo.app.group}"/>
-	<dubbo:service ref="areaService" interface="com.gcloud.shop.core.IAreaService" version="${gcloud.dubbo.app.version}" group="${gcloud.dubbo.app.group}"/>
 </beans>
