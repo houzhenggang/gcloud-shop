@@ -29,6 +29,11 @@
     <dependencies>
         <dependency>
             <groupId>com.gcloud</groupId>
+            <artifactId>gcloud-trade-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gcloud</groupId>
             <artifactId>gcloud-shop-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -156,6 +161,20 @@
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
         </dependency>
+
+        <!-- cloud Start -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -170,6 +189,7 @@
             <build>
                 <filters>
                     <filter>src/main/resources/config/dev/build.properties</filter>
+                    <filter>src/main/resources/config/dev/dubbo.properties</filter>
                 </filters>
             </build>
         </profile>
@@ -184,6 +204,7 @@
             <build>
                 <filters>
                     <filter>src/main/resources/config/gray/build.properties</filter>
+                    <filter>src/main/resources/config/gray/dubbo.properties</filter>
                 </filters>
             </build>
         </profile>
@@ -198,6 +219,7 @@
             <build>
                 <filters>
                     <filter>src/main/resources/config/prod/build.properties</filter>
+                    <filter>src/main/resources/config/prod/dubbo.properties</filter>
                 </filters>
             </build>
         </profile>
@@ -212,6 +234,7 @@
             <build>
                 <filters>
                     <filter>src/main/resources/config/test/build.properties</filter>
+                    <filter>src/main/resources/config/test/dubbo.properties</filter>
                 </filters>
             </build>
         </profile>

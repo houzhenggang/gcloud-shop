@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/gcloud-shop-core/gcloud-shop-core.iml" filepath="$PROJECT_DIR$/gcloud-shop-core/gcloud-shop-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/gcloud-shop-dao/gcloud-shop-dao.iml" filepath="$PROJECT_DIR$/gcloud-shop-dao/gcloud-shop-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/gcloud-shop-domain/gcloud-shop-domain.iml" filepath="$PROJECT_DIR$/gcloud-shop-domain/gcloud-shop-domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gcloud-shop-dubbo/gcloud-shop-dubbo.iml" filepath="$PROJECT_DIR$/gcloud-shop-dubbo/gcloud-shop-dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/gcloud-shop-sync/gcloud-shop-sync.iml" filepath="$PROJECT_DIR$/gcloud-shop-sync/gcloud-shop-sync.iml" />
       <module fileurl="file://$PROJECT_DIR$/gcloud-shop-web/gcloud-shop-web.iml" filepath="$PROJECT_DIR$/gcloud-shop-web/gcloud-shop-web.iml" />
     </modules>

@@ -14,6 +14,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/gcloud-shop-dubbo/pom.xml" />
         <option value="$PROJECT_DIR$/gcloud-shop-goods/pom.xml" />
         <option value="$PROJECT_DIR$/gcloud-shop-print/pom.xml" />
         <option value="$PROJECT_DIR$/gcloud-shop-trade/pom.xml" />
