@@ -7,13 +7,14 @@
   -- 地区信息
   -- ----------------------------
   DROP TABLE IF EXISTS `tb_shop_area`;
-  CREATE TABLE `tb_area` (
-    `id` bigint(20) NOT NULL,
-    `type` tinyint(4) DEFAULT NULL,
-    `name` varchar(128) DEFAULT '',
-    `parent_id` bigint(20) DEFAULT NULL,
-    `zip` varchar(128) DEFAULT '',
-    PRIMARY KEY (`id`)
+  CREATE TABLE `tb_shop_area` (
+    `id`        BIGINT(20) NOT NULL,
+    `type`      tinyint(4) DEFAULT NULL,
+    `name`      VARCHAR(128) DEFAULT '',
+    `parent_id` BIGINT(20) DEFAULT NULL,
+    `zip`       VARCHAR(128) DEFAULT '',
+    PRIMARY KEY (`id`),
+    KEY `inx_name` (`name`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   -- ----------------------------
@@ -22,7 +23,7 @@
   -- ----------------------------
   DROP TABLE IF EXISTS `tb_shop_warehouse`;
   CREATE TABLE `tb_shop_warehouse` (
-    `id`             BIGINT(30)   PRIMARY KEY AUTO_INCREMENT,
+    `id`             BIGINT(30)   PRIMARY KEY  COMMENT '主键（yyyyMMddhhmmss + 门店ID + 4位随机数）',
     `company_id`     BIGINT(30)   DEFAULT NULL COMMENT '公司ID',
     `store_id`       BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `warehouse_id`   BIGINT(30)   DEFAULT NULL COMMENT '仓库ID',
@@ -35,5 +36,5 @@
     KEY `inx_company_id` (`company_id`),
     KEY `inx_store_id` (`store_id`),
     KEY `inx_company_id_store` (`company_id`,`store_id`)
-  ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
+  ) ENGINE = InnoDB DEFAULT CHARSET = UTF8;
 
