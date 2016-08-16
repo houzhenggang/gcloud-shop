@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.StoreInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.StoreInfo" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="category_id" property="categoryId" jdbcType="VARCHAR" />
+    <result column="brand_name" property="brandName" jdbcType="VARCHAR" />
+    <result column="brand_logo" property="brandLogo" jdbcType="VARCHAR" />
+    <result column="main_shop_name" property="mainShopName" jdbcType="VARCHAR" />
+    <result column="branch_shop_name" property="branchShopName" jdbcType="VARCHAR" />
+    <result column="shop_type" property="shopType" jdbcType="VARCHAR" />
+    <result column="province_code" property="provinceCode" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="district_code" property="districtCode" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="longitude" property="longitude" jdbcType="VARCHAR" />
+    <result column="latitude" property="latitude" jdbcType="VARCHAR" />
+    <result column="partner_id" property="partnerId" jdbcType="VARCHAR" />
+    <result column="pay_type" property="payType" jdbcType="VARCHAR" />
+    <result column="create_channel" property="createChannel" jdbcType="VARCHAR" />
+    <result column="provider_xiaoer_uid" property="providerXiaoerUid" jdbcType="VARCHAR" />
+    <result column="contact_number" property="contactNumber" jdbcType="VARCHAR" />
+    <result column="notify_mobile" property="notifyMobile" jdbcType="VARCHAR" />
+    <result column="main_image" property="mainImage" jdbcType="VARCHAR" />
+    <result column="qr_code" property="qrCode" jdbcType="VARCHAR" />
+    <result column="processed_qr_code" property="processedQrCode" jdbcType="VARCHAR" />
+    <result column="business_time" property="businessTime" jdbcType="VARCHAR" />
+    <result column="wifi" property="wifi" jdbcType="VARCHAR" />
+    <result column="parking" property="parking" jdbcType="VARCHAR" />
+    <result column="value_added" property="valueAdded" jdbcType="VARCHAR" />
+    <result column="avg_price" property="avgPrice" jdbcType="VARCHAR" />
+    <result column="isv_uid" property="isvUid" jdbcType="VARCHAR" />
+    <result column="licence" property="licence" jdbcType="VARCHAR" />
+    <result column="licence_code" property="licenceCode" jdbcType="VARCHAR" />
+    <result column="licence_name" property="licenceName" jdbcType="VARCHAR" />
+    <result column="business_certificate" property="businessCertificate" jdbcType="VARCHAR" />
+    <result column="business_certificate_expires" property="businessCertificateExpires" jdbcType="VARCHAR" />
+    <result column="auth_letter" property="authLetter" jdbcType="VARCHAR" />
+    <result column="operate_notify_url" property="operateNotifyUrl" jdbcType="VARCHAR" />
+    <result column="implement_id" property="implementId" jdbcType="VARCHAR" />
+    <result column="request_id" property="requestId" jdbcType="VARCHAR" />
+    <result column="other_authorization" property="otherAuthorization" jdbcType="VARCHAR" />
+    <result column="licence_expires" property="licenceExpires" jdbcType="VARCHAR" />
+    <result column="op_role" property="opRole" jdbcType="VARCHAR" />
+    <result column="biz_version" property="bizVersion" jdbcType="VARCHAR" />
+    <result column="apply_id" property="applyId" jdbcType="VARCHAR" />
+    <result column="audit_status" property="auditStatus" jdbcType="VARCHAR" />
+    <result column="audit_desc" property="auditDesc" jdbcType="VARCHAR" />
+    <result column="no_smoking" property="noSmoking" jdbcType="VARCHAR" />
+    <result column="box" property="box" jdbcType="VARCHAR" />
+    <result column="is_operating_online" property="isOperatingOnline" jdbcType="VARCHAR" />
+    <result column="is_online" property="isOnline" jdbcType="VARCHAR" />
+    <result column="is_show" property="isShow" jdbcType="VARCHAR" />
+    <result column="gmt_shop_create" property="gmtShopCreate" jdbcType="VARCHAR" />
+    <result column="gmt_shop_modified" property="gmtShopModified" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.gcloud.shop.domain.StoreInfoWithBLOBs" extends="BaseResultMap" >
+    <result column="audit_images" property="auditImages" jdbcType="LONGVARCHAR" />
+    <result column="online_image" property="onlineImage" jdbcType="LONGVARCHAR" />
+    <result column="other_auth_images" property="otherAuthImages" jdbcType="LONGVARCHAR" />
+    <result column="online_url" property="onlineUrl" jdbcType="LONGVARCHAR" />
+    <result column="shop_tags" property="shopTags" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_id, category_id, brand_name, brand_logo, main_shop_name, branch_shop_name, 
+    shop_type, province_code, city_code, district_code, address, longitude, latitude, 
+    partner_id, pay_type, create_channel, provider_xiaoer_uid, contact_number, notify_mobile, 
+    main_image, qr_code, processed_qr_code, business_time, wifi, parking, value_added, 
+    avg_price, isv_uid, licence, licence_code, licence_name, business_certificate, business_certificate_expires, 
+    auth_letter, operate_notify_url, implement_id, request_id, other_authorization, licence_expires, 
+    op_role, biz_version, apply_id, audit_status, audit_desc, no_smoking, box, is_operating_online, 
+    is_online, is_show, gmt_shop_create, gmt_shop_modified, `status`, created, modified, 
+    enable_status
+  </sql>
+  <sql id="Blob_Column_List" >
+    audit_images, online_image, other_auth_images, online_url, shop_tags
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tb_shop_store
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_shop_store
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.StoreInfoWithBLOBs" >
+    insert into tb_shop_store (id, store_id, category_id, 
+      brand_name, brand_logo, main_shop_name, 
+      branch_shop_name, shop_type, province_code, 
+      city_code, district_code, address, 
+      longitude, latitude, partner_id, 
+      pay_type, create_channel, provider_xiaoer_uid, 
+      contact_number, notify_mobile, main_image, 
+      qr_code, processed_qr_code, business_time, 
+      wifi, parking, value_added, 
+      avg_price, isv_uid, licence, 
+      licence_code, licence_name, business_certificate, 
+      business_certificate_expires, auth_letter, 
+      operate_notify_url, implement_id, request_id, 
+      other_authorization, licence_expires, op_role, 
+      biz_version, apply_id, audit_status, 
+      audit_desc, no_smoking, box, 
+      is_operating_online, is_online, is_show, 
+      gmt_shop_create, gmt_shop_modified, `status`, 
+      created, modified, enable_status, 
+      audit_images, online_image, other_auth_images, 
+      online_url, shop_tags)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=VARCHAR}, #{categoryId,jdbcType=VARCHAR}, 
+      #{brandName,jdbcType=VARCHAR}, #{brandLogo,jdbcType=VARCHAR}, #{mainShopName,jdbcType=VARCHAR}, 
+      #{branchShopName,jdbcType=VARCHAR}, #{shopType,jdbcType=VARCHAR}, #{provinceCode,jdbcType=VARCHAR}, 
+      #{cityCode,jdbcType=VARCHAR}, #{districtCode,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{longitude,jdbcType=VARCHAR}, #{latitude,jdbcType=VARCHAR}, #{partnerId,jdbcType=VARCHAR}, 
+      #{payType,jdbcType=VARCHAR}, #{createChannel,jdbcType=VARCHAR}, #{providerXiaoerUid,jdbcType=VARCHAR}, 
+      #{contactNumber,jdbcType=VARCHAR}, #{notifyMobile,jdbcType=VARCHAR}, #{mainImage,jdbcType=VARCHAR}, 
+      #{qrCode,jdbcType=VARCHAR}, #{processedQrCode,jdbcType=VARCHAR}, #{businessTime,jdbcType=VARCHAR}, 
+      #{wifi,jdbcType=VARCHAR}, #{parking,jdbcType=VARCHAR}, #{valueAdded,jdbcType=VARCHAR}, 
+      #{avgPrice,jdbcType=VARCHAR}, #{isvUid,jdbcType=VARCHAR}, #{licence,jdbcType=VARCHAR}, 
+      #{licenceCode,jdbcType=VARCHAR}, #{licenceName,jdbcType=VARCHAR}, #{businessCertificate,jdbcType=VARCHAR}, 
+      #{businessCertificateExpires,jdbcType=VARCHAR}, #{authLetter,jdbcType=VARCHAR}, 
+      #{operateNotifyUrl,jdbcType=VARCHAR}, #{implementId,jdbcType=VARCHAR}, #{requestId,jdbcType=VARCHAR}, 
+      #{otherAuthorization,jdbcType=VARCHAR}, #{licenceExpires,jdbcType=VARCHAR}, #{opRole,jdbcType=VARCHAR}, 
+      #{bizVersion,jdbcType=VARCHAR}, #{applyId,jdbcType=VARCHAR}, #{auditStatus,jdbcType=VARCHAR}, 
+      #{auditDesc,jdbcType=VARCHAR}, #{noSmoking,jdbcType=VARCHAR}, #{box,jdbcType=VARCHAR}, 
+      #{isOperatingOnline,jdbcType=VARCHAR}, #{isOnline,jdbcType=VARCHAR}, #{isShow,jdbcType=VARCHAR}, 
+      #{gmtShopCreate,jdbcType=VARCHAR}, #{gmtShopModified,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{created,jdbcType=TIMESTAMP}, #{modified,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=BIT}, 
+      #{auditImages,jdbcType=LONGVARCHAR}, #{onlineImage,jdbcType=LONGVARCHAR}, #{otherAuthImages,jdbcType=LONGVARCHAR}, 
+      #{onlineUrl,jdbcType=LONGVARCHAR}, #{shopTags,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.StoreInfoWithBLOBs" >
+    insert into tb_shop_store
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="categoryId != null" >
+        category_id,
+      </if>
+      <if test="brandName != null" >
+        brand_name,
+      </if>
+      <if test="brandLogo != null" >
+        brand_logo,
+      </if>
+      <if test="mainShopName != null" >
+        main_shop_name,
+      </if>
+      <if test="branchShopName != null" >
+        branch_shop_name,
+      </if>
+      <if test="shopType != null" >
+        shop_type,
+      </if>
+      <if test="provinceCode != null" >
+        province_code,
+      </if>
+      <if test="cityCode != null" >
+        city_code,
+      </if>
+      <if test="districtCode != null" >
+        district_code,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="longitude != null" >
+        longitude,
+      </if>
+      <if test="latitude != null" >
+        latitude,
+      </if>
+      <if test="partnerId != null" >
+        partner_id,
+      </if>
+      <if test="payType != null" >
+        pay_type,
+      </if>
+      <if test="createChannel != null" >
+        create_channel,
+      </if>
+      <if test="providerXiaoerUid != null" >
+        provider_xiaoer_uid,
+      </if>
+      <if test="contactNumber != null" >
+        contact_number,
+      </if>
+      <if test="notifyMobile != null" >
+        notify_mobile,
+      </if>
+      <if test="mainImage != null" >
+        main_image,
+      </if>
+      <if test="qrCode != null" >
+        qr_code,
+      </if>
+      <if test="processedQrCode != null" >
+        processed_qr_code,
+      </if>
+      <if test="businessTime != null" >
+        business_time,
+      </if>
+      <if test="wifi != null" >
+        wifi,
+      </if>
+      <if test="parking != null" >
+        parking,
+      </if>
+      <if test="valueAdded != null" >
+        value_added,
+      </if>
+      <if test="avgPrice != null" >
+        avg_price,
+      </if>
+      <if test="isvUid != null" >
+        isv_uid,
+      </if>
+      <if test="licence != null" >
+        licence,
+      </if>
+      <if test="licenceCode != null" >
+        licence_code,
+      </if>
+      <if test="licenceName != null" >
+        licence_name,
+      </if>
+      <if test="businessCertificate != null" >
+        business_certificate,
+      </if>
+      <if test="businessCertificateExpires != null" >
+        business_certificate_expires,
+      </if>
+      <if test="authLetter != null" >
+        auth_letter,
+      </if>
+      <if test="operateNotifyUrl != null" >
+        operate_notify_url,
+      </if>
+      <if test="implementId != null" >
+        implement_id,
+      </if>
+      <if test="requestId != null" >
+        request_id,
+      </if>
+      <if test="otherAuthorization != null" >
+        other_authorization,
+      </if>
+      <if test="licenceExpires != null" >
+        licence_expires,
+      </if>
+      <if test="opRole != null" >
+        op_role,
+      </if>
+      <if test="bizVersion != null" >
+        biz_version,
+      </if>
+      <if test="applyId != null" >
+        apply_id,
+      </if>
+      <if test="auditStatus != null" >
+        audit_status,
+      </if>
+      <if test="auditDesc != null" >
+        audit_desc,
+      </if>
+      <if test="noSmoking != null" >
+        no_smoking,
+      </if>
+      <if test="box != null" >
+        box,
+      </if>
+      <if test="isOperatingOnline != null" >
+        is_operating_online,
+      </if>
+      <if test="isOnline != null" >
+        is_online,
+      </if>
+      <if test="isShow != null" >
+        is_show,
+      </if>
+      <if test="gmtShopCreate != null" >
+        gmt_shop_create,
+      </if>
+      <if test="gmtShopModified != null" >
+        gmt_shop_modified,
+      </if>
+      <if test="status != null" >
+        `status`,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+      <if test="auditImages != null" >
+        audit_images,
+      </if>
+      <if test="onlineImage != null" >
+        online_image,
+      </if>
+      <if test="otherAuthImages != null" >
+        other_auth_images,
+      </if>
+      <if test="onlineUrl != null" >
+        online_url,
+      </if>
+      <if test="shopTags != null" >
+        shop_tags,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null" >
+        #{categoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="brandName != null" >
+        #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="brandLogo != null" >
+        #{brandLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="mainShopName != null" >
+        #{mainShopName,jdbcType=VARCHAR},
+      </if>
+      <if test="branchShopName != null" >
+        #{branchShopName,jdbcType=VARCHAR},
+      </if>
+      <if test="shopType != null" >
+        #{shopType,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null" >
+        #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="districtCode != null" >
+        #{districtCode,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        #{longitude,jdbcType=VARCHAR},
+      </if>
+      <if test="latitude != null" >
+        #{latitude,jdbcType=VARCHAR},
+      </if>
+      <if test="partnerId != null" >
+        #{partnerId,jdbcType=VARCHAR},
+      </if>
+      <if test="payType != null" >
+        #{payType,jdbcType=VARCHAR},
+      </if>
+      <if test="createChannel != null" >
+        #{createChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="providerXiaoerUid != null" >
+        #{providerXiaoerUid,jdbcType=VARCHAR},
+      </if>
+      <if test="contactNumber != null" >
+        #{contactNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyMobile != null" >
+        #{notifyMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="mainImage != null" >
+        #{mainImage,jdbcType=VARCHAR},
+      </if>
+      <if test="qrCode != null" >
+        #{qrCode,jdbcType=VARCHAR},
+      </if>
+      <if test="processedQrCode != null" >
+        #{processedQrCode,jdbcType=VARCHAR},
+      </if>
+      <if test="businessTime != null" >
+        #{businessTime,jdbcType=VARCHAR},
+      </if>
+      <if test="wifi != null" >
+        #{wifi,jdbcType=VARCHAR},
+      </if>
+      <if test="parking != null" >
+        #{parking,jdbcType=VARCHAR},
+      </if>
+      <if test="valueAdded != null" >
+        #{valueAdded,jdbcType=VARCHAR},
+      </if>
+      <if test="avgPrice != null" >
+        #{avgPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="isvUid != null" >
+        #{isvUid,jdbcType=VARCHAR},
+      </if>
+      <if test="licence != null" >
+        #{licence,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceCode != null" >
+        #{licenceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceName != null" >
+        #{licenceName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessCertificate != null" >
+        #{businessCertificate,jdbcType=VARCHAR},
+      </if>
+      <if test="businessCertificateExpires != null" >
+        #{businessCertificateExpires,jdbcType=VARCHAR},
+      </if>
+      <if test="authLetter != null" >
+        #{authLetter,jdbcType=VARCHAR},
+      </if>
+      <if test="operateNotifyUrl != null" >
+        #{operateNotifyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="implementId != null" >
+        #{implementId,jdbcType=VARCHAR},
+      </if>
+      <if test="requestId != null" >
+        #{requestId,jdbcType=VARCHAR},
+      </if>
+      <if test="otherAuthorization != null" >
+        #{otherAuthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceExpires != null" >
+        #{licenceExpires,jdbcType=VARCHAR},
+      </if>
+      <if test="opRole != null" >
+        #{opRole,jdbcType=VARCHAR},
+      </if>
+      <if test="bizVersion != null" >
+        #{bizVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="applyId != null" >
+        #{applyId,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null" >
+        #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="auditDesc != null" >
+        #{auditDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="noSmoking != null" >
+        #{noSmoking,jdbcType=VARCHAR},
+      </if>
+      <if test="box != null" >
+        #{box,jdbcType=VARCHAR},
+      </if>
+      <if test="isOperatingOnline != null" >
+        #{isOperatingOnline,jdbcType=VARCHAR},
+      </if>
+      <if test="isOnline != null" >
+        #{isOnline,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null" >
+        #{isShow,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtShopCreate != null" >
+        #{gmtShopCreate,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtShopModified != null" >
+        #{gmtShopModified,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+      <if test="auditImages != null" >
+        #{auditImages,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="onlineImage != null" >
+        #{onlineImage,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="otherAuthImages != null" >
+        #{otherAuthImages,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="onlineUrl != null" >
+        #{onlineUrl,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="shopTags != null" >
+        #{shopTags,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.StoreInfoWithBLOBs" >
+    update tb_shop_store
+    <set >
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null" >
+        category_id = #{categoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="brandName != null" >
+        brand_name = #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="brandLogo != null" >
+        brand_logo = #{brandLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="mainShopName != null" >
+        main_shop_name = #{mainShopName,jdbcType=VARCHAR},
+      </if>
+      <if test="branchShopName != null" >
+        branch_shop_name = #{branchShopName,jdbcType=VARCHAR},
+      </if>
+      <if test="shopType != null" >
+        shop_type = #{shopType,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null" >
+        province_code = #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="districtCode != null" >
+        district_code = #{districtCode,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        longitude = #{longitude,jdbcType=VARCHAR},
+      </if>
+      <if test="latitude != null" >
+        latitude = #{latitude,jdbcType=VARCHAR},
+      </if>
+      <if test="partnerId != null" >
+        partner_id = #{partnerId,jdbcType=VARCHAR},
+      </if>
+      <if test="payType != null" >
+        pay_type = #{payType,jdbcType=VARCHAR},
+      </if>
+      <if test="createChannel != null" >
+        create_channel = #{createChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="providerXiaoerUid != null" >
+        provider_xiaoer_uid = #{providerXiaoerUid,jdbcType=VARCHAR},
+      </if>
+      <if test="contactNumber != null" >
+        contact_number = #{contactNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="notifyMobile != null" >
+        notify_mobile = #{notifyMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="mainImage != null" >
+        main_image = #{mainImage,jdbcType=VARCHAR},
+      </if>
+      <if test="qrCode != null" >
+        qr_code = #{qrCode,jdbcType=VARCHAR},
+      </if>
+      <if test="processedQrCode != null" >
+        processed_qr_code = #{processedQrCode,jdbcType=VARCHAR},
+      </if>
+      <if test="businessTime != null" >
+        business_time = #{businessTime,jdbcType=VARCHAR},
+      </if>
+      <if test="wifi != null" >
+        wifi = #{wifi,jdbcType=VARCHAR},
+      </if>
+      <if test="parking != null" >
+        parking = #{parking,jdbcType=VARCHAR},
+      </if>
+      <if test="valueAdded != null" >
+        value_added = #{valueAdded,jdbcType=VARCHAR},
+      </if>
+      <if test="avgPrice != null" >
+        avg_price = #{avgPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="isvUid != null" >
+        isv_uid = #{isvUid,jdbcType=VARCHAR},
+      </if>
+      <if test="licence != null" >
+        licence = #{licence,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceCode != null" >
+        licence_code = #{licenceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceName != null" >
+        licence_name = #{licenceName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessCertificate != null" >
+        business_certificate = #{businessCertificate,jdbcType=VARCHAR},
+      </if>
+      <if test="businessCertificateExpires != null" >
+        business_certificate_expires = #{businessCertificateExpires,jdbcType=VARCHAR},
+      </if>
+      <if test="authLetter != null" >
+        auth_letter = #{authLetter,jdbcType=VARCHAR},
+      </if>
+      <if test="operateNotifyUrl != null" >
+        operate_notify_url = #{operateNotifyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="implementId != null" >
+        implement_id = #{implementId,jdbcType=VARCHAR},
+      </if>
+      <if test="requestId != null" >
+        request_id = #{requestId,jdbcType=VARCHAR},
+      </if>
+      <if test="otherAuthorization != null" >
+        other_authorization = #{otherAuthorization,jdbcType=VARCHAR},
+      </if>
+      <if test="licenceExpires != null" >
+        licence_expires = #{licenceExpires,jdbcType=VARCHAR},
+      </if>
+      <if test="opRole != null" >
+        op_role = #{opRole,jdbcType=VARCHAR},
+      </if>
+      <if test="bizVersion != null" >
+        biz_version = #{bizVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="applyId != null" >
+        apply_id = #{applyId,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null" >
+        audit_status = #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="auditDesc != null" >
+        audit_desc = #{auditDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="noSmoking != null" >
+        no_smoking = #{noSmoking,jdbcType=VARCHAR},
+      </if>
+      <if test="box != null" >
+        box = #{box,jdbcType=VARCHAR},
+      </if>
+      <if test="isOperatingOnline != null" >
+        is_operating_online = #{isOperatingOnline,jdbcType=VARCHAR},
+      </if>
+      <if test="isOnline != null" >
+        is_online = #{isOnline,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null" >
+        is_show = #{isShow,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtShopCreate != null" >
+        gmt_shop_create = #{gmtShopCreate,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtShopModified != null" >
+        gmt_shop_modified = #{gmtShopModified,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        `status` = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+      <if test="auditImages != null" >
+        audit_images = #{auditImages,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="onlineImage != null" >
+        online_image = #{onlineImage,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="otherAuthImages != null" >
+        other_auth_images = #{otherAuthImages,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="onlineUrl != null" >
+        online_url = #{onlineUrl,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="shopTags != null" >
+        shop_tags = #{shopTags,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.gcloud.shop.domain.StoreInfoWithBLOBs" >
+    update tb_shop_store
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      category_id = #{categoryId,jdbcType=VARCHAR},
+      brand_name = #{brandName,jdbcType=VARCHAR},
+      brand_logo = #{brandLogo,jdbcType=VARCHAR},
+      main_shop_name = #{mainShopName,jdbcType=VARCHAR},
+      branch_shop_name = #{branchShopName,jdbcType=VARCHAR},
+      shop_type = #{shopType,jdbcType=VARCHAR},
+      province_code = #{provinceCode,jdbcType=VARCHAR},
+      city_code = #{cityCode,jdbcType=VARCHAR},
+      district_code = #{districtCode,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      longitude = #{longitude,jdbcType=VARCHAR},
+      latitude = #{latitude,jdbcType=VARCHAR},
+      partner_id = #{partnerId,jdbcType=VARCHAR},
+      pay_type = #{payType,jdbcType=VARCHAR},
+      create_channel = #{createChannel,jdbcType=VARCHAR},
+      provider_xiaoer_uid = #{providerXiaoerUid,jdbcType=VARCHAR},
+      contact_number = #{contactNumber,jdbcType=VARCHAR},
+      notify_mobile = #{notifyMobile,jdbcType=VARCHAR},
+      main_image = #{mainImage,jdbcType=VARCHAR},
+      qr_code = #{qrCode,jdbcType=VARCHAR},
+      processed_qr_code = #{processedQrCode,jdbcType=VARCHAR},
+      business_time = #{businessTime,jdbcType=VARCHAR},
+      wifi = #{wifi,jdbcType=VARCHAR},
+      parking = #{parking,jdbcType=VARCHAR},
+      value_added = #{valueAdded,jdbcType=VARCHAR},
+      avg_price = #{avgPrice,jdbcType=VARCHAR},
+      isv_uid = #{isvUid,jdbcType=VARCHAR},
+      licence = #{licence,jdbcType=VARCHAR},
+      licence_code = #{licenceCode,jdbcType=VARCHAR},
+      licence_name = #{licenceName,jdbcType=VARCHAR},
+      business_certificate = #{businessCertificate,jdbcType=VARCHAR},
+      business_certificate_expires = #{businessCertificateExpires,jdbcType=VARCHAR},
+      auth_letter = #{authLetter,jdbcType=VARCHAR},
+      operate_notify_url = #{operateNotifyUrl,jdbcType=VARCHAR},
+      implement_id = #{implementId,jdbcType=VARCHAR},
+      request_id = #{requestId,jdbcType=VARCHAR},
+      other_authorization = #{otherAuthorization,jdbcType=VARCHAR},
+      licence_expires = #{licenceExpires,jdbcType=VARCHAR},
+      op_role = #{opRole,jdbcType=VARCHAR},
+      biz_version = #{bizVersion,jdbcType=VARCHAR},
+      apply_id = #{applyId,jdbcType=VARCHAR},
+      audit_status = #{auditStatus,jdbcType=VARCHAR},
+      audit_desc = #{auditDesc,jdbcType=VARCHAR},
+      no_smoking = #{noSmoking,jdbcType=VARCHAR},
+      box = #{box,jdbcType=VARCHAR},
+      is_operating_online = #{isOperatingOnline,jdbcType=VARCHAR},
+      is_online = #{isOnline,jdbcType=VARCHAR},
+      is_show = #{isShow,jdbcType=VARCHAR},
+      gmt_shop_create = #{gmtShopCreate,jdbcType=VARCHAR},
+      gmt_shop_modified = #{gmtShopModified,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT},
+      audit_images = #{auditImages,jdbcType=LONGVARCHAR},
+      online_image = #{onlineImage,jdbcType=LONGVARCHAR},
+      other_auth_images = #{otherAuthImages,jdbcType=LONGVARCHAR},
+      online_url = #{onlineUrl,jdbcType=LONGVARCHAR},
+      shop_tags = #{shopTags,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.StoreInfo" >
+    update tb_shop_store
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      category_id = #{categoryId,jdbcType=VARCHAR},
+      brand_name = #{brandName,jdbcType=VARCHAR},
+      brand_logo = #{brandLogo,jdbcType=VARCHAR},
+      main_shop_name = #{mainShopName,jdbcType=VARCHAR},
+      branch_shop_name = #{branchShopName,jdbcType=VARCHAR},
+      shop_type = #{shopType,jdbcType=VARCHAR},
+      province_code = #{provinceCode,jdbcType=VARCHAR},
+      city_code = #{cityCode,jdbcType=VARCHAR},
+      district_code = #{districtCode,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      longitude = #{longitude,jdbcType=VARCHAR},
+      latitude = #{latitude,jdbcType=VARCHAR},
+      partner_id = #{partnerId,jdbcType=VARCHAR},
+      pay_type = #{payType,jdbcType=VARCHAR},
+      create_channel = #{createChannel,jdbcType=VARCHAR},
+      provider_xiaoer_uid = #{providerXiaoerUid,jdbcType=VARCHAR},
+      contact_number = #{contactNumber,jdbcType=VARCHAR},
+      notify_mobile = #{notifyMobile,jdbcType=VARCHAR},
+      main_image = #{mainImage,jdbcType=VARCHAR},
+      qr_code = #{qrCode,jdbcType=VARCHAR},
+      processed_qr_code = #{processedQrCode,jdbcType=VARCHAR},
+      business_time = #{businessTime,jdbcType=VARCHAR},
+      wifi = #{wifi,jdbcType=VARCHAR},
+      parking = #{parking,jdbcType=VARCHAR},
+      value_added = #{valueAdded,jdbcType=VARCHAR},
+      avg_price = #{avgPrice,jdbcType=VARCHAR},
+      isv_uid = #{isvUid,jdbcType=VARCHAR},
+      licence = #{licence,jdbcType=VARCHAR},
+      licence_code = #{licenceCode,jdbcType=VARCHAR},
+      licence_name = #{licenceName,jdbcType=VARCHAR},
+      business_certificate = #{businessCertificate,jdbcType=VARCHAR},
+      business_certificate_expires = #{businessCertificateExpires,jdbcType=VARCHAR},
+      auth_letter = #{authLetter,jdbcType=VARCHAR},
+      operate_notify_url = #{operateNotifyUrl,jdbcType=VARCHAR},
+      implement_id = #{implementId,jdbcType=VARCHAR},
+      request_id = #{requestId,jdbcType=VARCHAR},
+      other_authorization = #{otherAuthorization,jdbcType=VARCHAR},
+      licence_expires = #{licenceExpires,jdbcType=VARCHAR},
+      op_role = #{opRole,jdbcType=VARCHAR},
+      biz_version = #{bizVersion,jdbcType=VARCHAR},
+      apply_id = #{applyId,jdbcType=VARCHAR},
+      audit_status = #{auditStatus,jdbcType=VARCHAR},
+      audit_desc = #{auditDesc,jdbcType=VARCHAR},
+      no_smoking = #{noSmoking,jdbcType=VARCHAR},
+      box = #{box,jdbcType=VARCHAR},
+      is_operating_online = #{isOperatingOnline,jdbcType=VARCHAR},
+      is_online = #{isOnline,jdbcType=VARCHAR},
+      is_show = #{isShow,jdbcType=VARCHAR},
+      gmt_shop_create = #{gmtShopCreate,jdbcType=VARCHAR},
+      gmt_shop_modified = #{gmtShopModified,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

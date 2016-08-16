@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.ShopWindowMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.ShopWindow" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="app_name" property="appName" jdbcType="VARCHAR" />
+    <result column="logo_url" property="logoUrl" jdbcType="VARCHAR" />
+    <result column="public_greeting" property="publicGreeting" jdbcType="VARCHAR" />
+    <result column="license_url" property="licenseUrl" jdbcType="VARCHAR" />
+    <result column="shop_pic1" property="shopPic1" jdbcType="VARCHAR" />
+    <result column="shop_pic2" property="shopPic2" jdbcType="VARCHAR" />
+    <result column="shop_pic3" property="shopPic3" jdbcType="VARCHAR" />
+    <result column="auth_pic" property="authPic" jdbcType="VARCHAR" />
+    <result column="audit_status" property="auditStatus" jdbcType="VARCHAR" />
+    <result column="audit_desc" property="auditDesc" jdbcType="VARCHAR" />
+    <result column="is_online" property="isOnline" jdbcType="VARCHAR" />
+    <result column="is_show" property="isShow" jdbcType="VARCHAR" />
+    <result column="platform" property="platform" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_id, app_name, logo_url, public_greeting, license_url, shop_pic1, shop_pic2, 
+    shop_pic3, auth_pic, audit_status, audit_desc, is_online, is_show, platform, remark, 
+    created, modified, enable_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_shop_window
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_shop_window
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.ShopWindow" >
+    insert into tb_shop_window (id, store_id, app_name, 
+      logo_url, public_greeting, license_url, 
+      shop_pic1, shop_pic2, shop_pic3, 
+      auth_pic, audit_status, audit_desc, 
+      is_online, is_show, platform, 
+      remark, created, modified, 
+      enable_status)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=VARCHAR}, #{appName,jdbcType=VARCHAR}, 
+      #{logoUrl,jdbcType=VARCHAR}, #{publicGreeting,jdbcType=VARCHAR}, #{licenseUrl,jdbcType=VARCHAR}, 
+      #{shopPic1,jdbcType=VARCHAR}, #{shopPic2,jdbcType=VARCHAR}, #{shopPic3,jdbcType=VARCHAR}, 
+      #{authPic,jdbcType=VARCHAR}, #{auditStatus,jdbcType=VARCHAR}, #{auditDesc,jdbcType=VARCHAR}, 
+      #{isOnline,jdbcType=VARCHAR}, #{isShow,jdbcType=VARCHAR}, #{platform,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{modified,jdbcType=TIMESTAMP}, 
+      #{enableStatus,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.ShopWindow" >
+    insert into tb_shop_window
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="appName != null" >
+        app_name,
+      </if>
+      <if test="logoUrl != null" >
+        logo_url,
+      </if>
+      <if test="publicGreeting != null" >
+        public_greeting,
+      </if>
+      <if test="licenseUrl != null" >
+        license_url,
+      </if>
+      <if test="shopPic1 != null" >
+        shop_pic1,
+      </if>
+      <if test="shopPic2 != null" >
+        shop_pic2,
+      </if>
+      <if test="shopPic3 != null" >
+        shop_pic3,
+      </if>
+      <if test="authPic != null" >
+        auth_pic,
+      </if>
+      <if test="auditStatus != null" >
+        audit_status,
+      </if>
+      <if test="auditDesc != null" >
+        audit_desc,
+      </if>
+      <if test="isOnline != null" >
+        is_online,
+      </if>
+      <if test="isShow != null" >
+        is_show,
+      </if>
+      <if test="platform != null" >
+        platform,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="appName != null" >
+        #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="logoUrl != null" >
+        #{logoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="publicGreeting != null" >
+        #{publicGreeting,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseUrl != null" >
+        #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPic1 != null" >
+        #{shopPic1,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPic2 != null" >
+        #{shopPic2,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPic3 != null" >
+        #{shopPic3,jdbcType=VARCHAR},
+      </if>
+      <if test="authPic != null" >
+        #{authPic,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null" >
+        #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="auditDesc != null" >
+        #{auditDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="isOnline != null" >
+        #{isOnline,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null" >
+        #{isShow,jdbcType=VARCHAR},
+      </if>
+      <if test="platform != null" >
+        #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.ShopWindow" >
+    update tb_shop_window
+    <set >
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="appName != null" >
+        app_name = #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="logoUrl != null" >
+        logo_url = #{logoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="publicGreeting != null" >
+        public_greeting = #{publicGreeting,jdbcType=VARCHAR},
+      </if>
+      <if test="licenseUrl != null" >
+        license_url = #{licenseUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPic1 != null" >
+        shop_pic1 = #{shopPic1,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPic2 != null" >
+        shop_pic2 = #{shopPic2,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPic3 != null" >
+        shop_pic3 = #{shopPic3,jdbcType=VARCHAR},
+      </if>
+      <if test="authPic != null" >
+        auth_pic = #{authPic,jdbcType=VARCHAR},
+      </if>
+      <if test="auditStatus != null" >
+        audit_status = #{auditStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="auditDesc != null" >
+        audit_desc = #{auditDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="isOnline != null" >
+        is_online = #{isOnline,jdbcType=VARCHAR},
+      </if>
+      <if test="isShow != null" >
+        is_show = #{isShow,jdbcType=VARCHAR},
+      </if>
+      <if test="platform != null" >
+        platform = #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.ShopWindow" >
+    update tb_shop_window
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      app_name = #{appName,jdbcType=VARCHAR},
+      logo_url = #{logoUrl,jdbcType=VARCHAR},
+      public_greeting = #{publicGreeting,jdbcType=VARCHAR},
+      license_url = #{licenseUrl,jdbcType=VARCHAR},
+      shop_pic1 = #{shopPic1,jdbcType=VARCHAR},
+      shop_pic2 = #{shopPic2,jdbcType=VARCHAR},
+      shop_pic3 = #{shopPic3,jdbcType=VARCHAR},
+      auth_pic = #{authPic,jdbcType=VARCHAR},
+      audit_status = #{auditStatus,jdbcType=VARCHAR},
+      audit_desc = #{auditDesc,jdbcType=VARCHAR},
+      is_online = #{isOnline,jdbcType=VARCHAR},
+      is_show = #{isShow,jdbcType=VARCHAR},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

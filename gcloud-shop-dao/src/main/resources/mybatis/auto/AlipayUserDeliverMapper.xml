@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.AlipayUserDeliverMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.AlipayUserDeliver" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="deliver_fullname" property="deliverFullname" jdbcType="VARCHAR" />
+    <result column="default_deliver_address" property="defaultDeliverAddress" jdbcType="VARCHAR" />
+    <result column="deliver_phone" property="deliverPhone" jdbcType="VARCHAR" />
+    <result column="deliver_mobile" property="deliverMobile" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="zip" property="zip" jdbcType="VARCHAR" />
+    <result column="deliver_province" property="deliverProvince" jdbcType="VARCHAR" />
+    <result column="deliver_city" property="deliverCity" jdbcType="VARCHAR" />
+    <result column="deliver_area" property="deliverArea" jdbcType="VARCHAR" />
+    <result column="address_code" property="addressCode" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, deliver_fullname, default_deliver_address, deliver_phone, deliver_mobile, 
+    address, zip, deliver_province, deliver_city, deliver_area, address_code, created, 
+    modified, enable_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_alipay_user_deliver
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_alipay_user_deliver
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.AlipayUserDeliver" >
+    insert into tb_alipay_user_deliver (id, user_id, deliver_fullname, 
+      default_deliver_address, deliver_phone, deliver_mobile, 
+      address, zip, deliver_province, 
+      deliver_city, deliver_area, address_code, 
+      created, modified, enable_status
+      )
+    values (#{id,jdbcType=BIGINT}, #{userId,jdbcType=VARCHAR}, #{deliverFullname,jdbcType=VARCHAR}, 
+      #{defaultDeliverAddress,jdbcType=VARCHAR}, #{deliverPhone,jdbcType=VARCHAR}, #{deliverMobile,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{zip,jdbcType=VARCHAR}, #{deliverProvince,jdbcType=VARCHAR}, 
+      #{deliverCity,jdbcType=VARCHAR}, #{deliverArea,jdbcType=VARCHAR}, #{addressCode,jdbcType=VARCHAR}, 
+      #{created,jdbcType=TIMESTAMP}, #{modified,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.AlipayUserDeliver" >
+    insert into tb_alipay_user_deliver
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="deliverFullname != null" >
+        deliver_fullname,
+      </if>
+      <if test="defaultDeliverAddress != null" >
+        default_deliver_address,
+      </if>
+      <if test="deliverPhone != null" >
+        deliver_phone,
+      </if>
+      <if test="deliverMobile != null" >
+        deliver_mobile,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="zip != null" >
+        zip,
+      </if>
+      <if test="deliverProvince != null" >
+        deliver_province,
+      </if>
+      <if test="deliverCity != null" >
+        deliver_city,
+      </if>
+      <if test="deliverArea != null" >
+        deliver_area,
+      </if>
+      <if test="addressCode != null" >
+        address_code,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverFullname != null" >
+        #{deliverFullname,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultDeliverAddress != null" >
+        #{defaultDeliverAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverPhone != null" >
+        #{deliverPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverMobile != null" >
+        #{deliverMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null" >
+        #{zip,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverProvince != null" >
+        #{deliverProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverCity != null" >
+        #{deliverCity,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverArea != null" >
+        #{deliverArea,jdbcType=VARCHAR},
+      </if>
+      <if test="addressCode != null" >
+        #{addressCode,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.AlipayUserDeliver" >
+    update tb_alipay_user_deliver
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverFullname != null" >
+        deliver_fullname = #{deliverFullname,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultDeliverAddress != null" >
+        default_deliver_address = #{defaultDeliverAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverPhone != null" >
+        deliver_phone = #{deliverPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverMobile != null" >
+        deliver_mobile = #{deliverMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null" >
+        zip = #{zip,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverProvince != null" >
+        deliver_province = #{deliverProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverCity != null" >
+        deliver_city = #{deliverCity,jdbcType=VARCHAR},
+      </if>
+      <if test="deliverArea != null" >
+        deliver_area = #{deliverArea,jdbcType=VARCHAR},
+      </if>
+      <if test="addressCode != null" >
+        address_code = #{addressCode,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.AlipayUserDeliver" >
+    update tb_alipay_user_deliver
+    set user_id = #{userId,jdbcType=VARCHAR},
+      deliver_fullname = #{deliverFullname,jdbcType=VARCHAR},
+      default_deliver_address = #{defaultDeliverAddress,jdbcType=VARCHAR},
+      deliver_phone = #{deliverPhone,jdbcType=VARCHAR},
+      deliver_mobile = #{deliverMobile,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      zip = #{zip,jdbcType=VARCHAR},
+      deliver_province = #{deliverProvince,jdbcType=VARCHAR},
+      deliver_city = #{deliverCity,jdbcType=VARCHAR},
+      deliver_area = #{deliverArea,jdbcType=VARCHAR},
+      address_code = #{addressCode,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

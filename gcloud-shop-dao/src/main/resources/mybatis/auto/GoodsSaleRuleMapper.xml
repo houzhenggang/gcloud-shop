@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.GoodsSaleRuleMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.GoodsSaleRule" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="itme_id" property="itmeId" jdbcType="VARCHAR" />
+    <result column="item_sys_id" property="itemSysId" jdbcType="VARCHAR" />
+    <result column="daily_sales_limit" property="dailySalesLimit" jdbcType="BIGINT" />
+    <result column="user_sales_limit" property="userSalesLimit" jdbcType="VARCHAR" />
+    <result column="buyer_crowd_limit" property="buyerCrowdLimit" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="platform" property="platform" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_id, itme_id, item_sys_id, daily_sales_limit, user_sales_limit, buyer_crowd_limit, 
+    `status`, platform, remark, created, modified, enable_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_goods_sale_rule
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_goods_sale_rule
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.GoodsSaleRule" >
+    insert into tb_goods_sale_rule (id, store_id, itme_id, 
+      item_sys_id, daily_sales_limit, user_sales_limit, 
+      buyer_crowd_limit, `status`, platform, 
+      remark, created, modified, 
+      enable_status)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=VARCHAR}, #{itmeId,jdbcType=VARCHAR}, 
+      #{itemSysId,jdbcType=VARCHAR}, #{dailySalesLimit,jdbcType=BIGINT}, #{userSalesLimit,jdbcType=VARCHAR}, 
+      #{buyerCrowdLimit,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{platform,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{modified,jdbcType=TIMESTAMP}, 
+      #{enableStatus,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.GoodsSaleRule" >
+    insert into tb_goods_sale_rule
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="itmeId != null" >
+        itme_id,
+      </if>
+      <if test="itemSysId != null" >
+        item_sys_id,
+      </if>
+      <if test="dailySalesLimit != null" >
+        daily_sales_limit,
+      </if>
+      <if test="userSalesLimit != null" >
+        user_sales_limit,
+      </if>
+      <if test="buyerCrowdLimit != null" >
+        buyer_crowd_limit,
+      </if>
+      <if test="status != null" >
+        `status`,
+      </if>
+      <if test="platform != null" >
+        platform,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itmeId != null" >
+        #{itmeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSysId != null" >
+        #{itemSysId,jdbcType=VARCHAR},
+      </if>
+      <if test="dailySalesLimit != null" >
+        #{dailySalesLimit,jdbcType=BIGINT},
+      </if>
+      <if test="userSalesLimit != null" >
+        #{userSalesLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="buyerCrowdLimit != null" >
+        #{buyerCrowdLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.GoodsSaleRule" >
+    update tb_goods_sale_rule
+    <set >
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itmeId != null" >
+        itme_id = #{itmeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSysId != null" >
+        item_sys_id = #{itemSysId,jdbcType=VARCHAR},
+      </if>
+      <if test="dailySalesLimit != null" >
+        daily_sales_limit = #{dailySalesLimit,jdbcType=BIGINT},
+      </if>
+      <if test="userSalesLimit != null" >
+        user_sales_limit = #{userSalesLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="buyerCrowdLimit != null" >
+        buyer_crowd_limit = #{buyerCrowdLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        platform = #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.GoodsSaleRule" >
+    update tb_goods_sale_rule
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      itme_id = #{itmeId,jdbcType=VARCHAR},
+      item_sys_id = #{itemSysId,jdbcType=VARCHAR},
+      daily_sales_limit = #{dailySalesLimit,jdbcType=BIGINT},
+      user_sales_limit = #{userSalesLimit,jdbcType=VARCHAR},
+      buyer_crowd_limit = #{buyerCrowdLimit,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
