@@ -231,11 +231,11 @@
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
   -- ----------------------------
-  -- Table structure for tb_shop_item
+  -- Table structure for tb_goods_item
   -- 店铺商品信息
   -- ----------------------------
-  DROP TABLE IF EXISTS `tb_shop_item`;
-  CREATE TABLE `tb_shop_item` (
+  DROP TABLE IF EXISTS `tb_goods_item`;
+  CREATE TABLE `tb_goods_item` (
 
     `id`                  BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`            VARCHAR(32)  NOT NULL COMMENT '门店ID',
@@ -266,11 +266,11 @@
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
   -- ----------------------------
-  -- Table structure for tb_shop_item_desc
+  -- Table structure for tb_good_item_desc
   -- 店铺商品描述（代金券）
   -- ----------------------------
-  DROP TABLE IF EXISTS `tb_shop_item_desc`;
-  CREATE TABLE `tb_shop_item_desc` (
+  DROP TABLE IF EXISTS `tb_good_item_desc`;
+  CREATE TABLE `tb_good_item_desc` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
@@ -294,11 +294,11 @@
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
   -- ----------------------------
-  -- Table structure for tb_shop_sale_rule
+  -- Table structure for tb_goods_sale_rule
   -- 店铺商品销售规则
   -- ----------------------------
-  DROP TABLE IF EXISTS `tb_shop_sale_rule`;
-  CREATE TABLE `tb_shop_sale_rule` (
+  DROP TABLE IF EXISTS `tb_goods_sale_rule`;
+  CREATE TABLE `tb_goods_sale_rule` (
 
     `id`                BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`          VARCHAR(32)  NOT NULL COMMENT '门店ID',
@@ -320,11 +320,11 @@
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
   -- ----------------------------
-  -- Table structure for tb_shop_voucher
+  -- Table structure for tb_goods_voucher
   -- 店铺商品券模板信息
   -- ----------------------------
-  DROP TABLE IF EXISTS `tb_shop_voucher`;
-  CREATE TABLE `tb_shop_voucher` (
+  DROP TABLE IF EXISTS `tb_goods_voucher`;
+  CREATE TABLE `tb_goods_voucher` (
 
     `id`                 BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`           VARCHAR(32)  NOT NULL COMMENT '门店ID',
@@ -352,16 +352,16 @@
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
   -- ----------------------------
-  -- Table structure for tb_shop_voucher_period
+  -- Table structure for tb_goods_voucher_period
   -- 店铺商品券模板使用时间
   -- ----------------------------
-  DROP TABLE IF EXISTS `tb_shop_voucher_period`;
-  CREATE TABLE `tb_shop_voucher_period` (
+  DROP TABLE IF EXISTS `tb_goods_voucher_period`;
+  CREATE TABLE `tb_goods_voucher_period` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
     `voucher_id`      VARCHAR(32)  NOT NULL COMMENT '门店ID',
-    `voucher_type`       VARCHAR(20)  NOT NULL COMMENT '券类型，DISCOUNT（折扣券）、CASH（代金券）',
+    `voucher_type`    VARCHAR(20)  NOT NULL COMMENT '券类型，DISCOUNT（折扣券）、CASH（代金券）',
     `unit`            VARCHAR(20)  NOT NULL COMMENT '单位描述，分为： MINUTE（分钟） HOUR（小时） WEEK_DAY（星期几） DAY（日） WEEK（周） MONTH（月） ALL（整个销售周期）',
     `rule`            VARCHAR(20)  NOT NULL COMMENT '区间范围枚举，分为： INCLUDE（包含） EXCLUDE（排除）',
     `value`           VARCHAR(10)  NOT NULL COMMENT '区间范围值，参数类型为Number',
@@ -399,3 +399,197 @@
     KEY `inx_shop_store` (`store_id`),
     KEY `inx_shop_user_symbol` (`store_id`, `user_symbol`, `user_symbol_type`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
+
+  -- ----------------------------
+  -- Table structure for tb_trade_info
+  -- 统一收单交易
+  -- ----------------------------
+  DROP TABLE IF EXISTS `tb_trade_info`;
+  CREATE TABLE `tb_trade_info` (
+
+    `id`                   BIGINT(30)   PRIMARY KEY COMMENT '主键',
+    `store_id`             VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `out_trade_no`         VARCHAR(64)  NOT NULL COMMENT '商户订单号,64个字符以内、只能包含字母、数字、下划线；需保证在商户端不重复',
+    `seller_id`            VARCHAR(28)  NOT NULL COMMENT '卖家支付宝用户ID。 如果该值为空，则默认为商户签约账号对应的支付宝用户ID',
+    `total_amount`         DOUBLE(12,2) DEFAULT 0 COMMENT '订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]',
+    `discountable_amount`  DOUBLE(12,2) DEFAULT 0  COMMENT '可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位',
+    `undiscountable_amount`DOUBLE(12,2) DEFAULT 0  COMMENT '可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位',
+    `buyer_logon_id`       VARCHAR(100) DEFAULT '' COMMENT '买家支付宝账号，和buyer_id不能同时为空',
+    `subject`              VARCHAR(256) DEFAULT '' COMMENT '订单标题',
+    `body`                 VARCHAR(128) DEFAULT '' COMMENT '对交易或商品的描述',
+    `buyer_id`             VARCHAR(28) DEFAULT '' COMMENT '买家的支付宝唯一用户号（2088开头的16位纯数字）,和buyer_logon_id不能同时为空',
+    `operator_id`          VARCHAR(28) DEFAULT '' COMMENT '商户操作员编号',
+    `terminal_id`          VARCHAR(32) DEFAULT '' COMMENT '商户机具终端编号',
+    `timeout_express`      VARCHAR(32) DEFAULT '' COMMENT '该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。',
+    `alipay_store_id`      VARCHAR(32) DEFAULT '' COMMENT '支付宝的店铺编号',
+    `merchant_id`          VARCHAR(32) DEFAULT '' COMMENT '二级商户的支付宝id ',
+    `sys_service_provider_id` VARCHAR(64) DEFAULT '' COMMENT '系统商编号 该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID',
+    `hb_fq_num`            VARCHAR(5) DEFAULT '' COMMENT '使用花呗分期要进行的分期数',
+    `hb_fq_seller_percent` VARCHAR(3) DEFAULT '' COMMENT '使用花呗分期需要卖家承担的手续费比例的百分值，传入100代表100%',
+    `royalty_type`         VARCHAR(150) DEFAULT 'ROYALTY' COMMENT '分账类型 卖家的分账类型，目前只支持传入ROYALTY（普通分账类型）。',
+    `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
+    KEY `inx_shop_store` (`store_id`),
+    KEY `inx_shop_store_trade_no` (`store_id`, `out_trade_no`)
+  ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
+
+  -- ----------------------------
+  -- Table structure for tb_trade_detail
+  -- 统一收单交易商品信息
+  -- ----------------------------
+  DROP TABLE IF EXISTS `tb_trade_detail`;
+  CREATE TABLE `tb_trade_detail` (
+
+    `id`             BIGINT(30)   PRIMARY KEY COMMENT '主键',
+    `store_id`       VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `out_trade_no`   VARCHAR(64)  NOT NULL COMMENT '商户订单号,64个字符以内、只能包含字母、数字、下划线；需保证在商户端不重复',
+    `goods_id`       VARCHAR(32)  NOT NULL COMMENT '卖家支付宝用户ID。 如果该值为空，则默认为商户签约账号对应的支付宝用户ID',
+    `alipay_goods_id`VARCHAR(32)  NOT NULL COMMENT '订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]',
+    `goods_name`     VARCHAR(256) NOT NULL COMMENT '可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位',
+    `quantity`       BIGINT(10)   DEFAULT 0 COMMENT '可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位',
+    `price`          DOUBLE(12,2) DEFAULT 0 COMMENT '买家支付宝账号，和buyer_id不能同时为空',
+    `goods_category` VARCHAR(24)  DEFAULT '' COMMENT '订单标题',
+    `body`           VARCHAR(1000)DEFAULT '' COMMENT '对交易或商品的描述',
+    `show_url`       VARCHAR(400) DEFAULT '' COMMENT '买家的支付宝唯一用户号（2088开头的16位纯数字）,和buyer_logon_id不能同时为空',
+    `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
+    KEY `inx_shop_store` (`store_id`),
+    KEY `inx_shop_store_trade_no` (`store_id`, `out_trade_no`)
+  ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
+
+  -- ----------------------------
+  -- Table structure for tb_trade_royalty
+  -- 交易分账明细
+  -- ----------------------------
+  DROP TABLE IF EXISTS `tb_trade_royalty`;
+  CREATE TABLE `tb_trade_royalty` (
+
+    `id`             BIGINT(30)   PRIMARY KEY COMMENT '主键',
+    `store_id`       VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `out_trade_no`   VARCHAR(64)  NOT NULL COMMENT '商户订单号,64个字符以内、只能包含字母、数字、下划线；需保证在商户端不重复',
+    `serial_no`      VARCHAR(32)  NOT NULL COMMENT '分账序列号，表示分账执行的顺序，必须为正整数 ',
+    `batch_no`       VARCHAR(32)  NOT NULL COMMENT '分账批次号。 目前需要和转入账号类型为bankIndex配合使用。',
+    `trans_in_type`  VARCHAR(32)  DEFAULT 'userId' COMMENT '接受分账金额的账户类型', -- userId：支付宝账号对应的支付宝唯一用户号。  bankIndex：分账到银行账户的银行编号。目前暂时只支持分账到一个银行编号。 storeId：分账到门店对应的银行卡编号。 默认值为userId。',
+    `out_relation_id`VARCHAR(64)  NOT NULL COMMENT  '商户分账的外部关联号，用于关联到每一笔分账信息，商户需保证其唯一性。 如果为空，该值则默认为“商户网站唯一订单号+分账序列号”',
+    `trans_out_type` VARCHAR(24)  NOT NULL COMMENT '要分账的账户类型。 目前只支持userId：支付宝账号对应的支付宝唯一用户号。 默认值为userId。 ',
+    `trans_out`      VARCHAR(16)  NOT NULL COMMENT '如果转出账号类型为userId，本参数为要分账的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。 ',
+    `trans_in`       VARCHAR(28)  NOT NULL COMMENT '如果转入账号类型为userId，本参数为接受分账金额的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。  如果转入账号类型为bankIndex，本参数为28位的银行编号（商户和支付宝签约时确定）。 如果转入账号类型为storeId，本参数为商户的门店ID。 ',
+    `amount`         DOUBLE(12,2) DEFAULT 0 COMMENT '分账的金额，单位为元 ',
+    `desc`           VARCHAR(1000)DEFAULT '' COMMENT '分账描述信息 ',
+    `amount_percentage`VARCHAR(3) DEFAULT '' COMMENT '分账的比例，值为20代表按20%的比例分账 ',
+    `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
+    KEY `inx_shop_store` (`store_id`),
+    KEY `inx_shop_store_trade_no` (`store_id`, `out_trade_no`)
+  ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
+
+  -- ----------------------------
+  -- Table structure for tb_alipay_token
+  -- 口碑网授权信息
+  -- ----------------------------
+  DROP TABLE IF EXISTS `tb_alipay_token`;
+  CREATE TABLE `tb_alipay_token` (
+
+    `id`               BIGINT(30)  PRIMARY KEY COMMENT '主键',
+    `user_id`          VARCHAR(16) NOT NUll COMMENT '授权商户的user_id ',
+    `auth_app_id`      VARCHAR(20) NOT NUll COMMENT '授权商户的appid ',
+    `app_auth_token`   VARCHAR(40) NOT NUll COMMENT '应用授权令牌',
+    `app_refresh_token`VARCHAR(40) NOT NUll COMMENT '刷新令牌',
+    `expires_in`       VARCHAR(16) NOT NUll COMMENT '应用授权令牌的有效时间（从接口调用时间作为起始时间），单位到秒',
+    `re_expires_in`    VARCHAR(16) NOT NUll COMMENT '刷新令牌的有效时间（从接口调用时间作为起始时间），单位到秒',
+    `created`          TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `modified`         TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `enable_status`    TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
+    KEY `inx_app_user` (`user_id`, `auth_app_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  -- ----------------------------
+  -- Table structure for tb_alipay_user
+  -- 口碑网用户信息
+  -- ----------------------------
+  DROP TABLE IF EXISTS `tb_alipay_user`;
+  CREATE TABLE `tb_alipay_user` (
+
+    `id`                  BIGINT(30)  PRIMARY KEY COMMENT '主键',
+    `user_id`             VARCHAR(16) NOT NUll COMMENT '授权商户的user_id ',
+    `avatar`              VARCHAR(200)NOT NUll COMMENT '用户头像',
+    `user_type_value`     VARCHAR(2)  NOT NUll COMMENT '用户类型（1/2） 1代表公司账户2代表个人账户 ',
+    `user_status`         VARCHAR(2)  NOT NUll COMMENT '用户状态（Q/T/B/W）。 Q代表快速注册用户 T代表已认证用户 B代表被冻结账户 W代表已注册，未激活的账户 ',
+    `firm_name`           VARCHAR(100)NOT NUll COMMENT '公司名称（用户类型是公司类型时公司名称才有此字段）。 ',
+    `real_name`           VARCHAR(200)NOT NUll COMMENT '用户的真实姓名',
+
+    `email`               VARCHAR(200)NOT NUll COMMENT '用户支付宝账号绑定的邮箱地址',
+    `cert_no`             VARCHAR(50) NOT NUll COMMENT '证件号码',
+    `gender`              VARCHAR(2)  NOT NUll COMMENT '性别（F：女性；M：男性）',
+    `phone`               VARCHAR(50) NOT NUll COMMENT '电话号码',
+    `mobile`              VARCHAR(50) NOT NUll COMMENT '手机号码',
+
+    `is_certified`        VARCHAR(2) NOT NUll COMMENT '是否通过实名认证。T是通过 F是没有实名认证',
+    `is_bank_auth`        VARCHAR(2) NOT NUll COMMENT 'T为是银行卡认证，F为非银行卡认证。',
+    `is_id_auth`          VARCHAR(2) NOT NUll COMMENT 'T为是身份证认证，F为非身份证认证。',
+    `is_mobile_auth`      VARCHAR(2) NOT NUll COMMENT 'T为是手机认证，F为非手机认证。 ',
+    `is_licence_auth`     VARCHAR(2) NOT NUll COMMENT 'T为通过营业执照认证，F为没有通过',
+
+    `cert_type_value`     VARCHAR(5) NOT NUll COMMENT '0:身份证 1:护照 2:军官证 3:士兵证 4:回乡证 5:临时身份证 6:户口簿 7:警官证 8:台胞证 9:营业执照 10其它证件 ',
+    `deliver_phone`       VARCHAR(50) NOT NUll COMMENT '收货地址的联系人固定电话0517-28888888',
+    `deliver_mobile`      VARCHAR(50) NOT NUll COMMENT '收货地址的联系人移动电话131XXXXXXXX',
+    `deliver_fullname`    VARCHAR(200) NOT NUll COMMENT '收货人全名 ',
+    `default_deliver_address` VARCHAR(200) NOT NUll COMMENT '是否默认收货地址',
+    `province`            VARCHAR(20) NOT NUll COMMENT '省份名称',
+    `city`                VARCHAR(20) NOT NUll COMMENT '市名称',
+    `area`                VARCHAR(20) NOT NUll COMMENT '区县名称',
+    `address`             VARCHAR(200)NOT NUll COMMENT '地址',
+    `zip`                 VARCHAR(50) NOT NUll COMMENT '邮政编码',
+    `deliver_province`    VARCHAR(20) NOT NUll COMMENT '收货人所在省份',
+    `deliver_city`        VARCHAR(20) NOT NUll COMMENT '收货人所在城市',
+    `deliver_area`        VARCHAR(20) NOT NUll COMMENT '收货人所在区县',
+    `address_code`        VARCHAR(16) NOT NUll COMMENT '区域编码',
+
+    `is_student_certified` VARCHAR(2) DEFAULT 'T' COMMENT '是否是学生 T为是手机认证，F为非手机认证。 ',
+    `is_certify_grade_a`  VARCHAR(2)  DEFAULT 'F' COMMENT 'T：表示A类实名认证；F：表示非A类实名认证 ',
+    `alipay_user_id`      VARCHAR(20) NOT NUll COMMENT '支付宝用户ID ',
+    `birthday`            VARCHAR(8)  NOT NUll COMMENT '用户生日(19900918)',
+    `nick_name`           VARCHAR(200) NOT NUll COMMENT '用户昵称',
+    `family_name`         VARCHAR(50) NOT NUll COMMENT '姓氏，取的是realName中的首个字符，对非中文、中文复姓支持较差。',
+
+    `reduced_birthday`    VARCHAR(20) NOT NUll COMMENT '生日的月和日，MMdd格式',
+    `is_balance_frozen`   VARCHAR(2)  DEFAULT 'F' COMMENT 'T--被冻结；F--未冻结',
+    `balance_freeze_type` VARCHAR(50) NOT NUll COMMENT '注意】当is_balance_frozen为“F”时，改字段不会返回. ', -- CTU ---- CTU冻结，允许用户开启 ALIBABA ---- ALIBABA冻结，允许用户开启 SERVER ---- 后台冻结，允许用户开启 USER ---- 用户冻结 CTU_N---- CTU冻结，不允许用户开启 ALIBABA_N ---- ALIBABA冻结，不允许用户开启 SERVER_N ---- 后台冻结，不允许用户开启 UNKNOWN ---- 降级、或查询超时 ',
+    `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
+
+    KEY `inx_app_user` (`user_id`),
+    KEY `inx_app_user_name` (`real_name`),
+    KEY `inx_app_user_cert_no` (`cert_no`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  -- ----------------------------
+  -- Table structure for tb_alipay_user_deliver
+  -- 口碑网用户收货地址信息
+  -- ----------------------------
+  DROP TABLE IF EXISTS `tb_alipay_user_deliver`;
+  CREATE TABLE `tb_alipay_user_deliver` (
+
+    `id`              BIGINT(30)  PRIMARY KEY COMMENT '主键',
+    `user_id`         VARCHAR(16) NOT NUll COMMENT '授权商户的user_id ',
+    `deliver_fullname`VARCHAR(200) NOT NUll COMMENT '收货人全名 ',
+    `default_deliver_address` VARCHAR(200) NOT NUll COMMENT '是否默认收货地址',
+    `deliver_phone`   VARCHAR(50) NOT NUll COMMENT '收货地址的联系人固定电话0517-28888888',
+    `deliver_mobile`  VARCHAR(50) NOT NUll COMMENT '收货地址的联系人移动电话131XXXXXXXX',
+    `address`         VARCHAR(200) NOT NUll COMMENT '地址',
+    `zip`             VARCHAR(50) NOT NUll COMMENT '邮政编码',
+    `deliver_province`VARCHAR(20) NOT NUll COMMENT '收货人所在省份',
+    `deliver_city`    VARCHAR(20) NOT NUll COMMENT '收货人所在城市',
+    `deliver_area`    VARCHAR(20) NOT NUll COMMENT '收货人所在区县',
+    `address_code`    VARCHAR(16) NOT NUll COMMENT '区域编码',
+    `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
+
+    KEY `inx_user_id` (`user_id`),
+    KEY `inx_user_full_name` (`user_id`, `deliver_fullname`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
