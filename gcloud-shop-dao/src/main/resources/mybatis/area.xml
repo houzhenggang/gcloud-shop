@@ -13,6 +13,6 @@
     </resultMap>
 
     <select id="queryAreaList" resultMap="AreaMapper" parameterType="map">
-        SELECT id, type, name, parent_id, zip FROM ts_area
+        SELECT id, type, name, parent_id, zip FROM tb_shop_area
     </select>
 </mapper>
