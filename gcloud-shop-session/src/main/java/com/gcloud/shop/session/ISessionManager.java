@@ -20,7 +20,15 @@ public interface ISessionManager {
 	 * @throws SessionException
 	 */
 	public ISession getSession(String sessionId, HttpServletRequest reqest, HttpServletResponse response) throws SessionException;
-	
+
+	/**
+	 * 创建Session
+	 * @param sessionId
+	 * @param reqest
+	 * @param response
+	 * @return
+	 * @throws SessionException
+     */
 	public ISession createSession(String sessionId, HttpServletRequest reqest, HttpServletResponse response) throws SessionException;
 	
 	/**
@@ -34,5 +42,5 @@ public interface ISessionManager {
 	 * 这个会话类型是否是集中式会话
 	 * @return
 	 */
-	public boolean isCentralSession();
+	public boolean isCentralSession() throws SessionException;
 }

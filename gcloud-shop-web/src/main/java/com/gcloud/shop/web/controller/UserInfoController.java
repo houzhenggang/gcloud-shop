@@ -1,5 +1,6 @@
 package com.gcloud.shop.web.controller;
 
+import com.gcloud.shop.cache.ICache;
 import com.gcloud.shop.core.Constant;
 import com.gcloud.shop.core.IUserInfoService;
 import com.gcloud.shop.core.ServiceException;
@@ -41,6 +42,9 @@ public class UserInfoController {
     @Resource
     ISessionManager sessionManager;
 
+    @Resource
+    ICache cache;
+
     @RequestMapping(value = "/loginIn", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity loginIn(UserInfoReq userInfoReq, HttpServletRequest request, HttpServletResponse response) {
@@ -50,6 +54,8 @@ public class UserInfoController {
 
             UserInfo userInfo = userInfoService.selectByPrimaryKey(userInfoReq.getUserId());
             String sessionId = userInfo.getStoreId() + userInfo.getUserId();
+
+            boolean hasObject = cache.hasObject(sessionId);
             sessionManager.createSession(sessionId, request, response).setUser(userInfo);
             responseEntity.setResult(userInfo);
             responseEntity.setSecret(SecretUtil.secretPassWord(userInfo.getPhone()));

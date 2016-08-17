@@ -1,5 +1,6 @@
 package com.gcloud.shop.cache.redis;
 
+import com.gcloud.shop.cache.CacheException;
 import com.gcloud.shop.cache.ICache;
 import org.springframework.cache.Cache;
 import org.springframework.cache.support.SimpleValueWrapper;
@@ -157,5 +158,30 @@ public class RedisCache implements Cache, ICache {
             ex.printStackTrace();
         }
         return obj;
+    }
+
+    @Override
+    public void putObject(String key, Object object) throws CacheException {
+
+    }
+
+    @Override
+    public Object getObject(String key) throws CacheException {
+        return null;
+    }
+
+    @Override
+    public Object delObject(String key) throws CacheException {
+        return null;
+    }
+
+    @Override
+    public Object modObject(String key) throws CacheException {
+        return null;
+    }
+
+    @Override
+    public boolean hasObject(String key) throws CacheException {
+        return true;
     }
 }

@@ -1,5 +1,8 @@
 package com.gcloud.shop.cache.simple;
 
+import com.gcloud.shop.cache.CacheConfig;
+import com.gcloud.shop.cache.CacheException;
+import com.gcloud.shop.cache.ICache;
 import com.gcloud.shop.cache.ICacheManger;
 
 /**
@@ -11,5 +14,25 @@ import com.gcloud.shop.cache.ICacheManger;
  * @date 16-8-17 下午9:50
  */
 public class SimplCacheManger implements ICacheManger {
+
+    @Override
+    public ICache createCache(Object object) throws CacheException {
+        return null;
+    }
+
+    @Override
+    public ICache getCache(String sessionId) throws CacheException {
+        return null;
+    }
+
+    @Override
+    public CacheConfig getCacheConfig() throws CacheException {
+        return null;
+    }
+
+    @Override
+    public CacheConfig setCacheConfig(CacheConfig cacheConfig) throws CacheException {
+        return null;
+    }
 
 }
