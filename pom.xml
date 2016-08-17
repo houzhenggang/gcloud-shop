@@ -25,10 +25,10 @@
 
     <modules>
         <module>gcloud-shop-web</module>
-        <module>gcloud-shop-dao</module>
-        <module>gcloud-shop-domain</module>
-        <module>gcloud-shop-core</module>
         <module>gcloud-shop-api</module>
+        <module>gcloud-shop-dao</module>
+        <module>gcloud-shop-core</module>
+        <module>gcloud-shop-domain</module>
         <module>gcloud-shop-sync</module>
     </modules>
 
@@ -99,7 +99,7 @@
 
         <!-- cloud versions-->
         <gcloud.guava.version>18.0</gcloud.guava.version>
-        <gcloud.solrj.version>6.0.0</gcloud.solrj.version>
+        <gcloud.solrj.version>5.4.0</gcloud.solrj.version>
         <gcloud.kafka.version>0.10.0.0</gcloud.kafka.version>
         <gcloud.mongo.version>3.2.2</gcloud.mongo.version>
         <gcloud.dubbo.version>2.5.3</gcloud.dubbo.version>
@@ -206,6 +206,11 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context-support</artifactId>
+                <version>${gcloud.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
                 <version>${gcloud.spring.version}</version>
             </dependency>
             <dependency>
@@ -342,6 +347,50 @@
                 <artifactId>zkclient</artifactId>
                 <version>${gcloud.zkclient.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongo-java-driver</artifactId>
+                <version>${gcloud.mongo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka_2.10</artifactId>
+                <version>${gcloud.kafka.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${gcloud.redis.clients.version}</version>
+                <type>jar</type>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-solrj</artifactId>
+                <version>${gcloud.solrj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.mina</groupId>
+                <artifactId>mina-core</artifactId>
+                <version>${gcloud.shop.mina.version}</version>
+            </dependency>
+
+            <!-- 以下是有关阿里云服务的OSS库 -->
+            <dependency>
+                <groupId>com.aliyun.openservices</groupId>
+                <artifactId>aliyun-openservices</artifactId>
+                <version>${gcloud.shop.aliyun.openservices.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${gcloud.shop.com.aliyun.oss}</version>
+            </dependency>
+            <!-- cloud end -->
         </dependencies>
     </dependencyManagement>
 
