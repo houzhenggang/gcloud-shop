@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.ShopCategoryMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.ShopCategory" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="category_id" property="categoryId" jdbcType="BIGINT" />
+    <result column="category_name" property="categoryName" jdbcType="VARCHAR" />
+    <result column="category_level" property="categoryLevel" jdbcType="BIGINT" />
+    <result column="category_parent" property="categoryParent" jdbcType="TINYINT" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="platform" property="platform" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, category_id, category_name, category_level, category_parent, `status`, platform, 
+    remark, created, modified, enable_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_shop_category
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_shop_category
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.ShopCategory" >
+    insert into tb_shop_category (id, category_id, category_name, 
+      category_level, category_parent, `status`, 
+      platform, remark, created, 
+      modified, enable_status)
+    values (#{id,jdbcType=BIGINT}, #{categoryId,jdbcType=BIGINT}, #{categoryName,jdbcType=VARCHAR}, 
+      #{categoryLevel,jdbcType=BIGINT}, #{categoryParent,jdbcType=TINYINT}, #{status,jdbcType=TINYINT}, 
+      #{platform,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, 
+      #{modified,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.ShopCategory" >
+    insert into tb_shop_category
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="categoryId != null" >
+        category_id,
+      </if>
+      <if test="categoryName != null" >
+        category_name,
+      </if>
+      <if test="categoryLevel != null" >
+        category_level,
+      </if>
+      <if test="categoryParent != null" >
+        category_parent,
+      </if>
+      <if test="status != null" >
+        `status`,
+      </if>
+      <if test="platform != null" >
+        platform,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="categoryId != null" >
+        #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryName != null" >
+        #{categoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryLevel != null" >
+        #{categoryLevel,jdbcType=BIGINT},
+      </if>
+      <if test="categoryParent != null" >
+        #{categoryParent,jdbcType=TINYINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.ShopCategory" >
+    update tb_shop_category
+    <set >
+      <if test="categoryId != null" >
+        category_id = #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryName != null" >
+        category_name = #{categoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryLevel != null" >
+        category_level = #{categoryLevel,jdbcType=BIGINT},
+      </if>
+      <if test="categoryParent != null" >
+        category_parent = #{categoryParent,jdbcType=TINYINT},
+      </if>
+      <if test="status != null" >
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        platform = #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.ShopCategory" >
+    update tb_shop_category
+    set category_id = #{categoryId,jdbcType=BIGINT},
+      category_name = #{categoryName,jdbcType=VARCHAR},
+      category_level = #{categoryLevel,jdbcType=BIGINT},
+      category_parent = #{categoryParent,jdbcType=TINYINT},
+      `status` = #{status,jdbcType=TINYINT},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.ShopImageMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.ShopImage" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="image_type" property="imageType" jdbcType="VARCHAR" />
+    <result column="image_name" property="imageName" jdbcType="VARCHAR" />
+    <result column="image_url" property="imageUrl" jdbcType="VARCHAR" />
+    <result column="image_pid" property="imagePid" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="platform" property="platform" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.gcloud.shop.domain.ShopImage" extends="BaseResultMap" >
+    <result column="image_content" property="imageContent" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_id, image_type, image_name, image_url, image_pid, `status`, platform, remark, 
+    created, modified, enable_status
+  </sql>
+  <sql id="Blob_Column_List" >
+    image_content
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tb_shop_image
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_shop_image
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.ShopImage" >
+    insert into tb_shop_image (id, store_id, image_type, 
+      image_name, image_url, image_pid, 
+      `status`, platform, remark, 
+      created, modified, enable_status, 
+      image_content)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=VARCHAR}, #{imageType,jdbcType=VARCHAR}, 
+      #{imageName,jdbcType=VARCHAR}, #{imageUrl,jdbcType=VARCHAR}, #{imagePid,jdbcType=VARCHAR}, 
+      #{status,jdbcType=TINYINT}, #{platform,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{created,jdbcType=TIMESTAMP}, #{modified,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=BIT}, 
+      #{imageContent,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.ShopImage" >
+    insert into tb_shop_image
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="imageType != null" >
+        image_type,
+      </if>
+      <if test="imageName != null" >
+        image_name,
+      </if>
+      <if test="imageUrl != null" >
+        image_url,
+      </if>
+      <if test="imagePid != null" >
+        image_pid,
+      </if>
+      <if test="status != null" >
+        `status`,
+      </if>
+      <if test="platform != null" >
+        platform,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+      <if test="imageContent != null" >
+        image_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="imageType != null" >
+        #{imageType,jdbcType=VARCHAR},
+      </if>
+      <if test="imageName != null" >
+        #{imageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUrl != null" >
+        #{imageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePid != null" >
+        #{imagePid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+      <if test="imageContent != null" >
+        #{imageContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.ShopImage" >
+    update tb_shop_image
+    <set >
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="imageType != null" >
+        image_type = #{imageType,jdbcType=VARCHAR},
+      </if>
+      <if test="imageName != null" >
+        image_name = #{imageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUrl != null" >
+        image_url = #{imageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePid != null" >
+        image_pid = #{imagePid,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        platform = #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+      <if test="imageContent != null" >
+        image_content = #{imageContent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.gcloud.shop.domain.ShopImage" >
+    update tb_shop_image
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      image_type = #{imageType,jdbcType=VARCHAR},
+      image_name = #{imageName,jdbcType=VARCHAR},
+      image_url = #{imageUrl,jdbcType=VARCHAR},
+      image_pid = #{imagePid,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT},
+      image_content = #{imageContent,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.ShopImage" >
+    update tb_shop_image
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      image_type = #{imageType,jdbcType=VARCHAR},
+      image_name = #{imageName,jdbcType=VARCHAR},
+      image_url = #{imageUrl,jdbcType=VARCHAR},
+      image_pid = #{imagePid,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

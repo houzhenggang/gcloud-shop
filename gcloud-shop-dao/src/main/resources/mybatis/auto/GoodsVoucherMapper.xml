@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.GoodsVoucherMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.GoodsVoucher" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="voucher_type" property="voucherType" jdbcType="VARCHAR" />
+    <result column="value_amount" property="valueAmount" jdbcType="DOUBLE" />
+    <result column="threshold_quantity" property="thresholdQuantity" jdbcType="BIGINT" />
+    <result column="threshold_amount" property="thresholdAmount" jdbcType="DOUBLE" />
+    <result column="reduce_to_amount" property="reduceToAmount" jdbcType="DOUBLE" />
+    <result column="original_amount" property="originalAmount" jdbcType="DOUBLE" />
+    <result column="original_rate" property="originalRate" jdbcType="DOUBLE" />
+    <result column="discount_rate" property="discountRate" jdbcType="DOUBLE" />
+    <result column="valid_period" property="validPeriod" jdbcType="BIGINT" />
+    <result column="voucher_desc" property="voucherDesc" jdbcType="VARCHAR" />
+    <result column="delay_minute" property="delayMinute" jdbcType="VARCHAR" />
+    <result column="rounding_rule" property="roundingRule" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="platform" property="platform" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_id, voucher_type, value_amount, threshold_quantity, threshold_amount, reduce_to_amount, 
+    original_amount, original_rate, discount_rate, valid_period, voucher_desc, delay_minute, 
+    rounding_rule, `status`, platform, remark, created, modified, enable_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_goods_voucher
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_goods_voucher
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.GoodsVoucher" >
+    insert into tb_goods_voucher (id, store_id, voucher_type, 
+      value_amount, threshold_quantity, threshold_amount, 
+      reduce_to_amount, original_amount, original_rate, 
+      discount_rate, valid_period, voucher_desc, 
+      delay_minute, rounding_rule, `status`, 
+      platform, remark, created, 
+      modified, enable_status)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=VARCHAR}, #{voucherType,jdbcType=VARCHAR}, 
+      #{valueAmount,jdbcType=DOUBLE}, #{thresholdQuantity,jdbcType=BIGINT}, #{thresholdAmount,jdbcType=DOUBLE}, 
+      #{reduceToAmount,jdbcType=DOUBLE}, #{originalAmount,jdbcType=DOUBLE}, #{originalRate,jdbcType=DOUBLE}, 
+      #{discountRate,jdbcType=DOUBLE}, #{validPeriod,jdbcType=BIGINT}, #{voucherDesc,jdbcType=VARCHAR}, 
+      #{delayMinute,jdbcType=VARCHAR}, #{roundingRule,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{platform,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, 
+      #{modified,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.GoodsVoucher" >
+    insert into tb_goods_voucher
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="voucherType != null" >
+        voucher_type,
+      </if>
+      <if test="valueAmount != null" >
+        value_amount,
+      </if>
+      <if test="thresholdQuantity != null" >
+        threshold_quantity,
+      </if>
+      <if test="thresholdAmount != null" >
+        threshold_amount,
+      </if>
+      <if test="reduceToAmount != null" >
+        reduce_to_amount,
+      </if>
+      <if test="originalAmount != null" >
+        original_amount,
+      </if>
+      <if test="originalRate != null" >
+        original_rate,
+      </if>
+      <if test="discountRate != null" >
+        discount_rate,
+      </if>
+      <if test="validPeriod != null" >
+        valid_period,
+      </if>
+      <if test="voucherDesc != null" >
+        voucher_desc,
+      </if>
+      <if test="delayMinute != null" >
+        delay_minute,
+      </if>
+      <if test="roundingRule != null" >
+        rounding_rule,
+      </if>
+      <if test="status != null" >
+        `status`,
+      </if>
+      <if test="platform != null" >
+        platform,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="voucherType != null" >
+        #{voucherType,jdbcType=VARCHAR},
+      </if>
+      <if test="valueAmount != null" >
+        #{valueAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="thresholdQuantity != null" >
+        #{thresholdQuantity,jdbcType=BIGINT},
+      </if>
+      <if test="thresholdAmount != null" >
+        #{thresholdAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="reduceToAmount != null" >
+        #{reduceToAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="originalAmount != null" >
+        #{originalAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="originalRate != null" >
+        #{originalRate,jdbcType=DOUBLE},
+      </if>
+      <if test="discountRate != null" >
+        #{discountRate,jdbcType=DOUBLE},
+      </if>
+      <if test="validPeriod != null" >
+        #{validPeriod,jdbcType=BIGINT},
+      </if>
+      <if test="voucherDesc != null" >
+        #{voucherDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="delayMinute != null" >
+        #{delayMinute,jdbcType=VARCHAR},
+      </if>
+      <if test="roundingRule != null" >
+        #{roundingRule,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.GoodsVoucher" >
+    update tb_goods_voucher
+    <set >
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="voucherType != null" >
+        voucher_type = #{voucherType,jdbcType=VARCHAR},
+      </if>
+      <if test="valueAmount != null" >
+        value_amount = #{valueAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="thresholdQuantity != null" >
+        threshold_quantity = #{thresholdQuantity,jdbcType=BIGINT},
+      </if>
+      <if test="thresholdAmount != null" >
+        threshold_amount = #{thresholdAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="reduceToAmount != null" >
+        reduce_to_amount = #{reduceToAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="originalAmount != null" >
+        original_amount = #{originalAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="originalRate != null" >
+        original_rate = #{originalRate,jdbcType=DOUBLE},
+      </if>
+      <if test="discountRate != null" >
+        discount_rate = #{discountRate,jdbcType=DOUBLE},
+      </if>
+      <if test="validPeriod != null" >
+        valid_period = #{validPeriod,jdbcType=BIGINT},
+      </if>
+      <if test="voucherDesc != null" >
+        voucher_desc = #{voucherDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="delayMinute != null" >
+        delay_minute = #{delayMinute,jdbcType=VARCHAR},
+      </if>
+      <if test="roundingRule != null" >
+        rounding_rule = #{roundingRule,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        platform = #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.GoodsVoucher" >
+    update tb_goods_voucher
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      voucher_type = #{voucherType,jdbcType=VARCHAR},
+      value_amount = #{valueAmount,jdbcType=DOUBLE},
+      threshold_quantity = #{thresholdQuantity,jdbcType=BIGINT},
+      threshold_amount = #{thresholdAmount,jdbcType=DOUBLE},
+      reduce_to_amount = #{reduceToAmount,jdbcType=DOUBLE},
+      original_amount = #{originalAmount,jdbcType=DOUBLE},
+      original_rate = #{originalRate,jdbcType=DOUBLE},
+      discount_rate = #{discountRate,jdbcType=DOUBLE},
+      valid_period = #{validPeriod,jdbcType=BIGINT},
+      voucher_desc = #{voucherDesc,jdbcType=VARCHAR},
+      delay_minute = #{delayMinute,jdbcType=VARCHAR},
+      rounding_rule = #{roundingRule,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.GoodsItemMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.GoodsItem" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="itme_id" property="itmeId" jdbcType="VARCHAR" />
+    <result column="item_sys_id" property="itemSysId" jdbcType="VARCHAR" />
+    <result column="item_type" property="itemType" jdbcType="VARCHAR" />
+    <result column="subject" property="subject" jdbcType="VARCHAR" />
+    <result column="purchase_mode" property="purchaseMode" jdbcType="VARCHAR" />
+    <result column="inventory" property="inventory" jdbcType="BIGINT" />
+    <result column="cover" property="cover" jdbcType="VARCHAR" />
+    <result column="weight" property="weight" jdbcType="BIGINT" />
+    <result column="gmt_start" property="gmtStart" jdbcType="TIMESTAMP" />
+    <result column="gmt_end" property="gmtEnd" jdbcType="TIMESTAMP" />
+    <result column="is_auto_expanded" property="isAutoExpanded" jdbcType="TINYINT" />
+    <result column="operate_notify_url" property="operateNotifyUrl" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="platform" property="platform" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.gcloud.shop.domain.GoodsItem" extends="BaseResultMap" >
+    <result column="shop_list" property="shopList" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_id, itme_id, item_sys_id, item_type, subject, purchase_mode, inventory, 
+    cover, weight, gmt_start, gmt_end, is_auto_expanded, operate_notify_url, `status`, 
+    platform, remark, created, modified, enable_status
+  </sql>
+  <sql id="Blob_Column_List" >
+    shop_list
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tb_goods_item
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_goods_item
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.GoodsItem" >
+    insert into tb_goods_item (id, store_id, itme_id, 
+      item_sys_id, item_type, subject, 
+      purchase_mode, inventory, cover, 
+      weight, gmt_start, gmt_end, 
+      is_auto_expanded, operate_notify_url, `status`, 
+      platform, remark, created, 
+      modified, enable_status, shop_list
+      )
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=VARCHAR}, #{itmeId,jdbcType=VARCHAR}, 
+      #{itemSysId,jdbcType=VARCHAR}, #{itemType,jdbcType=VARCHAR}, #{subject,jdbcType=VARCHAR}, 
+      #{purchaseMode,jdbcType=VARCHAR}, #{inventory,jdbcType=BIGINT}, #{cover,jdbcType=VARCHAR}, 
+      #{weight,jdbcType=BIGINT}, #{gmtStart,jdbcType=TIMESTAMP}, #{gmtEnd,jdbcType=TIMESTAMP}, 
+      #{isAutoExpanded,jdbcType=TINYINT}, #{operateNotifyUrl,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{platform,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, 
+      #{modified,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=BIT}, #{shopList,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.GoodsItem" >
+    insert into tb_goods_item
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="itmeId != null" >
+        itme_id,
+      </if>
+      <if test="itemSysId != null" >
+        item_sys_id,
+      </if>
+      <if test="itemType != null" >
+        item_type,
+      </if>
+      <if test="subject != null" >
+        subject,
+      </if>
+      <if test="purchaseMode != null" >
+        purchase_mode,
+      </if>
+      <if test="inventory != null" >
+        inventory,
+      </if>
+      <if test="cover != null" >
+        cover,
+      </if>
+      <if test="weight != null" >
+        weight,
+      </if>
+      <if test="gmtStart != null" >
+        gmt_start,
+      </if>
+      <if test="gmtEnd != null" >
+        gmt_end,
+      </if>
+      <if test="isAutoExpanded != null" >
+        is_auto_expanded,
+      </if>
+      <if test="operateNotifyUrl != null" >
+        operate_notify_url,
+      </if>
+      <if test="status != null" >
+        `status`,
+      </if>
+      <if test="platform != null" >
+        platform,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+      <if test="shopList != null" >
+        shop_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itmeId != null" >
+        #{itmeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSysId != null" >
+        #{itemSysId,jdbcType=VARCHAR},
+      </if>
+      <if test="itemType != null" >
+        #{itemType,jdbcType=VARCHAR},
+      </if>
+      <if test="subject != null" >
+        #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseMode != null" >
+        #{purchaseMode,jdbcType=VARCHAR},
+      </if>
+      <if test="inventory != null" >
+        #{inventory,jdbcType=BIGINT},
+      </if>
+      <if test="cover != null" >
+        #{cover,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        #{weight,jdbcType=BIGINT},
+      </if>
+      <if test="gmtStart != null" >
+        #{gmtStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtEnd != null" >
+        #{gmtEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isAutoExpanded != null" >
+        #{isAutoExpanded,jdbcType=TINYINT},
+      </if>
+      <if test="operateNotifyUrl != null" >
+        #{operateNotifyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+      <if test="shopList != null" >
+        #{shopList,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.GoodsItem" >
+    update tb_goods_item
+    <set >
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itmeId != null" >
+        itme_id = #{itmeId,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSysId != null" >
+        item_sys_id = #{itemSysId,jdbcType=VARCHAR},
+      </if>
+      <if test="itemType != null" >
+        item_type = #{itemType,jdbcType=VARCHAR},
+      </if>
+      <if test="subject != null" >
+        subject = #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseMode != null" >
+        purchase_mode = #{purchaseMode,jdbcType=VARCHAR},
+      </if>
+      <if test="inventory != null" >
+        inventory = #{inventory,jdbcType=BIGINT},
+      </if>
+      <if test="cover != null" >
+        cover = #{cover,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        weight = #{weight,jdbcType=BIGINT},
+      </if>
+      <if test="gmtStart != null" >
+        gmt_start = #{gmtStart,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtEnd != null" >
+        gmt_end = #{gmtEnd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isAutoExpanded != null" >
+        is_auto_expanded = #{isAutoExpanded,jdbcType=TINYINT},
+      </if>
+      <if test="operateNotifyUrl != null" >
+        operate_notify_url = #{operateNotifyUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="platform != null" >
+        platform = #{platform,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+      <if test="shopList != null" >
+        shop_list = #{shopList,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.gcloud.shop.domain.GoodsItem" >
+    update tb_goods_item
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      itme_id = #{itmeId,jdbcType=VARCHAR},
+      item_sys_id = #{itemSysId,jdbcType=VARCHAR},
+      item_type = #{itemType,jdbcType=VARCHAR},
+      subject = #{subject,jdbcType=VARCHAR},
+      purchase_mode = #{purchaseMode,jdbcType=VARCHAR},
+      inventory = #{inventory,jdbcType=BIGINT},
+      cover = #{cover,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=BIGINT},
+      gmt_start = #{gmtStart,jdbcType=TIMESTAMP},
+      gmt_end = #{gmtEnd,jdbcType=TIMESTAMP},
+      is_auto_expanded = #{isAutoExpanded,jdbcType=TINYINT},
+      operate_notify_url = #{operateNotifyUrl,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT},
+      shop_list = #{shopList,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.GoodsItem" >
+    update tb_goods_item
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      itme_id = #{itmeId,jdbcType=VARCHAR},
+      item_sys_id = #{itemSysId,jdbcType=VARCHAR},
+      item_type = #{itemType,jdbcType=VARCHAR},
+      subject = #{subject,jdbcType=VARCHAR},
+      purchase_mode = #{purchaseMode,jdbcType=VARCHAR},
+      inventory = #{inventory,jdbcType=BIGINT},
+      cover = #{cover,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=BIGINT},
+      gmt_start = #{gmtStart,jdbcType=TIMESTAMP},
+      gmt_end = #{gmtEnd,jdbcType=TIMESTAMP},
+      is_auto_expanded = #{isAutoExpanded,jdbcType=TINYINT},
+      operate_notify_url = #{operateNotifyUrl,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=TINYINT},
+      platform = #{platform,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

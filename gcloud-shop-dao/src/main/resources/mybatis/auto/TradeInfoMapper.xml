@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gcloud.shop.mapper.TradeInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gcloud.shop.domain.TradeInfo" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="out_trade_no" property="outTradeNo" jdbcType="VARCHAR" />
+    <result column="seller_id" property="sellerId" jdbcType="VARCHAR" />
+    <result column="total_amount" property="totalAmount" jdbcType="DOUBLE" />
+    <result column="discountable_amount" property="discountableAmount" jdbcType="DOUBLE" />
+    <result column="undiscountable_amount" property="undiscountableAmount" jdbcType="DOUBLE" />
+    <result column="buyer_logon_id" property="buyerLogonId" jdbcType="VARCHAR" />
+    <result column="subject" property="subject" jdbcType="VARCHAR" />
+    <result column="body" property="body" jdbcType="VARCHAR" />
+    <result column="buyer_id" property="buyerId" jdbcType="VARCHAR" />
+    <result column="operator_id" property="operatorId" jdbcType="VARCHAR" />
+    <result column="terminal_id" property="terminalId" jdbcType="VARCHAR" />
+    <result column="timeout_express" property="timeoutExpress" jdbcType="VARCHAR" />
+    <result column="alipay_store_id" property="alipayStoreId" jdbcType="VARCHAR" />
+    <result column="merchant_id" property="merchantId" jdbcType="VARCHAR" />
+    <result column="sys_service_provider_id" property="sysServiceProviderId" jdbcType="VARCHAR" />
+    <result column="hb_fq_num" property="hbFqNum" jdbcType="VARCHAR" />
+    <result column="hb_fq_seller_percent" property="hbFqSellerPercent" jdbcType="VARCHAR" />
+    <result column="royalty_type" property="royaltyType" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="modified" property="modified" jdbcType="TIMESTAMP" />
+    <result column="enable_status" property="enableStatus" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_id, out_trade_no, seller_id, total_amount, discountable_amount, undiscountable_amount, 
+    buyer_logon_id, subject, body, buyer_id, operator_id, terminal_id, timeout_express, 
+    alipay_store_id, merchant_id, sys_service_provider_id, hb_fq_num, hb_fq_seller_percent, 
+    royalty_type, created, modified, enable_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_trade_info
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_trade_info
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gcloud.shop.domain.TradeInfo" >
+    insert into tb_trade_info (id, store_id, out_trade_no, 
+      seller_id, total_amount, discountable_amount, 
+      undiscountable_amount, buyer_logon_id, subject, 
+      body, buyer_id, operator_id, 
+      terminal_id, timeout_express, alipay_store_id, 
+      merchant_id, sys_service_provider_id, hb_fq_num, 
+      hb_fq_seller_percent, royalty_type, created, 
+      modified, enable_status)
+    values (#{id,jdbcType=BIGINT}, #{storeId,jdbcType=VARCHAR}, #{outTradeNo,jdbcType=VARCHAR}, 
+      #{sellerId,jdbcType=VARCHAR}, #{totalAmount,jdbcType=DOUBLE}, #{discountableAmount,jdbcType=DOUBLE}, 
+      #{undiscountableAmount,jdbcType=DOUBLE}, #{buyerLogonId,jdbcType=VARCHAR}, #{subject,jdbcType=VARCHAR}, 
+      #{body,jdbcType=VARCHAR}, #{buyerId,jdbcType=VARCHAR}, #{operatorId,jdbcType=VARCHAR}, 
+      #{terminalId,jdbcType=VARCHAR}, #{timeoutExpress,jdbcType=VARCHAR}, #{alipayStoreId,jdbcType=VARCHAR}, 
+      #{merchantId,jdbcType=VARCHAR}, #{sysServiceProviderId,jdbcType=VARCHAR}, #{hbFqNum,jdbcType=VARCHAR}, 
+      #{hbFqSellerPercent,jdbcType=VARCHAR}, #{royaltyType,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, 
+      #{modified,jdbcType=TIMESTAMP}, #{enableStatus,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gcloud.shop.domain.TradeInfo" >
+    insert into tb_trade_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="outTradeNo != null" >
+        out_trade_no,
+      </if>
+      <if test="sellerId != null" >
+        seller_id,
+      </if>
+      <if test="totalAmount != null" >
+        total_amount,
+      </if>
+      <if test="discountableAmount != null" >
+        discountable_amount,
+      </if>
+      <if test="undiscountableAmount != null" >
+        undiscountable_amount,
+      </if>
+      <if test="buyerLogonId != null" >
+        buyer_logon_id,
+      </if>
+      <if test="subject != null" >
+        subject,
+      </if>
+      <if test="body != null" >
+        body,
+      </if>
+      <if test="buyerId != null" >
+        buyer_id,
+      </if>
+      <if test="operatorId != null" >
+        operator_id,
+      </if>
+      <if test="terminalId != null" >
+        terminal_id,
+      </if>
+      <if test="timeoutExpress != null" >
+        timeout_express,
+      </if>
+      <if test="alipayStoreId != null" >
+        alipay_store_id,
+      </if>
+      <if test="merchantId != null" >
+        merchant_id,
+      </if>
+      <if test="sysServiceProviderId != null" >
+        sys_service_provider_id,
+      </if>
+      <if test="hbFqNum != null" >
+        hb_fq_num,
+      </if>
+      <if test="hbFqSellerPercent != null" >
+        hb_fq_seller_percent,
+      </if>
+      <if test="royaltyType != null" >
+        royalty_type,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="modified != null" >
+        modified,
+      </if>
+      <if test="enableStatus != null" >
+        enable_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="outTradeNo != null" >
+        #{outTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sellerId != null" >
+        #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="totalAmount != null" >
+        #{totalAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="discountableAmount != null" >
+        #{discountableAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="undiscountableAmount != null" >
+        #{undiscountableAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="buyerLogonId != null" >
+        #{buyerLogonId,jdbcType=VARCHAR},
+      </if>
+      <if test="subject != null" >
+        #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="body != null" >
+        #{body,jdbcType=VARCHAR},
+      </if>
+      <if test="buyerId != null" >
+        #{buyerId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorId != null" >
+        #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="terminalId != null" >
+        #{terminalId,jdbcType=VARCHAR},
+      </if>
+      <if test="timeoutExpress != null" >
+        #{timeoutExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="alipayStoreId != null" >
+        #{alipayStoreId,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantId != null" >
+        #{merchantId,jdbcType=VARCHAR},
+      </if>
+      <if test="sysServiceProviderId != null" >
+        #{sysServiceProviderId,jdbcType=VARCHAR},
+      </if>
+      <if test="hbFqNum != null" >
+        #{hbFqNum,jdbcType=VARCHAR},
+      </if>
+      <if test="hbFqSellerPercent != null" >
+        #{hbFqSellerPercent,jdbcType=VARCHAR},
+      </if>
+      <if test="royaltyType != null" >
+        #{royaltyType,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        #{enableStatus,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gcloud.shop.domain.TradeInfo" >
+    update tb_trade_info
+    <set >
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="outTradeNo != null" >
+        out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sellerId != null" >
+        seller_id = #{sellerId,jdbcType=VARCHAR},
+      </if>
+      <if test="totalAmount != null" >
+        total_amount = #{totalAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="discountableAmount != null" >
+        discountable_amount = #{discountableAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="undiscountableAmount != null" >
+        undiscountable_amount = #{undiscountableAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="buyerLogonId != null" >
+        buyer_logon_id = #{buyerLogonId,jdbcType=VARCHAR},
+      </if>
+      <if test="subject != null" >
+        subject = #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="body != null" >
+        body = #{body,jdbcType=VARCHAR},
+      </if>
+      <if test="buyerId != null" >
+        buyer_id = #{buyerId,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorId != null" >
+        operator_id = #{operatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="terminalId != null" >
+        terminal_id = #{terminalId,jdbcType=VARCHAR},
+      </if>
+      <if test="timeoutExpress != null" >
+        timeout_express = #{timeoutExpress,jdbcType=VARCHAR},
+      </if>
+      <if test="alipayStoreId != null" >
+        alipay_store_id = #{alipayStoreId,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantId != null" >
+        merchant_id = #{merchantId,jdbcType=VARCHAR},
+      </if>
+      <if test="sysServiceProviderId != null" >
+        sys_service_provider_id = #{sysServiceProviderId,jdbcType=VARCHAR},
+      </if>
+      <if test="hbFqNum != null" >
+        hb_fq_num = #{hbFqNum,jdbcType=VARCHAR},
+      </if>
+      <if test="hbFqSellerPercent != null" >
+        hb_fq_seller_percent = #{hbFqSellerPercent,jdbcType=VARCHAR},
+      </if>
+      <if test="royaltyType != null" >
+        royalty_type = #{royaltyType,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null" >
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enableStatus != null" >
+        enable_status = #{enableStatus,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gcloud.shop.domain.TradeInfo" >
+    update tb_trade_info
+    set store_id = #{storeId,jdbcType=VARCHAR},
+      out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+      seller_id = #{sellerId,jdbcType=VARCHAR},
+      total_amount = #{totalAmount,jdbcType=DOUBLE},
+      discountable_amount = #{discountableAmount,jdbcType=DOUBLE},
+      undiscountable_amount = #{undiscountableAmount,jdbcType=DOUBLE},
+      buyer_logon_id = #{buyerLogonId,jdbcType=VARCHAR},
+      subject = #{subject,jdbcType=VARCHAR},
+      body = #{body,jdbcType=VARCHAR},
+      buyer_id = #{buyerId,jdbcType=VARCHAR},
+      operator_id = #{operatorId,jdbcType=VARCHAR},
+      terminal_id = #{terminalId,jdbcType=VARCHAR},
+      timeout_express = #{timeoutExpress,jdbcType=VARCHAR},
+      alipay_store_id = #{alipayStoreId,jdbcType=VARCHAR},
+      merchant_id = #{merchantId,jdbcType=VARCHAR},
+      sys_service_provider_id = #{sysServiceProviderId,jdbcType=VARCHAR},
+      hb_fq_num = #{hbFqNum,jdbcType=VARCHAR},
+      hb_fq_seller_percent = #{hbFqSellerPercent,jdbcType=VARCHAR},
+      royalty_type = #{royaltyType,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      modified = #{modified,jdbcType=TIMESTAMP},
+      enable_status = #{enableStatus,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
