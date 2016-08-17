@@ -122,6 +122,7 @@
         <gcloud.xmemcached.version>2.0.0</gcloud.xmemcached.version>
         <gcloud.jackson.core.version>2.2.2</gcloud.jackson.core.version>
         <gcloud.redis.clients.version>2.8.1</gcloud.redis.clients.version>
+        <gcloud.redis.data.version>1.7.2.RELEASE</gcloud.redis.data.version>
         <gcloud.jackson.mapper.version>1.9.13</gcloud.jackson.mapper.version>
         <gcloud.spring.memcached.version>3.4.0</gcloud.spring.memcached.version>
         <gcloud.google.collections.version>1.0</gcloud.google.collections.version>
@@ -369,6 +370,11 @@
                 <version>${gcloud.redis.clients.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>${gcloud.redis.data.version}</version>
             </dependency>
 
             <dependency>
