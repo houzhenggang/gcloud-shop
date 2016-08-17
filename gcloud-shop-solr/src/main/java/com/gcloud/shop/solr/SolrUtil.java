@@ -16,8 +16,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Solr 操作工具类(单例模式)
- * Created by janenone on 2016/1/31.
+ * @author ChenJin
+ * @version V1.0
+ * @Title: sd
+ * @Package com.gcloud.shop.solr.util
+ * @Description: Solr 操作工具类(单例模式)
+ * @date 2016/8/17 14:07
  */
 public class SolrUtil {
 

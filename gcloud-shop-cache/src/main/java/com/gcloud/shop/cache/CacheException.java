@@ -1,16 +1,16 @@
-package com.gcloud.shop.core;
+package com.gcloud.shop.cache;
 
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: ServcieException
- * @Package com.gcloud.shop.core
+ * @Title: CacheException
+ * @Package com.gcloud.shop.cache
  * @Description: Servcie异常类
  * @date 2016/7/19 16:54
  */
-public class ServcieException extends Exception {
+public class CacheException extends Exception {
 
-    private static final long serialVersionUID = -8113101052534916105L;
+    private static final long serialVersionUID = 4071152502804969080L;
 
     /**
      * 异常对应的返回码
@@ -22,20 +22,20 @@ public class ServcieException extends Exception {
      */
     private String msgDesc;
 
-    public ServcieException() {
+    public CacheException() {
         super();
     }
 
-    public ServcieException(Throwable throwable) {
+    public CacheException(Throwable throwable) {
         super(throwable);
     }
 
-    public ServcieException(String message) {
+    public CacheException(String message) {
         super(message);
         msgDesc = message;
     }
 
-    public ServcieException(String msgCode, String msgDesc) {
+    public CacheException(String msgCode, String msgDesc) {
         super(msgDesc);
         this.msgCode = msgCode;
         this.msgDesc = msgDesc;

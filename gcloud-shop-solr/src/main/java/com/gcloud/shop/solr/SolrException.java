@@ -1,16 +1,16 @@
-package com.gcloud.shop.core;
+package com.gcloud.shop.solr;
 
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: ServcieException
- * @Package com.gcloud.shop.core
+ * @Title: SolrException
+ * @Package com.gcloud.pay.core
  * @Description: Servcie异常类
  * @date 2016/7/19 16:54
  */
-public class ServcieException extends Exception {
+public class SolrException extends Exception {
 
-    private static final long serialVersionUID = -8113101052534916105L;
+    private static final long serialVersionUID = -3930179588948221379L;
 
     /**
      * 异常对应的返回码
@@ -22,20 +22,20 @@ public class ServcieException extends Exception {
      */
     private String msgDesc;
 
-    public ServcieException() {
+    public SolrException() {
         super();
     }
 
-    public ServcieException(Throwable throwable) {
+    public SolrException(Throwable throwable) {
         super(throwable);
     }
 
-    public ServcieException(String message) {
+    public SolrException(String message) {
         super(message);
         msgDesc = message;
     }
 
-    public ServcieException(String msgCode, String msgDesc) {
+    public SolrException(String msgCode, String msgDesc) {
         super(msgDesc);
         this.msgCode = msgCode;
         this.msgDesc = msgDesc;

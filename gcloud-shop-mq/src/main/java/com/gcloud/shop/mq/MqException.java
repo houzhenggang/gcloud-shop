@@ -1,16 +1,16 @@
-package com.gcloud.shop.core;
+package com.gcloud.shop.mq;
 
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: ServcieException
- * @Package com.gcloud.shop.core
+ * @Title: MqException
+ * @Package com.gcloud.shop.mq
  * @Description: Servcie异常类
  * @date 2016/7/19 16:54
  */
-public class ServcieException extends Exception {
+public class MqException extends Exception {
 
-    private static final long serialVersionUID = -8113101052534916105L;
+    private static final long serialVersionUID = -7675525277660530847L;
 
     /**
      * 异常对应的返回码
@@ -22,20 +22,20 @@ public class ServcieException extends Exception {
      */
     private String msgDesc;
 
-    public ServcieException() {
+    public MqException() {
         super();
     }
 
-    public ServcieException(Throwable throwable) {
+    public MqException(Throwable throwable) {
         super(throwable);
     }
 
-    public ServcieException(String message) {
+    public MqException(String message) {
         super(message);
         msgDesc = message;
     }
 
-    public ServcieException(String msgCode, String msgDesc) {
+    public MqException(String msgCode, String msgDesc) {
         super(msgDesc);
         this.msgCode = msgCode;
         this.msgDesc = msgDesc;

@@ -1,0 +1,14 @@
+1. Intellij IDEA 默认没启用这个功能。
+Setting->Inspections->Serialization issues->Serializable class without ’serialVersionUID’
+
+2. Intellij IDEA 生成的类注释
+file->settings->File and Code Templates
+
+/**
+* @Title: ${NAME}
+* @Package ${PACKAGE_NAME}
+* @Description: ${TODO}(用一句话描述该文件做什么)
+* @author ${USER}
+* @date ${DATE} ${TIME}
+* @version V1.0
+*/
