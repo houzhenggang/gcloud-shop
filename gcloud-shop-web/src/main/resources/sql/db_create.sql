@@ -593,3 +593,34 @@
     KEY `inx_user_id` (`user_id`),
     KEY `inx_user_full_name` (`user_id`, `deliver_fullname`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  -- ----------------------------
+  -- Table structure for tb_shop_user
+  -- 系统用户信息
+  -- ----------------------------
+  DROP TABLE IF EXISTS `tb_shop_user`;
+  CREATE TABLE `tb_shop_user` (
+
+    `id`              BIGINT(30)  PRIMARY KEY COMMENT '主键',
+    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `user_id`         VARCHAR(16) NOT NUll COMMENT '用户ID ',
+    `alipay_user_id`  VARCHAR(16) NOT NUll COMMENT '支付宝账户 ',
+    `avatar`          VARCHAR(200) NOT NUll COMMENT '用户头像',
+    `real_name`       VARCHAR(200)NOT NUll COMMENT '用户的真实姓名',
+    `email`           VARCHAR(200)NOT NUll COMMENT '用户邮箱地址',
+    `cert_no`         VARCHAR(50) NOT NUll COMMENT '用户证件号码',
+    `gender`          VARCHAR(2)  NOT NUll COMMENT '性别（F：女性；M：男性）',
+    `phone`           VARCHAR(50) NOT NUll COMMENT '电话号码',
+    `mobile`          VARCHAR(50) NOT NUll COMMENT '手机号码',
+    `conf`            VARCHAR(4096)  DEFAULT NULL COMMENT '配置信息',
+    `last_login_date` VARCHAR(16) DEFAULT NULL COMMENT '最后登录时间',
+    `last_login_ip`   VARCHAR(16) DEFAULT NULL COMMENT '最后登录IP',
+    `deadline`        TIMESTAMP  NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `created`         TIMESTAMP  NOT NULL DEFAULT '2000-01-01 00:00:00',
+    `modified`        TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `enable_status`   TINYINT(1) NOT NULL DEFAULT 1 COMMENT '0否 1是',
+
+    KEY `inx_store` (`store_id`),
+    KEY `inx_store_user` (`store_id`, `user_id`),
+    KEY `inx_store_alipay_user` (`store_id`, `alipay_user_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
