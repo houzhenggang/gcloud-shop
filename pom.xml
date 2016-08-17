@@ -31,6 +31,8 @@
         <module>gcloud-shop-domain</module>
         <module>gcloud-shop-sync</module>
         <module>gcloud-shop-solr</module>
+        <module>gcloud-shop-cache</module>
+        <module>gcloud-shop-mq</module>
     </modules>
 
     <properties>
