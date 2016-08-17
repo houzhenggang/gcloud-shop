@@ -12,10 +12,7 @@ import java.io.Serializable;
  */
 public class SessionConfig implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5704444702779926642L;
+	private static final long serialVersionUID = -5769223121872969139L;
 
 	/**
 	 * 默认的Session过期时间，单位：秒，0表示永不过期
@@ -36,6 +33,11 @@ public class SessionConfig implements Serializable {
 	 * 写入登录会话的主站地址
 	 */
 	private String sessionRootHost = "/";
+
+	/**
+	 * 店铺ID
+	 */
+	private Long storeId;
 
 	public int getDefaultExpiryTime() {
 		return defaultExpiryTime;
@@ -67,5 +69,13 @@ public class SessionConfig implements Serializable {
 
 	public void setSessionRootHost(String sessionRootHost) {
 		this.sessionRootHost = sessionRootHost;
+	}
+
+	public Long getStoreId() {
+		return storeId;
+	}
+
+	public void setStoreId(Long storeId) {
+		this.storeId = storeId;
 	}
 }

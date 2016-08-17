@@ -22,6 +22,9 @@ public class ResponseEntity implements Serializable {
     @JSONField(name = "sign")
     private Object sign = "";
 
+    @JSONField(name = "secret")
+    private Object secret = "";
+
     public String getStatus() {
         return status;
     }
@@ -62,4 +65,11 @@ public class ResponseEntity implements Serializable {
         this.sign = sign;
     }
 
+    public Object getSecret() {
+        return secret;
+    }
+
+    public void setSecret(Object secret) {
+        this.secret = secret;
+    }
 }

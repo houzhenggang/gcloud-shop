@@ -2,6 +2,7 @@ package com.gcloud.shop.session.memcache;
 
 import com.gcloud.shop.domain.UserInfo;
 import com.gcloud.shop.session.AbstractRefSession;
+import com.gcloud.shop.session.Constant;
 import com.gcloud.shop.session.SessionException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,8 +25,6 @@ public class MemSession extends AbstractRefSession {
 	//12个小时
 	protected static final int defauiltSessionTime = 60*60*12;
 
-	protected final Long storeId;
-
 	/**
 	 * 这个会话实现，SessionId可有可无
 	 * @param req
@@ -33,19 +32,8 @@ public class MemSession extends AbstractRefSession {
 	 * @param sessionId
 	 * @throws Exception
 	 */
-	public MemSession(HttpServletRequest req, HttpServletResponse rsp, String sessionId, Long storeId) throws Exception {
-
+	public MemSession(HttpServletRequest req, HttpServletResponse rsp, String sessionId) throws Exception {
 		super(req, rsp, sessionId);
-		Long __storeId = storeId;
-		if(null == __storeId){
-//			__storeId = (Long)memSessionHandle.getObj(req, "storeId");
-		}else{
-//			memSessionHandle.setObj(request, response, "storeId", __storeId, __storeId);
-		}
-		
-		if(null == __storeId)
-			throw new SessionException("会话已失效");
-		this.storeId = __storeId;
 	}
 
 	@Override
@@ -54,15 +42,15 @@ public class MemSession extends AbstractRefSession {
 			return null; //memSessionHandle.getObj(request, attrName);
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
-			throw new SessionException(e);
+			throw new SessionException(Constant.API_CALL_ERROR_CODE, e.getMessage());
 		}
 	}
 
 	@Override
-	public <T extends Serializable> T getAttribute(String attrName,
-												   Class<T> type) throws SessionException {
-		if(null == type)
-			throw new NullPointerException("type参数为空");
+	public <T extends Serializable> T getAttribute(String attrName, Class<T> type) throws SessionException {
+		if(null == type){
+			throw new SessionException(Constant.API_CALL_ERROR_CODE, "type参数为空");
+		}
 		return type.cast(getAttribute(attrName));
 	}
 
@@ -73,7 +61,7 @@ public class MemSession extends AbstractRefSession {
 			return true;
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
-			throw new SessionException(e);
+			throw new SessionException(Constant.API_CALL_ERROR_CODE, e.getMessage());
 		}
 	}
 
@@ -83,7 +71,7 @@ public class MemSession extends AbstractRefSession {
 			return true; // memSessionHandle.hasObj(request, attrName);
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
-			throw new SessionException(e);
+			throw new SessionException(Constant.API_CALL_ERROR_CODE, e.getMessage());
 		}
 	}
 
@@ -92,50 +80,49 @@ public class MemSession extends AbstractRefSession {
 		try {
 			if( null == value){
 				logger.warn("value is not allow null!");
-				throw new SessionException("value is not allow null!");
+				throw new SessionException(Constant.API_CALL_ERROR_CODE, "value is not allow null!");
 			}
 //			memSessionHandle.setObj(request, response, attrName, storeId, value);
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
-			throw new SessionException(e);
+			throw new SessionException(Constant.API_CALL_ERROR_CODE, e.getMessage());
 		}
 	}
 
 	@Override
-	public void setAttribute(String attrName, Serializable value, int expiryTime)
-			throws SessionException {
+	public void setAttribute(String attrName, Serializable value, int expiryTime) throws SessionException {
 		try {
 			if(null == value){
 				logger.warn("value is not allow null!");
-				throw new SessionException("value is not allow null!");
+				throw new SessionException(Constant.API_CALL_ERROR_CODE, "value is not allow null!");
 			}
 			//memSessionHandle.setObj(request, response, attrName, storeId, expiryTime, value);
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
-			throw new SessionException(e);
+			throw new SessionException(Constant.API_CALL_ERROR_CODE, e.getMessage());
 		}
 	}
 
 	@Override
 	public Set<String> getAllAttributeKeys() throws SessionException {
-		throw new SessionException("getAllAttributeKeys此方法实现不了");
+		throw new SessionException(Constant.API_CALL_ERROR_CODE, "getAllAttributeKeys此方法实现不了!");
 	}
 
 	@Override
 	public UserInfo getUser() throws SessionException {
-		return getAttribute("userInfo", UserInfo.class);
+		return getAttribute(Constant.LOGIN_USER_KEY, UserInfo.class);
 	}
 
 	@Override
 	public void setUser(UserInfo userInfo) throws SessionException {
 		userInfo.setConf(null);
-		setAttribute("user", userInfo, 86400);
+		setAttribute(Constant.LOGIN_USER_KEY, userInfo, 86400);
 	}
 
 	@Override
 	public void logout(UserInfo userInfo, HttpServletRequest req, HttpServletResponse rsp) throws SessionException {
 
-		removeAttribute("user");
+		removeAttribute(Constant.LOGIN_USER_KEY);
 		Cookie cookie = new Cookie("memSessionId","");
 		cookie.setMaxAge(0);
 		cookie.setPath("/");

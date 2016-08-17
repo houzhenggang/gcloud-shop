@@ -2,6 +2,7 @@ package com.gcloud.shop.session.simple;
 
 import com.gcloud.shop.domain.UserInfo;
 import com.gcloud.shop.session.AbstractSession;
+import com.gcloud.shop.session.Constant;
 import com.gcloud.shop.session.SessionException;
 
 import javax.servlet.http.Cookie;
@@ -36,8 +37,7 @@ public class SimpleSession extends AbstractSession {
 	}
 
 	@Override
-	public <T extends Serializable> T getAttribute(String attrName,
-												   Class<T> type) throws SessionException {
+	public <T extends Serializable> T getAttribute(String attrName, Class<T> type) throws SessionException {
 		Serializable s = session.get(getKey(attrName));
 		if (null == s)
 			return null;
@@ -59,19 +59,13 @@ public class SimpleSession extends AbstractSession {
 	}
 
 	@Override
-	public void setAttribute(String attrName, Serializable value)
-			throws SessionException {
+	public void setAttribute(String attrName, Serializable value) throws SessionException {
 		session.put(getKey(attrName), value);
 	}
 
-	/**
-	 * 
-	 * @deprecated 此实现咱不支持属性的有效期控制
-	 */
 	@Override
 	@Deprecated
-	public void setAttribute(String attrName, Serializable value, int expiryTime)
-			throws SessionException {
+	public void setAttribute(String attrName, Serializable value, int expiryTime) throws SessionException {
 		setAttribute(getKey(attrName), value);
 	}
 
@@ -82,18 +76,18 @@ public class SimpleSession extends AbstractSession {
 
 	@Override
 	public UserInfo getUser() throws SessionException {
-		return getAttribute("userInfo", UserInfo.class);
+		return getAttribute(Constant.LOGIN_USER_KEY, UserInfo.class);
 	}
 
 	@Override
 	public void setUser(UserInfo userInfo) throws SessionException {
-		setAttribute("user", userInfo);
+		setAttribute(Constant.LOGIN_USER_KEY, userInfo);
 	}
 
 	@Override
 	public void logout(UserInfo userInfo, HttpServletRequest req, HttpServletResponse rsp) throws SessionException {
 
-		removeAttribute("userInfo");
+		removeAttribute(Constant.LOGIN_USER_KEY);
 		Cookie cookie = new Cookie(SimpleSessionManager.cookie4SessionName, "");
 		cookie.setPath("/");
 		cookie.setMaxAge(0);

@@ -21,7 +21,7 @@ public interface ISessionManager {
 	 */
 	public ISession getSession(String sessionId, HttpServletRequest reqest, HttpServletResponse response) throws SessionException;
 	
-	public ISession createSession(Long storeId, HttpServletRequest reqest, HttpServletResponse response) throws SessionException;
+	public ISession createSession(String sessionId, HttpServletRequest reqest, HttpServletResponse response) throws SessionException;
 	
 	/**
 	 * 获取会话配置

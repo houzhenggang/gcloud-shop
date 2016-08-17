@@ -3,12 +3,12 @@ package com.gcloud.shop.core;
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: ServcieException
+ * @Title: ServiceException
  * @Package com.gcloud.shop.core
  * @Description: Servcie异常类
  * @date 2016/7/19 16:54
  */
-public class ServcieException extends Exception {
+public class ServiceException extends Exception {
 
     private static final long serialVersionUID = -8113101052534916105L;
 
@@ -22,20 +22,20 @@ public class ServcieException extends Exception {
      */
     private String msgDesc;
 
-    public ServcieException() {
+    public ServiceException() {
         super();
     }
 
-    public ServcieException(Throwable throwable) {
+    public ServiceException(Throwable throwable) {
         super(throwable);
     }
 
-    public ServcieException(String message) {
+    public ServiceException(String message) {
         super(message);
         msgDesc = message;
     }
 
-    public ServcieException(String msgCode, String msgDesc) {
+    public ServiceException(String msgCode, String msgDesc) {
         super(msgDesc);
         this.msgCode = msgCode;
         this.msgDesc = msgDesc;

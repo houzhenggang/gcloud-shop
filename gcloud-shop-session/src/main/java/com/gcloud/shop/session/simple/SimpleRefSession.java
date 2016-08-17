@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: MemSession
+ * @Title: SimpleRefSession
  * @Package com.gcloud.api
  * @Description: 地址Service
  * @date 2016/6/1 13:53
@@ -33,8 +33,7 @@ public class SimpleRefSession extends AbstractRefSession {
 	}
 
 	@Override
-	public <T extends Serializable> T getAttribute(String attrName,
-												   Class<T> type) throws SessionException {
+	public <T extends Serializable> T getAttribute(String attrName, Class<T> type) throws SessionException {
 		return session.getAttribute(attrName, type);
 	}
 

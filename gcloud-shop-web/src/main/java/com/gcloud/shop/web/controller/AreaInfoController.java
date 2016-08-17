@@ -1,7 +1,7 @@
 package com.gcloud.shop.web.controller;
 
 import com.gcloud.shop.core.Constant;
-import com.gcloud.shop.core.ServcieException;
+import com.gcloud.shop.core.ServiceException;
 import com.gcloud.shop.core.IAreaInfoService;
 import com.gcloud.shop.domain.AreaInfo;
 import com.gcloud.shop.web.bean.ResponseEntity;
@@ -43,7 +43,7 @@ public class AreaInfoController {
         try {
             List<AreaInfo> AreaInfoList = areaInfoService.queryAreaInfo(null);
             responseEntity.setResult(AreaInfoList);
-        } catch (ServcieException e){
+        } catch (ServiceException e){
             responseEntity.setStatus(e.getMsgCode());
             responseEntity.setMessage(e.getMsgDesc());
             logger.error(e.getMessage());

@@ -15,22 +15,22 @@ import java.util.Map;
  */
 public interface IAreaInfoService {
 
-    int deleteByPrimaryKey(Long id) throws ServcieException;
+    int deleteByPrimaryKey(Long id) throws ServiceException;
 
-    int insert(AreaInfo record) throws ServcieException;
+    int insert(AreaInfo record) throws ServiceException;
 
-    int insertSelective(AreaInfo record) throws ServcieException;
+    int insertSelective(AreaInfo record) throws ServiceException;
 
-    AreaInfo selectByPrimaryKey(Long id) throws ServcieException;
+    AreaInfo selectByPrimaryKey(Long id) throws ServiceException;
 
-    int updateByPrimaryKeySelective(AreaInfo record) throws ServcieException;
+    int updateByPrimaryKeySelective(AreaInfo record) throws ServiceException;
 
-    int updateByPrimaryKey(AreaInfo record) throws ServcieException;
+    int updateByPrimaryKey(AreaInfo record) throws ServiceException;
 
     /**
      * 查询区域信息
      * @param params
      * @return
      */
-    List<AreaInfo> queryAreaInfo(Map<String, Object> params) throws ServcieException;
+    List<AreaInfo> queryAreaInfo(Map<String, Object> params) throws ServiceException;
 }

@@ -10,16 +10,42 @@ package com.gcloud.shop.session;
  */
 public class SessionException extends Exception {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6867165720650881604L;
+	private static final long serialVersionUID = -5623408920329210928L;
 
-	public SessionException(String msg) {
-		super(msg);
+	/**
+	 * 异常对应的返回码
+	 */
+	private String msgCode;
+
+	/**
+	 * 异常对应的描述信息
+	 */
+	private String msgDesc;
+
+	public SessionException() {
+		super();
 	}
-	
-	public SessionException(Exception e){
-		super(e);
+
+	public SessionException(Throwable throwable) {
+		super(throwable);
+	}
+
+	public SessionException(String message) {
+		super(message);
+		msgDesc = message;
+	}
+
+	public SessionException(String msgCode, String msgDesc) {
+		super(msgDesc);
+		this.msgCode = msgCode;
+		this.msgDesc = msgDesc;
+	}
+
+	public String getMsgCode() {
+		return msgCode;
+	}
+
+	public String getMsgDesc() {
+		return msgDesc;
 	}
 }

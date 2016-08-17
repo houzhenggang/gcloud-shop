@@ -1,10 +1,8 @@
 package com.gcloud.shop.session.simple;
 
-import com.gcloud.shop.session.ISession;
-import com.gcloud.shop.session.ISessionManager;
-import com.gcloud.shop.session.SessionConfig;
-import com.gcloud.shop.session.SessionException;
+import com.gcloud.shop.session.*;
 import com.gcloud.shop.session.util.SessionIdGenerator;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Repository;
 
 import javax.servlet.http.Cookie;
@@ -41,16 +39,37 @@ public class SimpleSessionManager implements ISessionManager {
 	}
 	
 	@Override
-	public ISession createSession(Long userId, HttpServletRequest request,
-								  HttpServletResponse response) throws SessionException {
+	public ISession createSession(String sessionId, HttpServletRequest request, HttpServletResponse response) throws SessionException {
 
 		SimpleRefSession session = new SimpleRefSession(request, response, SessionIdGenerator.generate());
-		sessions.put(session.getSessionId(), session);
-		// 将会话编号设置到response中的cookie里
-		Cookie cookie = new Cookie(cookie4SessionName, session.getSessionId());
+		sessions.put(sessionId, session);
+		Cookie cookie = new Cookie(cookie4SessionName, sessionId);
 		cookie.setPath(getSessionConfig().getSessionRootHost());
-		//cookie.setMaxAge(defaultCookieSessionAge * 24 * 3600);
+		cookie.setMaxAge(defaultCookieSessionAge * 24 * 3600);
 		response.addCookie(cookie);
+		return session;
+	}
+
+	@Override
+	public ISession getSession(String sessionId, HttpServletRequest request, HttpServletResponse response) throws SessionException {
+		if(StringUtils.isEmpty(sessionId)){
+			Cookie[] cookies = request.getCookies();
+			if(null == cookies || cookies.length == 0){
+				throw new SessionException(Constant.API_CALL_ERROR_CODE, "用户会话已过期");
+			}
+			for(Cookie cookie : cookies){
+				if(cookie4SessionName.equals(cookie.getName())){
+					sessionId = cookie.getValue();
+				}
+			}
+			if(StringUtils.isEmpty(sessionId)){
+				throw new SessionException(Constant.API_CALL_ERROR_CODE, "用户会话已过期");
+			}
+		}
+		ISession session = sessions.get(sessionId);
+		if(null == session){
+			throw new SessionException(Constant.API_CALL_ERROR_CODE, "用户会话已过期");
+		}
 		return session;
 	}
 
@@ -66,30 +85,6 @@ public class SimpleSessionManager implements ISessionManager {
 		sessionConfig = config;
 	}
 
-	@Override
-	public ISession getSession(String sessionId, HttpServletRequest request,
-							   HttpServletResponse response) throws SessionException {
-		if(null == sessionId || "".equals(sessionId.trim())){
-			// 从request的cookie中获取
-			Cookie[] cookies = request.getCookies();
-			if(null == cookies || cookies.length == 0){
-				throw new SessionException("用户会话已过期");
-			}
-			for(Cookie cookie : cookies){
-				if(cookie4SessionName.equals(cookie.getName())){
-					sessionId = cookie.getValue();
-				}
-			}
-			if(null == sessionId || "".equals(sessionId.trim())){
-				throw new SessionException("用户会话已过期");
-			}
-		}
-		ISession session = sessions.get(sessionId);
-		if(null == session)
-			throw new SessionException("用户会话已过期");
-		return session;
-	}
-	
 	@Override
 	public boolean isCentralSession() {
 		return false;

@@ -1,0 +1,6 @@
+1. log日志分类
+2. session管理动态获取sessionManager
+3. 增加mq消息队列
+4. 增加cache缓存
+5. solr分区处理
+6. dao数据分库分表
