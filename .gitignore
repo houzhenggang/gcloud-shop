@@ -2,6 +2,7 @@
 target
 /.idea/*
 *.log
+/**/*.log
 .project
 .settings
 .classpath
@@ -10,6 +11,6 @@ target
 .idea
 .buildpath
 .gitmodules
-*.iml
+/**/*.iml
 rebel.xml
 .externalToolBuilder
