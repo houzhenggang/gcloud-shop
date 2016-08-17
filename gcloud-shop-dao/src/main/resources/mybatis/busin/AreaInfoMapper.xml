@@ -2,4 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.gcloud.shop.mapper.AreaInfoMapper" >
 
+    <select id="queryAreaInfo" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select <include refid="Base_Column_List" />
+        from tb_shop_area
+    </select>
 </mapper>

@@ -14,6 +14,6 @@
 	<dubbo:registry protocol="zookeeper" address="${gcloud.dubbo.zkServer.url}" check="false" subscribe="false"/>
 	<dubbo:protocol name="dubbo" port="${gcloud.dubbo.port}" host="${gcloud.dubbo.host}" />
 
-	<bean id="areaService" class="com.gcloud.shop.core.impl.AreaServiceImpl" />
-	<dubbo:service ref="areaService" interface="com.gcloud.shop.core.IAreaService" version="${gcloud.dubbo.app.version}" group="${gcloud.dubbo.app.group}"/>
+	<bean id="areaService" class="com.gcloud.shop.core.impl.AreaInfoServiceImpl" />
+	<dubbo:service ref="areaService" interface="com.gcloud.shop.core.IAreaInfoService" version="${gcloud.dubbo.app.version}" group="${gcloud.dubbo.app.group}"/>
 </beans>
