@@ -9,7 +9,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>gcloud-shop-core</artifactId>
+    <artifactId>gcloud-shop-solr</artifactId>
     <packaging>jar</packaging>
 
     <organization>
@@ -27,50 +27,21 @@
     </developers>
 
     <dependencies>
-       
         <dependency>
             <groupId>com.gcloud</groupId>
-            <artifactId>gcloud-shop-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.gcloud</groupId>
-            <artifactId>gcloud-event-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.gcloud</groupId>
-            <artifactId>gcloud-shop-solr</artifactId>
+            <artifactId>gcloud-shop-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+            <version>${gcloud.solrj.version}</version>
         </dependency>
     </dependencies>
 
@@ -85,7 +56,7 @@
             </properties>
             <build>
                 <filters>
-                    <filter>src/main/resources/config/dev/event.properties</filter>
+                    <filter>src/main/resources/config/dev/solr.properties</filter>
                 </filters>
             </build>
         </profile>
@@ -99,7 +70,7 @@
             </properties>
             <build>
                 <filters>
-                    <filter>src/main/resources/config/gray/event.properties</filter>
+                    <filter>src/main/resources/config/gray/solr.properties</filter>
                 </filters>
             </build>
         </profile>
@@ -113,7 +84,7 @@
             </properties>
             <build>
                 <filters>
-                    <filter>src/main/resources/config/prod/event.properties</filter>
+                    <filter>src/main/resources/config/prod/solr.properties</filter>
                 </filters>
             </build>
         </profile>
@@ -127,9 +98,10 @@
             </properties>
             <build>
                 <filters>
-                    <filter>src/main/resources/config/test/event.properties</filter>
+                    <filter>src/main/resources/config/test/solr.properties</filter>
                 </filters>
             </build>
         </profile>
     </profiles>
+
 </project>

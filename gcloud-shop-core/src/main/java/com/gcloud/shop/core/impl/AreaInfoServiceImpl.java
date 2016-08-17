@@ -5,8 +5,11 @@ import com.gcloud.shop.core.IAreaInfoService;
 import com.gcloud.shop.core.ServcieException;
 import com.gcloud.shop.domain.AreaInfo;
 import com.gcloud.shop.mapper.AreaInfoMapper;
+import com.gcloud.shop.solr.SolrUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.solr.client.solrj.impl.HttpSolrClient;
+import org.apache.solr.common.SolrInputDocument;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -28,6 +31,9 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
 
     @Resource
     private AreaInfoMapper areaInfoMapper;
+
+    @Resource
+    private HttpSolrClient solrClient;
 
     @Override
     public int deleteByPrimaryKey(Long id) throws ServcieException {
@@ -105,7 +111,10 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
     public List<AreaInfo> queryAreaInfo(Map<String, Object> params) throws ServcieException {
         List<AreaInfo> areaInfoList = null;
         try {
+
             areaInfoList = areaInfoMapper.queryAreaInfo(params);
+            List<SolrInputDocument> solrInputDocumentList = SolrUtil.getInstance().getSolrInputDocument(areaInfoList);
+            SolrUtil.getInstance().addSolrDoc(solrClient, solrInputDocumentList);
         } catch (Exception e){
             logger.error(e.getMessage());
             throw new ServcieException(Constant.API_CALL_ERROR, "查询区域信息报错!");

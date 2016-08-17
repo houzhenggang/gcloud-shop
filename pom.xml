@@ -30,6 +30,7 @@
         <module>gcloud-shop-core</module>
         <module>gcloud-shop-domain</module>
         <module>gcloud-shop-sync</module>
+        <module>gcloud-shop-solr</module>
     </modules>
 
     <properties>
