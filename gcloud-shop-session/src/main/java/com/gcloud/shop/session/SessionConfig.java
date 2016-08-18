@@ -5,9 +5,9 @@ import java.io.Serializable;
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: MemSession
- * @Package com.gcloud.api
- * @Description: 地址Service
+ * @Title: SessionConfig
+ * @Package com.gcloud.shop.session
+ * @Description: 缓存配置信息
  * @date 2016/6/1 13:53
  */
 public class SessionConfig implements Serializable {
@@ -35,9 +35,9 @@ public class SessionConfig implements Serializable {
 	private String sessionRootHost = "/";
 
 	/**
-	 * 店铺ID
+	 * 加密字符串
 	 */
-	private Long storeId;
+	private String secret="gcloud_shop";
 
 	public int getDefaultExpiryTime() {
 		return defaultExpiryTime;
@@ -45,14 +45,6 @@ public class SessionConfig implements Serializable {
 
 	public void setDefaultExpiryTime(int defaultExpiryTime) {
 		this.defaultExpiryTime = defaultExpiryTime;
-	}
-
-	public boolean isGet2touch() {
-		return get2touch;
-	}
-
-	public void setGet2touch(boolean get2touch) {
-		this.get2touch = get2touch;
 	}
 
 	public int getDefaultAttributeExpiryTime() {
@@ -63,6 +55,14 @@ public class SessionConfig implements Serializable {
 		this.defaultAttributeExpiryTime = defaultAttributeExpiryTime;
 	}
 
+	public boolean isGet2touch() {
+		return get2touch;
+	}
+
+	public void setGet2touch(boolean get2touch) {
+		this.get2touch = get2touch;
+	}
+
 	public String getSessionRootHost() {
 		return sessionRootHost;
 	}
@@ -71,11 +71,11 @@ public class SessionConfig implements Serializable {
 		this.sessionRootHost = sessionRootHost;
 	}
 
-	public Long getStoreId() {
-		return storeId;
+	public String getSecret() {
+		return secret;
 	}
 
-	public void setStoreId(Long storeId) {
-		this.storeId = storeId;
+	public void setSecret(String secret) {
+		this.secret = secret;
 	}
 }

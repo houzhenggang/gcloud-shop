@@ -15,24 +15,29 @@ import com.gcloud.shop.cache.ICacheManger;
  */
 public class SimplCacheManger implements ICacheManger {
 
+    private CacheConfig cacheConfig;
+
+    public SimplCacheManger(CacheConfig cacheConfig){
+        this.cacheConfig = cacheConfig;
+    }
+
     @Override
-    public ICache createCache(Object object) throws CacheException {
+    public ICache createCache(String sessionKey, Object object) throws CacheException {
         return null;
     }
 
     @Override
-    public ICache getCache(String sessionId) throws CacheException {
+    public ICache getCache(String sessionKey) throws CacheException {
         return null;
     }
 
     @Override
-    public CacheConfig getCacheConfig() throws CacheException {
+    public ICache delCache(String sessionKey) throws CacheException {
         return null;
     }
 
     @Override
-    public CacheConfig setCacheConfig(CacheConfig cacheConfig) throws CacheException {
+    public ICache modCache(String sessionKey) throws CacheException {
         return null;
     }
-
 }

@@ -3,41 +3,43 @@ package com.gcloud.shop.cache;
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: CacheException
+ * @Title: ICacheManger
  * @Package com.gcloud.shop.cache
- * @Description: Servcie异常类
+ * @Description: cache缓存管理类
  * @date 2016/7/19 16:54
  */
 public interface ICacheManger {
 
     /**
-     * 根据sessionId获取相应的会话对象
+     * 创建session
      * @param  object
      * @return
      * @throws CacheException
      */
-    public ICache createCache(Object object) throws CacheException;
+    public ICache createCache(String sessionKey, Object object) throws CacheException;
 
     /**
-     * 创建Session
-     * @param sessionId
+     * 获取Session
+     * @param sessionKey
      * @return
      * @throws CacheException
      */
-    public ICache getCache(String sessionId) throws CacheException;
+    public ICache getCache(String sessionKey) throws CacheException;
 
     /**
-     * 获取cache配置
+     * 删除Session
+     * @param sessionKey
      * @return
      * @throws CacheException
      */
-    public CacheConfig getCacheConfig() throws CacheException;
+    public ICache delCache(String sessionKey) throws CacheException;
 
     /**
-     * 获取cache配置
+     * 修改Session
+     * @param sessionKey
      * @return
      * @throws CacheException
      */
-    public CacheConfig setCacheConfig(CacheConfig cacheConfig) throws CacheException;
+    public ICache modCache(String sessionKey) throws CacheException;
 
 }

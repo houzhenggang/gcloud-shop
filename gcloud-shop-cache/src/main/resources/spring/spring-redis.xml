@@ -11,38 +11,38 @@
 	                       http://www.springframework.org/schema/mvc/spring-mvc.xsd"
 	   default-lazy-init="true">
 
-	<description>redis配置</description>
+	<!--<description>redis配置</description>-->
 
-	<!-- 启用缓存注解功能，这个是必须的，否则注解不会生效，另外，该注解一定要声明在spring主配置文件中才会生效 -->
-	<cache:annotation-driven cache-manager="cacheManager" />
+	<!--&lt;!&ndash; 启用缓存注解功能，这个是必须的，否则注解不会生效，另外，该注解一定要声明在spring主配置文件中才会生效 &ndash;&gt;-->
+	<!--<cache:annotation-driven cache-manager="cacheManager" />-->
 
-	<!-- spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value -->
-	<bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
-		<property name="caches">
-			<set>
-				<bean class="org.cpframework.cache.redis.RedisCache">
-					<property name="redisTemplate" ref="redisTemplate" />
-					<property name="name" value="default"/>
-				</bean>
-				<bean class="org.cpframework.cache.redis.RedisCache">
-					<property name="redisTemplate" ref="redisTemplate02" />
-					<property name="name" value="commonCache"/>
-				</bean>
-			</set>
-		</property>
-	</bean>
+	<!--&lt;!&ndash; spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value &ndash;&gt;-->
+	<!--<bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">-->
+		<!--<property name="caches">-->
+			<!--<set>-->
+				<!--<bean class="org.cpframework.cache.redis.RedisCache">-->
+					<!--<property name="redisTemplate" ref="redisTemplate" />-->
+					<!--<property name="name" value="default"/>-->
+				<!--</bean>-->
+				<!--<bean class="org.cpframework.cache.redis.RedisCache">-->
+					<!--<property name="redisTemplate" ref="redisTemplate02" />-->
+					<!--<property name="name" value="commonCache"/>-->
+				<!--</bean>-->
+			<!--</set>-->
+		<!--</property>-->
+	<!--</bean>-->
 
-	<!-- redis 相关配置 -->
-	<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
-		<property name="maxIdle" value="${redis.maxIdle}" />
-		<property name="maxWaitMillis" value="${redis.maxWait}" />
-		<property name="testOnBorrow" value="${redis.testOnBorrow}" />
-	</bean>
+	<!--&lt;!&ndash; redis 相关配置 &ndash;&gt;-->
+	<!--<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">-->
+		<!--<property name="maxIdle" value="${redis.maxIdle}" />-->
+		<!--<property name="maxWaitMillis" value="${redis.maxWait}" />-->
+		<!--<property name="testOnBorrow" value="${redis.testOnBorrow}" />-->
+	<!--</bean>-->
 
-	<bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
-		  p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:pool-config-ref="poolConfig"/>
+	<!--<bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"-->
+		  <!--p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:pool-config-ref="poolConfig"/>-->
 
-	<bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">
-		<property name="connectionFactory"   ref="connectionFactory" />
-	</bean>
+	<!--<bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">-->
+		<!--<property name="connectionFactory"   ref="connectionFactory" />-->
+	<!--</bean>-->
 </beans>

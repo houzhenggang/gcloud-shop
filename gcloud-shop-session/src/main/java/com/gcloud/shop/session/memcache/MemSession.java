@@ -123,7 +123,7 @@ public class MemSession extends AbstractRefSession {
 	public void logout(UserInfo userInfo, HttpServletRequest req, HttpServletResponse rsp) throws SessionException {
 
 		removeAttribute(Constant.LOGIN_USER_KEY);
-		Cookie cookie = new Cookie("memSessionId","");
+		Cookie cookie = new Cookie(Constant.COOKIE_SESSION_NAME, "");
 		cookie.setMaxAge(0);
 		cookie.setPath("/");
 		rsp.addCookie(cookie);

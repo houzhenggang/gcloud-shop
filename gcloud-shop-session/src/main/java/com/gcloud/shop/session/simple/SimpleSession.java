@@ -17,8 +17,8 @@ import java.util.Set;
 /**
  * @author ChenJin
  * @version V1.0
- * @Title: MemSession
- * @Package com.gcloud.api
+ * @Title: SimpleSession
+ * @Package com.gcloud.shop.session.simple
  * @Description: 地址Service
  * @date 2016/6/1 13:53
  */
@@ -88,7 +88,7 @@ public class SimpleSession extends AbstractSession {
 	public void logout(UserInfo userInfo, HttpServletRequest req, HttpServletResponse rsp) throws SessionException {
 
 		removeAttribute(Constant.LOGIN_USER_KEY);
-		Cookie cookie = new Cookie(SimpleSessionManager.cookie4SessionName, "");
+		Cookie cookie = new Cookie(Constant.COOKIE_SESSION_NAME, "");
 		cookie.setPath("/");
 		cookie.setMaxAge(0);
 		rsp.addCookie(cookie);

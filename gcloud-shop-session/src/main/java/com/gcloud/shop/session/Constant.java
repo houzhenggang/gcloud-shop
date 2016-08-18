@@ -24,6 +24,14 @@ public class Constant {
      * */
     public static final String API_CALL_ERROR_CODE = "201";
 
+    /**
+     * 系统登录用户标识KEY
+     */
     public static final String LOGIN_USER_KEY = "login_user_key";
+
+    /**
+     * cookie名称
+     */
+    public static final String COOKIE_SESSION_NAME = "cookie_session_name";
 
 }
