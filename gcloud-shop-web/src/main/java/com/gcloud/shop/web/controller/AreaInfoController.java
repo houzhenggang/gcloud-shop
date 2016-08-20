@@ -35,9 +35,9 @@ public class AreaInfoController {
     @Autowired
     IAreaInfoService areaInfoService;
 
-    @RequestMapping(value = "/list", method = RequestMethod.POST)
+    @RequestMapping(value = "/query", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity skuList(AreaInfoReq areaInfoReq) {
+    public ResponseEntity queryArea(AreaInfoReq areaInfoReq) {
 
         ResponseEntity responseEntity = new ResponseEntity();
         try {

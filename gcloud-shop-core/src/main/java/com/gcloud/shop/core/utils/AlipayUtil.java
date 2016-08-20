@@ -1,6 +1,5 @@
 package com.gcloud.shop.core.utils;
 
-import com.alibaba.druid.sql.visitor.functions.Concat;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.AlipayRequest;
@@ -21,18 +20,6 @@ public class AlipayUtil {
 
     private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(AlipayUtil.class);
 
-    private static final String ALIPAY_URL = "https://openapi.alipay.com/gateway.do";
-
-    private static final String ALIPAY_APP_ID = "2016070201575604";
-
-    private static final String ALIPAY_APP_PRIVAIDE_KEY = "your private_key";
-
-    private static final String ALIPAY_APP_PUBLIC_KEY = "your private_key";
-
-    private static final String ALIPAY_APP_DAA_YPE = "json";
-
-    private static final String ALIPAY_APP_CAHRSE= "GBK";
-
     /**
      * 私有化构造函数
      */
@@ -40,10 +27,17 @@ public class AlipayUtil {
 
     }
 
+    /**
+     * 内部类处理，多线程安全
+     */
     private static class AlipayUtilHandler {
         public static AlipayUtil alipayUtil = new AlipayUtil();
     }
 
+    /**
+     * 单例获取AlipayUtil
+     * @return
+     */
     public static AlipayUtil getInstance(){
         return AlipayUtilHandler.alipayUtil;
     }
@@ -56,10 +50,8 @@ public class AlipayUtil {
 
         try {
 
-            AlipayClient alipayClient = new DefaultAlipayClient(ALIPAY_URL, ALIPAY_APP_ID,
-                    ALIPAY_APP_PRIVAIDE_KEY, ALIPAY_APP_DAA_YPE, ALIPAY_APP_CAHRSE, ALIPAY_APP_PUBLIC_KEY);
-
-            logger.info(request);
+            AlipayClient alipayClient = new DefaultAlipayClient(AlipayConfig.URL, AlipayConfig.APPID,
+                    AlipayConfig.RSA_RRIVATE_KEY, AlipayConfig.FORMAT, AlipayConfig.CHARSET, AlipayConfig.ALIPAY_PUBLIC_KEY);
             alipayClient.execute(request);
         } catch (AlipayApiException e) {
             throw new ServiceException(Constant.API_CALL_ERROR, "调用支付接口出错!" + e.getErrMsg());
