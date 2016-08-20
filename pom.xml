@@ -41,6 +41,7 @@
         <gcloud.web.port>9090</gcloud.web.port>
         <gcloud.web.path>/</gcloud.web.path>
         <gcloud.taobao.sdk>20150906</gcloud.taobao.sdk>
+        <gcloud.alipay.sdk>20160819220102</gcloud.alipay.sdk>
         <gcloud.jetty.version>9.3.9.v20160517</gcloud.jetty.version>
 
         <!-- build setting -->
@@ -401,6 +402,19 @@
                 <version>${gcloud.shop.com.aliyun.oss}</version>
             </dependency>
             <!-- cloud end -->
+
+            <!-- sdk -->
+            <dependency>
+                <groupId>com.taobao</groupId>
+                <artifactId>taobao-sdk</artifactId>
+                <version>${gcloud.taobao.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alipay</groupId>
+                <artifactId>alipay-sdk</artifactId>
+                <version>${gcloud.taobao.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
