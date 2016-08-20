@@ -41,10 +41,6 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
     public int deleteByPrimaryKey(Long id) throws ServiceException {
         int result = 0;
         try {
-
-            AlipayMobilePublicGisGetRequest request = new AlipayMobilePublicGisGetRequest();
-            request.setBizContent("{ \"userId \":\"2088102146158132\" }");
-            AlipayUtil.getInstance().excute(request);
             result = areaInfoMapper.deleteByPrimaryKey(id);
         } catch (Exception e){
             logger.error(e.getMessage());
@@ -119,8 +115,11 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
         try {
 
             areaInfoList = areaInfoMapper.queryAreaInfo(params);
-            List<SolrInputDocument> solrInputDocumentList = SolrUtil.getInstance().getSolrInputDocument(areaInfoList);
-            SolrUtil.getInstance().addSolrDoc(solrClient, solrInputDocumentList);
+//            List<SolrInputDocument> solrInputDocumentList = SolrUtil.getInstance().getSolrInputDocument(areaInfoList);
+//            SolrUtil.getInstance().addSolrDoc(solrClient, solrInputDocumentList);
+            AlipayMobilePublicGisGetRequest request = new AlipayMobilePublicGisGetRequest();
+            request.setBizContent("{ \"userId \":\"2088102146158132\" }");
+            AlipayUtil.getInstance().excute(request);
         } catch (Exception e){
             logger.error(e.getMessage());
             throw new ServiceException(Constant.API_CALL_ERROR, "查询区域信息报错!");
