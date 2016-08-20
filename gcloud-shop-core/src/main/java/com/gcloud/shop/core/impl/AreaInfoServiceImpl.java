@@ -1,8 +1,10 @@
 package com.gcloud.shop.core.impl;
 
+import com.alipay.api.request.AlipayMobilePublicGisGetRequest;
 import com.gcloud.shop.core.Constant;
 import com.gcloud.shop.core.IAreaInfoService;
 import com.gcloud.shop.core.ServiceException;
+import com.gcloud.shop.core.utils.AlipayUtil;
 import com.gcloud.shop.domain.AreaInfo;
 import com.gcloud.shop.mapper.AreaInfoMapper;
 import com.gcloud.shop.solr.SolrUtil;
@@ -39,6 +41,10 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
     public int deleteByPrimaryKey(Long id) throws ServiceException {
         int result = 0;
         try {
+
+            AlipayMobilePublicGisGetRequest request = new AlipayMobilePublicGisGetRequest();
+            request.setBizContent("{ \"userId \":\"2088102146158132\" }");
+            AlipayUtil.getInstance().excute(request);
             result = areaInfoMapper.deleteByPrimaryKey(id);
         } catch (Exception e){
             logger.error(e.getMessage());

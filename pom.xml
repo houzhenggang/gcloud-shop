@@ -40,8 +40,6 @@
         <!-- base setting -->
         <gcloud.web.port>9090</gcloud.web.port>
         <gcloud.web.path>/</gcloud.web.path>
-        <gcloud.taobao.sdk>20150906</gcloud.taobao.sdk>
-        <gcloud.alipay.sdk>20160819220102</gcloud.alipay.sdk>
         <gcloud.jetty.version>9.3.9.v20160517</gcloud.jetty.version>
 
         <!-- build setting -->
@@ -128,6 +126,10 @@
         <gcloud.spring.memcached.version>3.4.0</gcloud.spring.memcached.version>
         <gcloud.google.collections.version>1.0</gcloud.google.collections.version>
         <gcloud.aliyun.openservices.version>OTS-2.0.4</gcloud.aliyun.openservices.version>
+
+        <gcloud.taobao.sdk.version>20150906</gcloud.taobao.sdk.version>
+        <gcloud.alipay.sdk.version>20160819220102</gcloud.alipay.sdk.version>
+
     </properties>
 
     <dependencyManagement>
@@ -407,13 +409,13 @@
             <dependency>
                 <groupId>com.taobao</groupId>
                 <artifactId>taobao-sdk</artifactId>
-                <version>${gcloud.taobao.version}</version>
+                <version>${gcloud.taobao.sdk.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.alipay</groupId>
                 <artifactId>alipay-sdk</artifactId>
-                <version>${gcloud.taobao.version}</version>
+                <version>${gcloud.alipay.sdk.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
