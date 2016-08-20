@@ -1,9 +1,6 @@
 package com.gcloud.shop.core.utils;
 
-import com.alipay.api.AlipayApiException;
-import com.alipay.api.AlipayClient;
-import com.alipay.api.AlipayRequest;
-import com.alipay.api.DefaultAlipayClient;
+import com.alipay.api.*;
 import com.gcloud.shop.core.Constant;
 import com.gcloud.shop.core.ServiceException;
 import org.apache.logging.log4j.LogManager;
@@ -46,16 +43,18 @@ public class AlipayUtil {
      * 請求支付接口
      * @param request
      */
-    public void excute(AlipayRequest request) throws ServiceException {
+    public AlipayResponse excute(AlipayRequest request) throws ServiceException {
 
+        AlipayResponse alipayResponse = null;
         try {
 
             AlipayClient alipayClient = new DefaultAlipayClient(AlipayConfig.URL, AlipayConfig.APPID,
                     AlipayConfig.RSA_RRIVATE_KEY, AlipayConfig.FORMAT, AlipayConfig.CHARSET, AlipayConfig.ALIPAY_PUBLIC_KEY);
-            alipayClient.execute(request);
+            alipayResponse = alipayClient.execute(request);
         } catch (AlipayApiException e) {
             throw new ServiceException(Constant.API_CALL_ERROR, "调用支付接口出错!" + e.getErrMsg());
         }
+        return alipayResponse;
     }
 
 }
