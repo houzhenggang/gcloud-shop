@@ -54,7 +54,7 @@ public class AlipayUtil {
                     AlipayConfig.RSA_RRIVATE_KEY, AlipayConfig.FORMAT, AlipayConfig.CHARSET, AlipayConfig.ALIPAY_PUBLIC_KEY);
             alipayClient.execute(request);
         } catch (AlipayApiException e) {
-            throw new ServiceException(Constant.API_CALL_ERROR, "调用支付接口出错!" + e.getErrMsg());
+            throw new ServiceException(Constant.API_CALL_ERROR, "调用支付接口出错!" + e.getMessage());
         }
     }
 
