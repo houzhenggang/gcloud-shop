@@ -12,9 +12,13 @@ import com.gcloud.shop.domain.AreaInfo;
 import com.gcloud.shop.mapper.AreaInfoMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +31,7 @@ import java.util.Map;
  * @date 2016/6/1 13:53
  */
 @Service("areaInfoService")
-public class AreaInfoServiceImpl implements IAreaInfoService {
+public class AreaInfoServiceImpl implements IAreaInfoService, ApplicationContextAware {
 
     private static final Logger logger = LogManager.getLogger(AreaInfoServiceImpl.class);
 
@@ -36,6 +40,8 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
 
     @Resource
     private IEventCenter eventCenter;
+
+    private ApplicationContext applicationContext;
 
     @Override
     public int deleteByPrimaryKey(Long id) throws ServiceException {
@@ -115,13 +121,22 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
         try {
 
             areaInfoList = areaInfoMapper.queryAreaInfo(params);
-            IEventListener eventListener = new AreaQueryEvent();
-            EventBind eventBind = (EventBind) eventListener.getClass().getAnnotation(EventBind.class);
+            Map<String, IEventListener> listenerMap = this.applicationContext.getBeansOfType(IEventListener.class);
+            Collection<IEventListener> listeners = listenerMap.values();
+            for(IEventListener listener : listeners){
+                EventBind bind = listener.getClass().getAnnotation(EventBind.class);
+                System.out.println(bind.value());
+            }
             eventCenter.fireEvent(this, new EventInfo("gcloud.shop.area.query").setArgs(new Object[]{areaInfoList}), null);
         } catch (Exception e){
             logger.error(e.getMessage());
             throw new ServiceException(Constant.API_CALL_ERROR, "查询区域信息报错!");
         }
         return areaInfoList;
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
     }
 }
