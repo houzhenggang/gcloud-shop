@@ -1,18 +1,17 @@
 package com.gcloud.shop.core.impl;
 
-import com.alipay.api.request.AlipayMobilePublicInfoQueryRequest;
-import com.alipay.api.response.AlipayMobilePublicInfoQueryResponse;
 import com.gcloud.event.core.EventInfo;
 import com.gcloud.event.core.IEventCenter;
+import com.gcloud.event.core.IEventListener;
+import com.gcloud.event.core.annotation.EventBind;
 import com.gcloud.shop.core.Constant;
 import com.gcloud.shop.core.IAreaInfoService;
 import com.gcloud.shop.core.ServiceException;
-import com.gcloud.shop.core.utils.AlipayUtil;
+import com.gcloud.shop.core.event.AreaQueryEvent;
 import com.gcloud.shop.domain.AreaInfo;
 import com.gcloud.shop.mapper.AreaInfoMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -34,9 +33,6 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
 
     @Resource
     private AreaInfoMapper areaInfoMapper;
-
-    @Resource
-    private HttpSolrClient solrClient;
 
     @Resource
     private IEventCenter eventCenter;
@@ -119,11 +115,9 @@ public class AreaInfoServiceImpl implements IAreaInfoService {
         try {
 
             areaInfoList = areaInfoMapper.queryAreaInfo(params);
-//            List<SolrInputDocument> solrInputDocumentList = SolrUtil.getInstance().getSolrInputDocument(areaInfoList);
-//            SolrUtil.getInstance().addSolrDoc(solrClient, solrInputDocumentList);
-            AlipayMobilePublicInfoQueryRequest request = new AlipayMobilePublicInfoQueryRequest();
-            AlipayMobilePublicInfoQueryResponse alipayResponse = (AlipayMobilePublicInfoQueryResponse)AlipayUtil.getInstance().excute(request);
-            eventCenter.fireEvent(this, new EventInfo("gcloud.shop.area.query").setArgs(new Object[]{"ChenJin"}), null);
+            IEventListener eventListener = new AreaQueryEvent();
+            EventBind eventBind = (EventBind) eventListener.getClass().getAnnotation(EventBind.class);
+            eventCenter.fireEvent(this, new EventInfo("gcloud.shop.area.query").setArgs(new Object[]{areaInfoList}), null);
         } catch (Exception e){
             logger.error(e.getMessage());
             throw new ServiceException(Constant.API_CALL_ERROR, "查询区域信息报错!");

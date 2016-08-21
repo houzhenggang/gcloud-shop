@@ -51,6 +51,7 @@ public class AlipayUtil {
             AlipayClient alipayClient = new DefaultAlipayClient(AlipayConfig.URL, AlipayConfig.APPID,
                     AlipayConfig.RSA_RRIVATE_KEY, AlipayConfig.FORMAT, AlipayConfig.CHARSET, AlipayConfig.ALIPAY_PUBLIC_KEY);
             alipayResponse = alipayClient.execute(request);
+            logger.info(alipayResponse.getBody());
         } catch (AlipayApiException e) {
             throw new ServiceException(Constant.API_CALL_ERROR, "调用支付接口出错!" + e.getErrMsg());
         }
