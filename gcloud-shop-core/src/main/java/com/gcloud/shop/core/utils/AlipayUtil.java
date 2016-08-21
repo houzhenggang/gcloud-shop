@@ -53,7 +53,7 @@ public class AlipayUtil {
             alipayResponse = alipayClient.execute(request);
             logger.info(alipayResponse.getBody());
         } catch (AlipayApiException e) {
-            throw new ServiceException(Constant.API_CALL_ERROR, "调用支付接口出错!" + e.getErrMsg());
+            throw new ServiceException(Constant.API_CALL_ERROR, "调用支付接口出错!" + e.getMessage());
         }
         return alipayResponse;
     }
