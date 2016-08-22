@@ -24,7 +24,6 @@
   DROP TABLE IF EXISTS `tb_shop_warehouse`;
   CREATE TABLE `tb_shop_warehouse` (
     `id`             BIGINT(30)   PRIMARY KEY  COMMENT '主键（yyyyMMddhhmmss + 门店ID + 4位随机数）',
-    `company_id`     BIGINT(30)   DEFAULT NULL COMMENT '公司ID',
     `store_id`       BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `warehouse_id`   BIGINT(30)   DEFAULT NULL COMMENT '仓库ID',
     `name`           VARCHAR(255) DEFAULT "默认仓储" COMMENT '默认仓储',
@@ -33,9 +32,7 @@
     `created`       TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
     `modified`      TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status` TINYINT(1)  NOT NULL DEFAULT 1,
-    KEY `inx_company_id` (`company_id`),
-    KEY `inx_shop_id` (`store_id`),
-    KEY `inx_company_id_store` (`company_id`,`store_id`)
+    KEY `inx_company_id_store` (`store_id`, `warehouse_id`)
   ) ENGINE = InnoDB DEFAULT CHARSET = UTF8;
 
   -- ----------------------------
@@ -117,8 +114,7 @@
     `created`       TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
     `modified`      TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status` TINYINT(1)  NOT NULL DEFAULT 1,
-    KEY `inx_shop_id` (`store_id`),
-    KEY `inx_shop_category` (`store_id`,`category_id`),
+
     KEY `inx_shop_brand` (`store_id`,`brand_name`),
     KEY `inx_shop_category_brand` (`store_id`,`category_id`, `brand_name`),
     KEY `inx_shop_category_main_name` (`store_id`,`category_id`, `main_shop_name`),
@@ -135,7 +131,7 @@
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
-    `app_name`        VARCHAR(20) NOT NULL COMMENT '服务窗名称',
+    `app_name`        VARCHAR(20)  NOT NULL COMMENT '服务窗名称',
     `logo_url`        VARCHAR(128) NOT NULL COMMENT '服务窗头像地址',
     `public_greeting` VARCHAR(200) NOT NULL COMMENT '服务窗欢迎语',
     `license_url`     VARCHAR(128) NOT NULL COMMENT '营业执照地址，建议尺寸 320 x 320px，支持.jpg .jpeg .png 格式，小于3M',
@@ -153,8 +149,6 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_store` (`store_id`),
-    KEY `inx_shop_name` (`app_name`),
     KEY `inx_shop_store_name` (`store_id`, `app_name`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -179,9 +173,7 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_store` (`store_id`),
-    KEY `inx_shop_type` (`image_type`),
-    KEY `inx_shop_name` (`image_name`),
+    KEY `inx_shop_store_type` (`store_id`, `image_type`),
     KEY `inx_shop_store_name` (`store_id`, `image_name`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -202,7 +194,6 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_store` (`store_id`),
     KEY `inx_shop_name` (`store_id`, `menu`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -225,9 +216,8 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_category` (`category_id`),
-    KEY `inx_shop_category_name` (`category_name`),
-    KEY `inx_shop_platform` (`platform`)
+    KEY `inx_shop_platform_category_id` (`platform`, `category_id`),
+    KEY `inx_shop_platform_category_name` (`platform`, `category_name`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
   -- ----------------------------
@@ -239,7 +229,7 @@
 
     `id`                  BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`            VARCHAR(32)  NOT NULL COMMENT '门店ID',
-    `itme_id`             VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
+    `item_id`             VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
     `item_sys_id`         VARCHAR(64)  NOT NULL COMMENT '商品ID(系统)',
     `item_type`           VARCHAR(20)  NOT NULL COMMENT '商品类型，券类型填写固定值VOUCHER',
     `subject`             VARCHAR(40)  NOT NULL COMMENT '商品名称，请勿超过15个汉字，30个字符',
@@ -259,8 +249,7 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_store` (`store_id`),
-    KEY `inx_shop_store_item` (`store_id`,`itme_id`),
+    KEY `inx_shop_store_item` (`store_id`,`item_id`),
     KEY `inx_shop_store_item_sys` (`store_id`,`item_sys_id`),
     KEY `inx_shop_store_subject` (`store_id`, `subject`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
@@ -274,7 +263,7 @@
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
-    `itme_id`         VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
+    `item_id`         VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
     `item_sys_id`     VARCHAR(64)  NOT NULL COMMENT '商品ID(系统)',
     `title`           VARCHAR(30)  NOT NULL COMMENT '描述标题，不得超过15个中文字符(洗剪吹套餐)',
     `details`         VARCHAR(500)  NOT NULL COMMENT '标题下的描述列表,券使用说明内容',
@@ -287,8 +276,7 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_store` (`store_id`),
-    KEY `inx_shop_store_item` (`store_id`,`itme_id`),
+    KEY `inx_shop_store_item` (`store_id`,`item_id`),
     KEY `inx_shop_store_item_sys` (`store_id`,`item_sys_id`),
     KEY `inx_shop_store_title` (`store_id`, `title`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
@@ -302,7 +290,7 @@
 
     `id`                BIGINT(30)   PRIMARY KEY COMMENT '主键',
     `store_id`          VARCHAR(32)  NOT NULL COMMENT '门店ID',
-    `itme_id`           VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
+    `item_id`           VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
     `item_sys_id`       VARCHAR(64)  NOT NULL COMMENT '商品ID(系统)',
     `daily_sales_limit` BIGINT(10)   NOT NULL COMMENT '可限制商品单日销售上限',
     `user_sales_limit`  VARCHAR(50)  NOT NULL COMMENT '用户购买策略如不填，则默认值为一个用户一天可以领取三次。 可限制DAY、WEEK、MONTH中n天领取m次，格式为DAY|n|m； 同时也可限制券的1次生命周期中可被领取x次，如ALL|1|x，两个规则可组合使用',
@@ -314,8 +302,7 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_store` (`store_id`),
-    KEY `inx_shop_store_item` (`store_id`,`itme_id`),
+    KEY `inx_shop_store_item` (`store_id`,`item_id`),
     KEY `inx_shop_store_item_sys` (`store_id`,`item_sys_id`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -347,7 +334,6 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_voucher` (`store_id`),
     KEY `inx_shop_voucher_type` (`store_id`,`voucher_type`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -372,7 +358,6 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_voucher` (`store_id`),
     KEY `inx_shop_voucher_type` (`store_id`,`voucher_type`),
     KEY `inx_shop_voucher_id` (`store_id`,`voucher_id`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
@@ -385,7 +370,7 @@
   CREATE TABLE `tb_shop_order` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)   NOT NULL COMMENT '门店ID',
+    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
     `user_symbol`     VARCHAR(64)   NOT NULL COMMENT '用户标识符，用于指定集分宝发放的用户，和user_symbol_type一起使用，确定一个唯一的支付宝用户',
     `user_symbol_type`TINYINT(64)   DEFAULT 0 COMMENT '用户标识符类型， 现在支持ALIPAY_USER_ID:表示支付宝用户ID, ALIPAY_LOGON_ID:表示支付宝登陆号, TAOBAO_NICK:淘宝昵称',
     `point_count`     VARCHAR(64)   DEFAULT 'kb' COMMENT '发放集分宝的数量',
@@ -396,7 +381,6 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_shop_store` (`store_id`),
     KEY `inx_shop_user_symbol` (`store_id`, `user_symbol`, `user_symbol_type`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -430,7 +414,7 @@
     `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
-    KEY `inx_shop_store` (`store_id`),
+
     KEY `inx_shop_store_trade_no` (`store_id`, `out_trade_no`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -455,7 +439,7 @@
     `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
-    KEY `inx_shop_store` (`store_id`),
+
     KEY `inx_shop_store_trade_no` (`store_id`, `out_trade_no`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -482,7 +466,7 @@
     `created`         TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
-    KEY `inx_shop_store` (`store_id`),
+
     KEY `inx_shop_store_trade_no` (`store_id`, `out_trade_no`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = UTF8;
 
@@ -503,6 +487,7 @@
     `created`          TIMESTAMP   NOT NULL DEFAULT '2000-01-01 00:00:00',
     `modified`         TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`    TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
+
     KEY `inx_app_user` (`user_id`, `auth_app_id`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -590,7 +575,6 @@
     `modified`        TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1)  NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_user_id` (`user_id`),
     KEY `inx_user_full_name` (`user_id`, `deliver_fullname`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -620,7 +604,6 @@
     `modified`        TIMESTAMP  NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `enable_status`   TINYINT(1) NOT NULL DEFAULT 1 COMMENT '0否 1是',
 
-    KEY `inx_store` (`store_id`),
     KEY `inx_store_user` (`store_id`, `user_id`),
     KEY `inx_store_alipay_user` (`store_id`, `alipay_user_id`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
