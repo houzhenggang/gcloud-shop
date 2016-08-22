@@ -42,7 +42,7 @@
   DROP TABLE IF EXISTS `tb_shop_store`;
   CREATE TABLE `tb_shop_store` (
     `id`               BIGINT(30)   PRIMARY KEY  COMMENT '主键（yyyyMMddhhmmss + 门店ID + 4位随机数）',
-    `store_id`         VARCHAR(32)   NOT NULL COMMENT '门店ID',
+    `store_id`         BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `category_id`      VARCHAR(32)   NOT NULL COMMENT '类目id，请参考',
     `brand_name`       VARCHAR(512)  DEFAULT '其它品牌' COMMENT '品牌名，不填写则默认为“其它品牌”',
     `brand_logo`       VARCHAR(512)  DEFAULT NULL COMMENT '品牌LOGO; 图片ID，不填写则默认为门店首图main_image',
@@ -130,7 +130,7 @@
   CREATE TABLE `tb_shop_window` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`        BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `app_name`        VARCHAR(20)  NOT NULL COMMENT '服务窗名称',
     `logo_url`        VARCHAR(128) NOT NULL COMMENT '服务窗头像地址',
     `public_greeting` VARCHAR(200) NOT NULL COMMENT '服务窗欢迎语',
@@ -160,7 +160,7 @@
   CREATE TABLE `tb_shop_image` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`        BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `image_type`      VARCHAR(8)   NOT NULL DEFAULT 'jpg' COMMENT '图片格式',
     `image_name`      VARCHAR(128) NOT NULL COMMENT '图片名称',
     `image_url`       VARCHAR(128) NOT NULL COMMENT '图片URL',
@@ -185,7 +185,7 @@
   CREATE TABLE `tb_shop_menu` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`        BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `menu`            VARCHAR(8)   NOT NULL COMMENT '菜单信息',
     `status`          TINYINT(2)   DEFAULT 0 COMMENT '当前状态(0 未确认 1 商家确认 2 小二确认  -1 屏蔽  -2 删除)',
     `platform`        VARCHAR(12)  DEFAULT 'kb' COMMENT '平台信息(kb口碑 tb淘宝 bd百度外卖)',
@@ -228,7 +228,7 @@
   CREATE TABLE `tb_goods_item` (
 
     `id`                  BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`            VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`            BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `item_id`             VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
     `item_sys_id`         VARCHAR(64)  NOT NULL COMMENT '商品ID(系统)',
     `item_type`           VARCHAR(20)  NOT NULL COMMENT '商品类型，券类型填写固定值VOUCHER',
@@ -262,7 +262,7 @@
   CREATE TABLE `tb_good_item_desc` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`        BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `item_id`         VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
     `item_sys_id`     VARCHAR(64)  NOT NULL COMMENT '商品ID(系统)',
     `title`           VARCHAR(30)  NOT NULL COMMENT '描述标题，不得超过15个中文字符(洗剪吹套餐)',
@@ -289,7 +289,7 @@
   CREATE TABLE `tb_goods_sale_rule` (
 
     `id`                BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`          VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`          BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `item_id`           VARCHAR(64)  NOT NULL COMMENT '商品ID(口碑)',
     `item_sys_id`       VARCHAR(64)  NOT NULL COMMENT '商品ID(系统)',
     `daily_sales_limit` BIGINT(10)   NOT NULL COMMENT '可限制商品单日销售上限',
@@ -314,7 +314,7 @@
   CREATE TABLE `tb_goods_voucher` (
 
     `id`                 BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`           VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`           BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `voucher_type`       VARCHAR(20)  NOT NULL COMMENT '券类型，DISCOUNT（折扣券）、CASH（代金券）',
     `value_amount`       DOUBLE(20,2)  COMMENT '价值金额，单位（元） CASH类型为代金券金额 DISCOUNT类型为优惠封顶金额 在代金券类型时，value_amout与reduce_to_amount不能同时为空，不能同时不为空。',
     `threshold_quantity` BIGINT(20)    COMMENT '起步数量，用于指定可享受优惠的起步单品购买数量',
@@ -345,7 +345,7 @@
   CREATE TABLE `tb_goods_voucher_period` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`        BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `voucher_id`      VARCHAR(32)  NOT NULL COMMENT '门店ID',
     `voucher_type`    VARCHAR(20)  NOT NULL COMMENT '券类型，DISCOUNT（折扣券）、CASH（代金券）',
     `unit`            VARCHAR(20)  NOT NULL COMMENT '单位描述，分为： MINUTE（分钟） HOUR（小时） WEEK_DAY（星期几） DAY（日） WEEK（周） MONTH（月） ALL（整个销售周期）',
@@ -370,7 +370,7 @@
   CREATE TABLE `tb_shop_order` (
 
     `id`              BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`        BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `user_symbol`     VARCHAR(64)   NOT NULL COMMENT '用户标识符，用于指定集分宝发放的用户，和user_symbol_type一起使用，确定一个唯一的支付宝用户',
     `user_symbol_type`TINYINT(64)   DEFAULT 0 COMMENT '用户标识符类型， 现在支持ALIPAY_USER_ID:表示支付宝用户ID, ALIPAY_LOGON_ID:表示支付宝登陆号, TAOBAO_NICK:淘宝昵称',
     `point_count`     VARCHAR(64)   DEFAULT 'kb' COMMENT '发放集分宝的数量',
@@ -392,7 +392,7 @@
   CREATE TABLE `tb_trade_info` (
 
     `id`                   BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`             VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`             BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `out_trade_no`         VARCHAR(64)  NOT NULL COMMENT '商户订单号,64个字符以内、只能包含字母、数字、下划线；需保证在商户端不重复',
     `seller_id`            VARCHAR(28)  NOT NULL COMMENT '卖家支付宝用户ID。 如果该值为空，则默认为商户签约账号对应的支付宝用户ID',
     `total_amount`         DOUBLE(12,2) DEFAULT 0 COMMENT '订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]',
@@ -426,7 +426,7 @@
   CREATE TABLE `tb_trade_detail` (
 
     `id`             BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`       VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`       BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `out_trade_no`   VARCHAR(64)  NOT NULL COMMENT '商户订单号,64个字符以内、只能包含字母、数字、下划线；需保证在商户端不重复',
     `goods_id`       VARCHAR(32)  NOT NULL COMMENT '卖家支付宝用户ID。 如果该值为空，则默认为商户签约账号对应的支付宝用户ID',
     `alipay_goods_id`VARCHAR(32)  NOT NULL COMMENT '订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000]',
@@ -451,7 +451,7 @@
   CREATE TABLE `tb_trade_royalty` (
 
     `id`             BIGINT(30)   PRIMARY KEY COMMENT '主键',
-    `store_id`       VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`       BIGINT(30)   DEFAULT NULL COMMENT '门店ID',
     `out_trade_no`   VARCHAR(64)  NOT NULL COMMENT '商户订单号,64个字符以内、只能包含字母、数字、下划线；需保证在商户端不重复',
     `serial_no`      VARCHAR(32)  NOT NULL COMMENT '分账序列号，表示分账执行的顺序，必须为正整数 ',
     `batch_no`       VARCHAR(32)  NOT NULL COMMENT '分账批次号。 目前需要和转入账号类型为bankIndex配合使用。',
@@ -586,7 +586,7 @@
   CREATE TABLE `tb_shop_user` (
 
     `id`              BIGINT(30)  PRIMARY KEY COMMENT '主键',
-    `store_id`        VARCHAR(32)  NOT NULL COMMENT '门店ID',
+    `store_id`        BIGINT(30)  DEFAULT NULL COMMENT '门店ID',
     `user_id`         VARCHAR(16) NOT NUll COMMENT '用户ID ',
     `alipay_user_id`  VARCHAR(16) NOT NUll COMMENT '支付宝账户 ',
     `avatar`          VARCHAR(200) NOT NUll COMMENT '用户头像',
