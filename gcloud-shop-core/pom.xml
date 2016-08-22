@@ -82,6 +82,17 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
         </dependency>
+
+        <!-- sdk -->
+        <!--<dependency>-->
+            <!--<groupId>com.taobao</groupId>-->
+            <!--<artifactId>taobao-sdk</artifactId>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>alipay-sdk</artifactId>
+        </dependency>
     </dependencies>
 
     <profiles>
