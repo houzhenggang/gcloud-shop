@@ -34,6 +34,7 @@
         <module>gcloud-shop-cache</module>
         <module>gcloud-shop-mq</module>
         <module>gcloud-shop-session</module>
+        <module>gcloud-shop-annotation</module>
     </modules>
 
     <properties>
